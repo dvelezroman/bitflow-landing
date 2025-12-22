@@ -1,0 +1,187 @@
+{
+  "nav": {
+    "projects": "Projects",
+    "features": "Features",
+    "about": "About Us",
+    "pricing": "Pricing",
+    "contact": "Contact",
+    "start": "Get Started"
+  },
+  "hero": {
+    "title": "Instant Notifications",
+    "titleHighlight": "that Transform Your Business",
+    "description": "BITFLOW Notifier is one of our innovative projects. A leading enterprise messaging platform that allows you to send alerts, events, and promotions to your customers quickly, securely, and efficiently.",
+    "tryFree": "Try Free",
+    "viewDemo": "View Demo",
+    "companies": "Companies",
+    "messagesSent": "Messages Sent",
+    "uptime": "Uptime"
+  },
+  "projects": {
+    "title": "Our Projects",
+    "description": "BITFLOW develops innovative technological solutions for businesses",
+    "notifier": {
+      "title": "BITFLOW Notifier",
+      "description": "Instant messaging notification platform. Send alerts, events, and promotions to your customers efficiently and securely.",
+      "learnMore": "Learn more →"
+    },
+    "moreProjects": {
+      "title": "More Projects",
+      "description": "We are working on new innovative projects that will be available soon. Stay updated with our updates."
+    },
+    "inDevelopment": {
+      "title": "Projects in Development",
+      "description": "We have several projects in production that will be launched in the coming months. Each designed to solve specific business challenges."
+    },
+    "available": "Available",
+    "comingSoon": "Coming Soon",
+    "inProduction": "In Production"
+  },
+  "features": {
+    "title": "Powerful Features",
+    "description": "Everything you need to communicate efficiently with your customers",
+    "instantDelivery": {
+      "title": "Instant Delivery",
+      "description": "Your messages arrive in less than a second. State-of-the-art technology to ensure maximum delivery speed."
+    },
+    "security": {
+      "title": "Advanced Security",
+      "description": "End-to-end encryption and GDPR compliance. Your data and your customers' data are completely protected."
+    },
+    "analytics": {
+      "title": "Real-Time Analytics",
+      "description": "Complete dashboard with detailed metrics. Know the performance of your campaigns and optimize your communication strategies."
+    },
+    "multichannel": {
+      "title": "Multi-Channel",
+      "description": "SMS, WhatsApp, Telegram and more. Send your messages through the channel your customers prefer."
+    },
+    "api": {
+      "title": "Powerful API",
+      "description": "Easy integration with your existing system. Documented RESTful API and SDKs for the most popular languages."
+    },
+    "scheduling": {
+      "title": "Smart Scheduling",
+      "description": "Schedule your messages in advance. Automate your campaigns and save valuable time in your day-to-day."
+    }
+  },
+  "about": {
+    "title": "About BITFLOW",
+    "description": "Technological innovation at the service of businesses",
+    "heading": "Transforming Business Communication",
+    "paragraph1": "BITFLOW is a technology company dedicated to developing innovative solutions that help businesses improve their communication and operational efficiency.",
+    "paragraph2": "Our flagship project, BITFLOW Notifier, is an instant messaging platform that allows businesses to send notifications, alerts, and promotions quickly and efficiently to their customers.",
+    "paragraph3": "We currently have several projects in production that will be launched soon, each designed to solve specific challenges of the modern business world.",
+    "ceo": {
+      "name": "Eng. Dario Velez Roman, Ms.",
+      "title": "CEO & Founder",
+      "description": "Engineer with a Master's degree, leads BITFLOW with innovative vision and commitment to technological excellence. His experience and leadership have been fundamental in the development of our business solutions."
+    }
+  },
+  "benefits": {
+    "title": "Why Choose BITFLOW?",
+    "description": "The complete solution for your business communication needs",
+    "roi": {
+      "title": "Increase Your ROI",
+      "description": "Instant notifications have a 98% open rate, much higher than traditional email. Maximize the impact of your campaigns."
+    },
+    "saveTime": {
+      "title": "Save Time and Resources",
+      "description": "Automate your communications and free up your team for more strategic tasks. Our platform does the heavy lifting for you."
+    },
+    "scalability": {
+      "title": "Unlimited Scalability",
+      "description": "From startups to large corporations. Our infrastructure grows with you without limits."
+    },
+    "support": {
+      "title": "24/7 Support",
+      "description": "Our team of experts is available at all times to help you get the most out of the platform."
+    },
+    "stats": {
+      "messagesToday": "Messages Sent Today",
+      "deliveryRate": "Delivery Rate",
+      "avgTime": "Average Time",
+      "activeClients": "Active Clients"
+    }
+  },
+  "pricing": {
+    "title": "Plans that Adapt to You",
+    "description": "Choose the perfect plan for your business. All include a 14-day free trial.",
+    "starter": {
+      "name": "Starter",
+      "price": "/month",
+      "features": {
+        "messages": "10,000 messages/month",
+        "support": "Email support",
+        "api": "Basic API",
+        "dashboard": "Basic dashboard"
+      },
+      "button": "Get Started"
+    },
+    "professional": {
+      "name": "Professional",
+      "price": "/month",
+      "features": {
+        "messages": "100,000 messages/month",
+        "support": "Priority support",
+        "api": "Full API",
+        "analytics": "Advanced analytics",
+        "scheduling": "Advanced scheduling"
+      },
+      "button": "Get Started",
+      "badge": "Most Popular"
+    },
+    "enterprise": {
+      "name": "Enterprise",
+      "price": "Custom",
+      "features": {
+        "unlimited": "Unlimited messages",
+        "support": "Dedicated 24/7 support",
+        "sla": "Guaranteed SLA",
+        "onboarding": "Custom onboarding",
+        "manager": "Dedicated account manager"
+      },
+      "button": "Contact Sales"
+    }
+  },
+  "cta": {
+    "title": "Ready to Transform Your Communication?",
+    "description": "Join thousands of companies that already trust BITFLOW Notifier for their instant notifications",
+    "button": "Start Free Trial"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "description": "Have questions? We're here to help you",
+    "email": "Email",
+    "message": "Message",
+    "emailPlaceholder": "your@email.com",
+    "messagePlaceholder": "Tell us how we can help you...",
+    "send": "Send Message",
+    "emailLabel": "Email",
+    "phoneLabel": "Phone",
+    "success": "Thank you for your interest! We will contact you soon."
+  },
+  "footer": {
+    "description": "The leading platform for instant notifications for businesses of all sizes.",
+    "product": "Product",
+    "company": "Company",
+    "legal": "Legal",
+    "links": {
+      "features": "Features",
+      "pricing": "Pricing",
+      "api": "API",
+      "docs": "Documentation",
+      "about": "About Us",
+      "projects": "Projects",
+      "blog": "Blog",
+      "careers": "Careers",
+      "contact": "Contact",
+      "privacy": "Privacy",
+      "terms": "Terms",
+      "cookies": "Cookies",
+      "gdpr": "GDPR"
+    },
+    "copyright": "All rights reserved."
+  }
+}
+
