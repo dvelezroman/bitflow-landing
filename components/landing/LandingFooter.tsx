@@ -1,0 +1,81 @@
+'use client'
+
+import { useI18n } from '@/lib/i18n'
+import { SITE } from '@/lib/site'
+
+export function LandingFooter() {
+  const { t } = useI18n()
+
+  return (
+    <footer className="border-t border-stone-200 bg-white py-12">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
+        <div className="flex flex-col gap-10 md:flex-row md:items-start md:justify-between">
+          <div className="max-w-sm">
+            <img src={SITE.logoUrl} alt="" className="h-8 w-auto opacity-90" width={120} height={36} />
+            <p className="mt-4 text-sm text-stone-600">{t('footer.tagline')}</p>
+          </div>
+          <div className="grid grid-cols-2 gap-10 sm:grid-cols-3">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-wider text-stone-500">{t('footer.services')}</p>
+              <ul className="mt-4 space-y-2 text-sm">
+                <li>
+                  <a href="#servicios" className="text-stone-600 hover:text-stone-900">
+                    {t('footer.links.services')}
+                  </a>
+                </li>
+                <li>
+                  <a href="#casos" className="text-stone-600 hover:text-stone-900">
+                    {t('footer.links.cases')}
+                  </a>
+                </li>
+                <li>
+                  <a href="#proceso" className="text-stone-600 hover:text-stone-900">
+                    {t('footer.links.process')}
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-wider text-stone-500">{t('footer.company')}</p>
+              <ul className="mt-4 space-y-2 text-sm">
+                <li>
+                  <a href="#testimonios" className="text-stone-600 hover:text-stone-900">
+                    {t('footer.links.testimonials')}
+                  </a>
+                </li>
+                <li>
+                  <a href="#nosotros" className="text-stone-600 hover:text-stone-900">
+                    {t('footer.links.about')}
+                  </a>
+                </li>
+                <li>
+                  <a href="#contacto" className="text-stone-600 hover:text-stone-900">
+                    {t('footer.links.contact')}
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-wider text-stone-500">{t('footer.legal')}</p>
+              <ul className="mt-4 space-y-2 text-sm">
+                <li>
+                  <a href="#" className="text-stone-600 hover:text-stone-900">
+                    {t('footer.links.privacy')}
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-stone-600 hover:text-stone-900">
+                    {t('footer.links.terms')}
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <p className="mt-12 border-t border-stone-100 pt-8 text-center text-sm text-stone-500">
+          &copy; {new Date().getFullYear()} BITFLOW. {t('footer.rights')}
+        </p>
+      </div>
+    </footer>
+  )
+}

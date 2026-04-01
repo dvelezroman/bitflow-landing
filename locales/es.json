@@ -1,6 +1,9 @@
 {
   "nav": {
     "services": "Servicios",
+    "showcase": "Experiencia",
+    "cases": "Casos",
+    "testimonials": "Clientes",
     "process": "Cómo trabajamos",
     "about": "Nosotros",
     "faq": "FAQ",
@@ -13,26 +16,31 @@
     "titleAccent": "para tu negocio y tu hogar",
     "description": "Desarrollo de software, consultoría en soluciones digitales, plataformas de gestión e instalaciones de seguridad y domótica. Un solo equipo para integrar lo digital con lo que necesitas en el día a día.",
     "ctaPrimary": "Hablemos de tu proyecto",
-    "ctaSecondary": "Ver servicios"
+    "ctaSecondary": "Ver servicios",
+    "imageCredit": "Imágenes ilustrativas — equipo y entorno de trabajo"
   },
   "services": {
     "title": "Qué hacemos",
     "subtitle": "Dos líneas de trabajo que puedes combinar: ingeniería de producto y sistemas para el hogar o la empresa.",
     "software": {
       "title": "Desarrollo de software",
-      "description": "Aplicaciones web y backends a medida, integraciones y evolución continua de tus sistemas."
+      "description": "Aplicaciones web y backends a medida, integraciones y evolución continua de tus sistemas.",
+      "imageAlt": "Código y desarrollo de software en equipo"
     },
     "consulting": {
       "title": "Consultoría en soluciones",
-      "description": "Acompañamiento para definir arquitectura, prioridades y roadmap de producto o plataforma."
+      "description": "Acompañamiento para definir arquitectura, prioridades y roadmap de producto o plataforma.",
+      "imageAlt": "Reunión de consultoría y planificación"
     },
     "platforms": {
       "title": "Plataformas de gestión",
-      "description": "Automatización de procesos y herramientas de gestión adaptadas a tu operación."
+      "description": "Automatización de procesos y herramientas de gestión adaptadas a tu operación.",
+      "imageAlt": "Panel de control y analítica de negocio"
     },
     "security": {
       "title": "Seguridad y domótica",
       "description": "Alarmas, videovigilancia, cercos eléctricos y automatización del hogar o negocio.",
+      "imageAlt": "Hogar conectado y seguridad inteligente",
       "bullets": {
         "alarms": "Alarmas y sensores",
         "cameras": "Sistemas de cámaras",
@@ -40,6 +48,66 @@
         "automation": "Automatización e integración"
       }
     }
+  },
+  "showcase": {
+    "title": "Cómo trabajamos en la práctica",
+    "subtitle": "Un vistazo en vídeo al tipo de entornos y proyectos que acompañamos — desde el código hasta el despliegue.",
+    "caption": "Vídeo de referencia: trabajo técnico y colaboración (stock — fines ilustrativos).",
+    "disclaimer": "El contenido audiovisual es de archivo libre y sirve como referencia visual; no representa un proyecto específico de un cliente.",
+    "videoAria": "Vídeo ilustrativo de trabajo tecnológico"
+  },
+  "caseStudies": {
+    "title": "Casos de estudio",
+    "subtitle": "Ejemplos de alcance y resultados — datos representativos para mostrar el tipo de impacto que buscamos.",
+    "note": "Los nombres y cifras son escenarios de referencia; cada proyecto se define bajo acuerdo y confidencialidad.",
+    "items": [
+      {
+        "sector": "Retail · inventario",
+        "title": "Plataforma unificada de stock y pedidos",
+        "summary": "Cadena regional con sucursales en varias ciudades: integración de ERP ligero, app interna para tiendas y alertas automáticas de reposición.",
+        "result": "Resultado referencial: ~40% menos errores de inventario y tiempos de cierre diario reducidos en horas.",
+        "imageAlt": "Operaciones logísticas y almacén"
+      },
+      {
+        "sector": "Servicios financieros · consultoría",
+        "title": "Arquitectura y roadmap para producto digital",
+        "summary": "Fintech en crecimiento: auditoría de deuda técnica, definición de módulos de API y plan de entregas por fases con hitos medibles.",
+        "result": "Resultado referencial: despliegue del primer trimestre de mejoras sin parar operaciones críticas.",
+        "imageAlt": "Equipo analizando arquitectura de software"
+      },
+      {
+        "sector": "Residencial · seguridad",
+        "title": "Videovigilancia, cerco y app de acceso",
+        "summary": "Vivienda y pequeño negocio en la misma propiedad: cámaras IP, cerco perimetral integrado y notificaciones al móvil del propietario.",
+        "result": "Resultado referencial: un solo panel para ver cámaras y estado de alarma, con soporte post-instalación.",
+        "imageAlt": "Instalación de cámaras de seguridad"
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Opiniones de clientes",
+    "subtitle": "Referencias de estilo profesional — útiles para transmitir confianza mientras construyes historial propio.",
+    "note": "Los nombres y empresas son ficticios; sustituye por testimonios reales cuando los tengas.",
+    "items": [
+      {
+        "quote": "Necesitábamos ordenar el caos de hojas de cálculo. El equipo entregó una primera versión usable en semanas y nos acompañó en el despliegue.",
+        "name": "Mariana Ortega",
+        "role": "Directora de operaciones",
+        "company": "Distribuidora Andina (ejemplo)"
+      },
+      {
+        "quote": "La consultoría nos ayudó a priorizar sin romper el presupuesto. Documentación clara y reuniones cortas, al grano.",
+        "name": "James Keller",
+        "role": "CTO",
+        "company": "PayBridge Labs (ejemplo)"
+      },
+      {
+        "quote": "Instalación de cámaras y alarma impecable. Explicaron el mantenimiento y dejaron todo etiquetado para futuras ampliaciones.",
+        "name": "Roberto Silva",
+        "role": "Propietario",
+        "company": "Residencial / PYME (ejemplo)"
+      }
+    ]
   },
   "process": {
     "title": "Cómo trabajamos",
@@ -63,7 +131,8 @@
     "paragraph1": "BITFLOW une desarrollo de software y proyectos de seguridad y automatización para quienes necesitan un partner técnico cercano.",
     "paragraph2": "Trabajamos con pymes, profesionales independientes y hogares que buscan modernizar procesos o reforzar seguridad con instalaciones serias.",
     "highlight": "Ing. Darío Vélez Román, Ms.",
-    "role": "CEO y fundador"
+    "role": "CEO y fundador",
+    "imageAlt": "Equipo colaborando en proyecto tecnológico"
   },
   "cta": {
     "title": "¿Tienes un reto técnico o un proyecto en mente?",
@@ -122,7 +191,9 @@
     "legal": "Legal",
     "links": {
       "services": "Servicios",
+      "cases": "Casos",
       "process": "Cómo trabajamos",
+      "testimonials": "Opiniones",
       "about": "Nosotros",
       "contact": "Contacto",
       "privacy": "Privacidad",

@@ -1,6 +1,9 @@
 {
   "nav": {
     "services": "Services",
+    "showcase": "Showcase",
+    "cases": "Case studies",
+    "testimonials": "Clients",
     "process": "How we work",
     "about": "About",
     "faq": "FAQ",
@@ -13,26 +16,31 @@
     "titleAccent": "for your business and home",
     "description": "Software development, consulting on digital solutions, management platforms, and security and smart-home installations. One team to connect what you run in the cloud with what you need on the ground.",
     "ctaPrimary": "Discuss your project",
-    "ctaSecondary": "View services"
+    "ctaSecondary": "View services",
+    "imageCredit": "Illustrative imagery — team and workplace context"
   },
   "services": {
     "title": "What we do",
     "subtitle": "Two lines of work you can combine: product engineering and systems for home or business.",
     "software": {
       "title": "Software development",
-      "description": "Tailored web apps and backends, integrations, and continuous improvement of your systems."
+      "description": "Tailored web apps and backends, integrations, and continuous improvement of your systems.",
+      "imageAlt": "Code and collaborative software development"
     },
     "consulting": {
       "title": "Solution consulting",
-      "description": "Support to define architecture, priorities, and your product or platform roadmap."
+      "description": "Support to define architecture, priorities, and your product or platform roadmap.",
+      "imageAlt": "Consulting session and planning"
     },
     "platforms": {
       "title": "Management platforms",
-      "description": "Process automation and management tools aligned with how you operate."
+      "description": "Process automation and management tools aligned with how you operate.",
+      "imageAlt": "Business dashboard and analytics"
     },
     "security": {
       "title": "Security & smart home",
       "description": "Alarms, video surveillance, electric fencing, and automation for home or business.",
+      "imageAlt": "Connected home and smart security",
       "bullets": {
         "alarms": "Alarms and sensors",
         "cameras": "Camera systems",
@@ -40,6 +48,66 @@
         "automation": "Automation and integration"
       }
     }
+  },
+  "showcase": {
+    "title": "What our work looks like",
+    "subtitle": "A short video glimpse of the kinds of environments and projects we support — from code to rollout.",
+    "caption": "Reference video: technical work and collaboration (stock — illustrative).",
+    "disclaimer": "Footage is from royalty-free stock for visual context only; it does not depict a specific client project.",
+    "videoAria": "Illustrative technology workplace video"
+  },
+  "caseStudies": {
+    "title": "Case studies",
+    "subtitle": "Examples of scope and outcomes — representative figures to illustrate the impact we aim for.",
+    "note": "Names and metrics are reference scenarios; each engagement is defined under agreement and confidentiality.",
+    "items": [
+      {
+        "sector": "Retail · inventory",
+        "title": "Unified stock and order platform",
+        "summary": "Regional chain with multiple locations: lightweight ERP integration, internal store app, and automated replenishment alerts.",
+        "result": "Reference outcome: ~40% fewer inventory errors and faster daily close-outs.",
+        "imageAlt": "Logistics and warehouse operations"
+      },
+      {
+        "sector": "Financial services · consulting",
+        "title": "Architecture and roadmap for a digital product",
+        "summary": "Growing fintech: technical debt review, API module definition, and phased delivery plan with measurable milestones.",
+        "result": "Reference outcome: first-quarter improvements shipped without stopping critical operations.",
+        "imageAlt": "Team reviewing software architecture"
+      },
+      {
+        "sector": "Residential · security",
+        "title": "Cameras, electric fence, and access app",
+        "summary": "Home and small business on the same property: IP cameras, integrated perimeter fence, and mobile notifications for the owner.",
+        "result": "Reference outcome: single dashboard for cameras and alarm status, with post-install support.",
+        "imageAlt": "Security camera installation"
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Client voices",
+    "subtitle": "Professional-style references — useful for credibility while you build a real track record.",
+    "note": "Names and companies are fictional; replace with real testimonials when available.",
+    "items": [
+      {
+        "quote": "We needed to get out of spreadsheet chaos. The team shipped a usable first version in weeks and stayed through rollout.",
+        "name": "Mariana Ortega",
+        "role": "Head of operations",
+        "company": "Andean Distribution (sample)"
+      },
+      {
+        "quote": "Consulting helped us prioritize without blowing the budget. Clear documentation and short, focused meetings.",
+        "name": "James Keller",
+        "role": "CTO",
+        "company": "PayBridge Labs (sample)"
+      },
+      {
+        "quote": "Camera and alarm installation was spot on. They explained maintenance and labeled everything for future extensions.",
+        "name": "Roberto Silva",
+        "role": "Owner",
+        "company": "Residential / SMB (sample)"
+      }
+    ]
   },
   "process": {
     "title": "How we work",
@@ -63,7 +131,8 @@
     "paragraph1": "BITFLOW brings together software development and security and automation projects for those who need a technical partner close to the work.",
     "paragraph2": "We work with SMBs, independents, and households that want to modernize operations or strengthen security with serious installations.",
     "highlight": "Eng. Darío Vélez Román, Ms.",
-    "role": "CEO & founder"
+    "role": "CEO & founder",
+    "imageAlt": "Team collaborating on a technology project"
   },
   "cta": {
     "title": "Have a technical challenge or a project in mind?",
@@ -122,7 +191,9 @@
     "legal": "Legal",
     "links": {
       "services": "Services",
+      "cases": "Case studies",
       "process": "How we work",
+      "testimonials": "Testimonials",
       "about": "About",
       "contact": "Contact",
       "privacy": "Privacy",
