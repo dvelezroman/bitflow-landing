@@ -1,187 +1,132 @@
 {
   "nav": {
-    "projects": "Proyectos",
-    "features": "Características",
-    "about": "Sobre Nosotros",
-    "pricing": "Precios",
+    "services": "Servicios",
+    "process": "Cómo trabajamos",
+    "about": "Nosotros",
+    "faq": "FAQ",
     "contact": "Contacto",
-    "start": "Comenzar"
+    "cta": "Solicitar consulta"
   },
   "hero": {
-    "title": "Notificaciones Instantáneas",
-    "titleHighlight": "que Transforman tu Negocio",
-    "description": "BITFLOW Notificador es uno de nuestros proyectos innovadores. Una plataforma líder en mensajería empresarial que permite enviar alertas, eventos y propaganda a tus clientes de forma rápida, segura y eficiente.",
-    "tryFree": "Prueba Gratis",
-    "viewDemo": "Ver Demo",
-    "companies": "Empresas",
-    "messagesSent": "Mensajes Enviados",
-    "uptime": "Uptime"
+    "eyebrow": "BITFLOW",
+    "title": "Tecnología y tranquilidad",
+    "titleAccent": "para tu negocio y tu hogar",
+    "description": "Desarrollo de software, consultoría en soluciones digitales, plataformas de gestión e instalaciones de seguridad y domótica. Un solo equipo para integrar lo digital con lo que necesitas en el día a día.",
+    "ctaPrimary": "Hablemos de tu proyecto",
+    "ctaSecondary": "Ver servicios"
   },
-  "projects": {
-    "title": "Nuestros Proyectos",
-    "description": "BITFLOW desarrolla soluciones tecnológicas innovadoras para empresas",
-    "notifier": {
-      "title": "BITFLOW Notificador",
-      "description": "Plataforma de notificaciones instantáneas por mensajería. Envía alertas, eventos y propaganda a tus clientes de forma eficiente y segura.",
-      "learnMore": "Conocer más →"
+  "services": {
+    "title": "Qué hacemos",
+    "subtitle": "Dos líneas de trabajo que puedes combinar: ingeniería de producto y sistemas para el hogar o la empresa.",
+    "software": {
+      "title": "Desarrollo de software",
+      "description": "Aplicaciones web y backends a medida, integraciones y evolución continua de tus sistemas."
     },
-    "moreProjects": {
-      "title": "Más Proyectos",
-      "description": "Estamos trabajando en nuevos proyectos innovadores que estarán disponibles próximamente. Mantente al día con nuestras actualizaciones."
+    "consulting": {
+      "title": "Consultoría en soluciones",
+      "description": "Acompañamiento para definir arquitectura, prioridades y roadmap de producto o plataforma."
     },
-    "inDevelopment": {
-      "title": "Proyectos en Desarrollo",
-      "description": "Tenemos varios proyectos en producción que se lanzarán en los próximos meses. Cada uno diseñado para resolver problemas empresariales específicos."
-    },
-    "available": "Disponible",
-    "comingSoon": "Próximamente",
-    "inProduction": "En Producción"
-  },
-  "features": {
-    "title": "Características Potentes",
-    "description": "Todo lo que necesitas para comunicarte eficientemente con tus clientes",
-    "instantDelivery": {
-      "title": "Envío Instantáneo",
-      "description": "Tus mensajes llegan en menos de un segundo. Tecnología de última generación para garantizar la máxima velocidad de entrega."
+    "platforms": {
+      "title": "Plataformas de gestión",
+      "description": "Automatización de procesos y herramientas de gestión adaptadas a tu operación."
     },
     "security": {
-      "title": "Seguridad Avanzada",
-      "description": "Encriptación end-to-end y cumplimiento con GDPR. Tus datos y los de tus clientes están completamente protegidos."
+      "title": "Seguridad y domótica",
+      "description": "Alarmas, videovigilancia, cercos eléctricos y automatización del hogar o negocio.",
+      "bullets": {
+        "alarms": "Alarmas y sensores",
+        "cameras": "Sistemas de cámaras",
+        "fences": "Cercos eléctricos",
+        "automation": "Automatización e integración"
+      }
+    }
+  },
+  "process": {
+    "title": "Cómo trabajamos",
+    "subtitle": "Proceso claro para que sepas qué esperar en cada etapa.",
+    "step1": {
+      "title": "Diagnóstico",
+      "description": "Escuchamos objetivos, contexto y restricciones. Definimos alcance inicial y riesgos."
     },
-    "analytics": {
-      "title": "Analytics en Tiempo Real",
-      "description": "Dashboard completo con métricas detalladas. Conoce el rendimiento de tus campañas y optimiza tus estrategias de comunicación."
+    "step2": {
+      "title": "Propuesta",
+      "description": "Te entregamos opciones, tiempos y una estimación transparente antes de avanzar."
     },
-    "multichannel": {
-      "title": "Multi-Canal",
-      "description": "SMS, WhatsApp, Telegram y más. Envía tus mensajes por el canal que prefieran tus clientes."
-    },
-    "api": {
-      "title": "API Potente",
-      "description": "Integración sencilla con tu sistema existente. API RESTful documentada y SDKs para los lenguajes más populares."
-    },
-    "scheduling": {
-      "title": "Programación Inteligente",
-      "description": "Programa tus mensajes con antelación. Automatiza tus campañas y ahorra tiempo valioso en tu día a día."
+    "step3": {
+      "title": "Implementación",
+      "description": "Ejecución por entregas, comunicación frecuente y soporte al cierre y después del go-live."
     }
   },
   "about": {
     "title": "Sobre BITFLOW",
-    "description": "Innovación tecnológica al servicio de las empresas",
-    "heading": "Transformando la Comunicación Empresarial",
-    "paragraph1": "BITFLOW es una empresa tecnológica dedicada al desarrollo de soluciones innovadoras que ayudan a las empresas a mejorar su comunicación y eficiencia operativa.",
-    "paragraph2": "Nuestro proyecto estrella, BITFLOW Notificador, es una plataforma de mensajería instantánea que permite a las empresas enviar notificaciones, alertas y propaganda de forma rápida y eficiente a sus clientes.",
-    "paragraph3": "Actualmente tenemos varios proyectos en producción que se lanzarán próximamente, cada uno diseñado para resolver desafíos específicos del mundo empresarial moderno.",
-    "ceo": {
-      "name": "Ing. Dario Velez Roman, Ms.",
-      "title": "CEO & Fundador",
-      "description": "Ingeniero con Maestría, lidera BITFLOW con visión innovadora y compromiso con la excelencia tecnológica. Su experiencia y liderazgo han sido fundamentales en el desarrollo de nuestras soluciones empresariales."
-    }
-  },
-  "benefits": {
-    "title": "¿Por qué Elegir BITFLOW?",
-    "description": "La solución completa para tus necesidades de comunicación empresarial",
-    "roi": {
-      "title": "Aumenta tu ROI",
-      "description": "Las notificaciones instantáneas tienen una tasa de apertura del 98%, mucho mayor que el email tradicional. Maximiza el impacto de tus campañas."
-    },
-    "saveTime": {
-      "title": "Ahorra Tiempo y Recursos",
-      "description": "Automatiza tus comunicaciones y libera a tu equipo para tareas más estratégicas. Nuestra plataforma hace el trabajo pesado por ti."
-    },
-    "scalability": {
-      "title": "Escalabilidad Ilimitada",
-      "description": "Desde startups hasta grandes corporaciones. Nuestra infraestructura crece contigo sin límites."
-    },
-    "support": {
-      "title": "Soporte 24/7",
-      "description": "Nuestro equipo de expertos está disponible en todo momento para ayudarte a sacar el máximo provecho de la plataforma."
-    },
-    "stats": {
-      "messagesToday": "Mensajes Enviados Hoy",
-      "deliveryRate": "Tasa de Entrega",
-      "avgTime": "Tiempo Promedio",
-      "activeClients": "Clientes Activos"
-    }
-  },
-  "pricing": {
-    "title": "Planes que se Adaptan a Ti",
-    "description": "Elige el plan perfecto para tu negocio. Todos incluyen prueba gratuita de 14 días.",
-    "starter": {
-      "name": "Starter",
-      "price": "/mes",
-      "features": {
-        "messages": "10,000 mensajes/mes",
-        "support": "Soporte por email",
-        "api": "API básica",
-        "dashboard": "Dashboard básico"
-      },
-      "button": "Comenzar"
-    },
-    "professional": {
-      "name": "Professional",
-      "price": "/mes",
-      "features": {
-        "messages": "100,000 mensajes/mes",
-        "support": "Soporte prioritario",
-        "api": "API completa",
-        "analytics": "Analytics avanzados",
-        "scheduling": "Programación avanzada"
-      },
-      "button": "Comenzar",
-      "badge": "Más Popular"
-    },
-    "enterprise": {
-      "name": "Enterprise",
-      "price": "Personalizado",
-      "features": {
-        "unlimited": "Mensajes ilimitados",
-        "support": "Soporte 24/7 dedicado",
-        "sla": "SLA garantizado",
-        "onboarding": "Onboarding personalizado",
-        "manager": "Cuenta manager dedicado"
-      },
-      "button": "Contactar Ventas"
-    }
+    "description": "Equipo enfocado en soluciones reales, sin humo: código, infraestructura y campo cuando hace falta.",
+    "paragraph1": "BITFLOW une desarrollo de software y proyectos de seguridad y automatización para quienes necesitan un partner técnico cercano.",
+    "paragraph2": "Trabajamos con pymes, profesionales independientes y hogares que buscan modernizar procesos o reforzar seguridad con instalaciones serias.",
+    "highlight": "Ing. Darío Vélez Román, Ms.",
+    "role": "CEO y fundador"
   },
   "cta": {
-    "title": "¿Listo para Transformar tu Comunicación?",
-    "description": "Únete a miles de empresas que ya confían en BITFLOW Notificador para sus notificaciones instantáneas",
-    "button": "Comenzar Prueba Gratuita"
+    "title": "¿Tienes un reto técnico o un proyecto en mente?",
+    "description": "Cuéntanos en qué estás y te respondemos con próximos pasos concretos.",
+    "button": "Ir al formulario de contacto"
+  },
+  "faq": {
+    "title": "Preguntas frecuentes",
+    "q1": {
+      "question": "¿Atienden solo empresas o también hogares?",
+      "answer": "Ambos. El desarrollo y la consultoría suelen orientarse a negocios y equipos; seguridad y domótica incluye instalaciones residenciales y comerciales."
+    },
+    "q2": {
+      "question": "¿Cómo se cotiza un proyecto de software?",
+      "answer": "Tras una primera conversación definimos alcance, entregables y modalidad (por proyecto o por etapas). No hay costo por esa valoración inicial."
+    },
+    "q3": {
+      "question": "¿Ofrecen mantenimiento o soporte después?",
+      "answer": "Sí. Podemos acordar soporte evolutivo, monitoreo o visitas según el tipo de solución instalada o desarrollada."
+    },
+    "q4": {
+      "question": "¿En qué zona realizan instalaciones de seguridad?",
+      "answer": "Lo acordamos según el proyecto. Indícanos ubicación y tipo de instalación en el formulario y te confirmamos disponibilidad."
+    }
   },
   "contact": {
-    "title": "Contáctanos",
-    "description": "¿Tienes preguntas? Estamos aquí para ayudarte",
-    "email": "Email",
+    "title": "Contacto",
+    "subtitle": "Deja tus datos y un resumen de lo que necesitas. Te responderemos por correo o, si lo prefieres, coordina por WhatsApp.",
+    "name": "Nombre",
+    "namePlaceholder": "Tu nombre o empresa",
+    "email": "Correo electrónico",
+    "emailPlaceholder": "tu@correo.com",
+    "phone": "Teléfono",
+    "phonePlaceholder": "Opcional",
+    "service": "Tipo de consulta",
+    "servicePlaceholder": "Selecciona una opción",
+    "serviceSoftware": "Desarrollo de software",
+    "serviceConsulting": "Consultoría",
+    "servicePlatforms": "Plataformas de gestión",
+    "serviceSecurity": "Seguridad y domótica",
+    "serviceOther": "Otro / varios",
     "message": "Mensaje",
-    "emailPlaceholder": "tu@email.com",
-    "messagePlaceholder": "Cuéntanos cómo podemos ayudarte...",
-    "send": "Enviar Mensaje",
-    "emailLabel": "Email",
+    "messagePlaceholder": "Describe tu necesidad, plazos o ubicación si aplica.",
+    "send": "Enviar mensaje",
+    "whatsapp": "WhatsApp",
+    "emailLabel": "Correo",
     "phoneLabel": "Teléfono",
-    "success": "¡Gracias por tu interés! Te contactaremos pronto."
+    "channelsTitle": "Canales directos",
+    "success": "Gracias. Hemos recibido tu mensaje y te contactaremos pronto."
   },
   "footer": {
-    "description": "La plataforma líder en notificaciones instantáneas para empresas de todos los tamaños.",
-    "product": "Producto",
+    "tagline": "Soluciones tecnológicas, software y seguridad integrada.",
+    "rights": "Todos los derechos reservados.",
+    "services": "Servicios",
     "company": "Empresa",
     "legal": "Legal",
     "links": {
-      "features": "Características",
-      "pricing": "Precios",
-      "api": "API",
-      "docs": "Documentación",
-      "about": "Sobre Nosotros",
-      "projects": "Proyectos",
-      "blog": "Blog",
-      "careers": "Carreras",
+      "services": "Servicios",
+      "process": "Cómo trabajamos",
+      "about": "Nosotros",
       "contact": "Contacto",
       "privacy": "Privacidad",
-      "terms": "Términos",
-      "cookies": "Cookies",
-      "gdpr": "GDPR"
-    },
-    "copyright": "Todos los derechos reservados."
+      "terms": "Términos"
+    }
   }
 }
-

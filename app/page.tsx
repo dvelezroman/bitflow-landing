@@ -3,649 +3,555 @@
 import { useState } from 'react'
 import { useI18n } from '@/lib/i18n'
 
+const LOGO_URL = 'https://bitflow-public.s3.us-east-1.amazonaws.com/Bitflow-logo.png'
+const EMAIL = 'ventas@bitflow.bid'
+const PHONE_DISPLAY = '+593 995 710 556'
+const PHONE_WHATSAPP = '593995710556'
+
 export default function Home() {
   const { t, language, setLanguage } = useI18n()
+  const [menuOpen, setMenuOpen] = useState(false)
+  const [name, setName] = useState('')
   const [email, setEmail] = useState('')
+  const [phone, setPhone] = useState('')
+  const [service, setService] = useState('')
+  const [message, setMessage] = useState('')
+
+  const closeMenu = () => setMenuOpen(false)
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    // Aquí iría la lógica para enviar el email
     alert(t('contact.success'))
+    setName('')
     setEmail('')
+    setPhone('')
+    setService('')
+    setMessage('')
   }
 
+  const navLinkClass =
+    'text-sm font-medium text-stone-600 transition hover:text-stone-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-600 focus-visible:ring-offset-2 rounded px-1'
+
+  const LangBtn = ({ lang, label }: { lang: 'es' | 'en'; label: string }) => (
+    <button
+      type="button"
+      onClick={() => setLanguage(lang)}
+      className={`rounded-md px-2.5 py-1 text-xs font-medium transition ${
+        language === lang
+          ? 'bg-stone-900 text-white'
+          : 'text-stone-500 hover:text-stone-800'
+      }`}
+      aria-pressed={language === lang}
+    >
+      {label}
+    </button>
+  )
+
   return (
-    <main className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
-      {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <div className="flex items-center">
-              <img 
-                src="https://bitflow-public.s3.us-east-1.amazonaws.com/Bitflow-logo.png" 
-                alt="BITFLOW Logo" 
-                className="h-10 w-auto"
-              />
+    <main className="min-h-screen bg-stone-50 text-stone-900">
+      <a
+        href="#contenido"
+        className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded-md focus:bg-white focus:px-4 focus:py-2 focus:text-sm focus:shadow-lg"
+      >
+        {language === 'es' ? 'Saltar al contenido' : 'Skip to content'}
+      </a>
+
+      <header className="fixed inset-x-0 top-0 z-50 border-b border-stone-200/80 bg-stone-50/90 backdrop-blur-md">
+        <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
+          <a href="#" className="flex shrink-0 items-center gap-2" onClick={closeMenu}>
+            <img src={LOGO_URL} alt="BITFLOW" className="h-8 w-auto md:h-9" width={120} height={36} />
+          </a>
+
+          <nav className="hidden items-center gap-8 md:flex" aria-label="Principal">
+            <a href="#servicios" className={navLinkClass}>
+              {t('nav.services')}
+            </a>
+            <a href="#proceso" className={navLinkClass}>
+              {t('nav.process')}
+            </a>
+            <a href="#nosotros" className={navLinkClass}>
+              {t('nav.about')}
+            </a>
+            <a href="#faq" className={navLinkClass}>
+              {t('nav.faq')}
+            </a>
+            <a href="#contacto" className={navLinkClass}>
+              {t('nav.contact')}
+            </a>
+          </nav>
+
+          <div className="flex items-center gap-2 md:gap-3">
+            <div className="flex rounded-lg border border-stone-200 bg-white p-0.5" role="group" aria-label="Idioma">
+              <LangBtn lang="es" label="ES" />
+              <LangBtn lang="en" label="EN" />
             </div>
-            <div className="hidden md:flex items-center space-x-8">
-              <a href="#proyectos" className="text-gray-700 hover:text-primary-600 transition">{t('nav.projects')}</a>
-              <a href="#caracteristicas" className="text-gray-700 hover:text-primary-600 transition">{t('nav.features')}</a>
-              <a href="#sobre-nosotros" className="text-gray-700 hover:text-primary-600 transition">{t('nav.about')}</a>
-              <a href="#precios" className="text-gray-700 hover:text-primary-600 transition">{t('nav.pricing')}</a>
-              <a href="#contacto" className="text-gray-700 hover:text-primary-600 transition">{t('nav.contact')}</a>
-              <div className="flex items-center space-x-2 border-l border-gray-300 pl-4">
-                <button
-                  onClick={() => setLanguage('es')}
-                  className={`px-2 py-1 rounded text-sm font-medium transition ${
-                    language === 'es' 
-                      ? 'bg-primary-600 text-white' 
-                      : 'text-gray-600 hover:text-primary-600'
-                  }`}
-                >
-                  ES
-                </button>
-                <button
-                  onClick={() => setLanguage('en')}
-                  className={`px-2 py-1 rounded text-sm font-medium transition ${
-                    language === 'en' 
-                      ? 'bg-primary-600 text-white' 
-                      : 'text-gray-600 hover:text-primary-600'
-                  }`}
-                >
-                  EN
-                </button>
-              </div>
-            </div>
-            <button className="bg-primary-600 text-white px-6 py-2 rounded-lg hover:bg-primary-700 transition">
-              {t('nav.start')}
+            <a
+              href="#contacto"
+              className="hidden rounded-full bg-stone-900 px-4 py-2 text-sm font-medium text-white transition hover:bg-stone-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-600 focus-visible:ring-offset-2 md:inline-flex"
+            >
+              {t('nav.cta')}
+            </a>
+            <button
+              type="button"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-stone-200 bg-white text-stone-800 md:hidden"
+              onClick={() => setMenuOpen((o) => !o)}
+              aria-expanded={menuOpen}
+              aria-controls="mobile-menu"
+              aria-label={menuOpen ? 'Cerrar menú' : 'Abrir menú'}
+            >
+              {menuOpen ? (
+                <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              ) : (
+                <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              )}
             </button>
           </div>
         </div>
-      </nav>
 
-      {/* Hero Section */}
-      <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6">
-              {t('hero.title')}
-              <span className="block text-primary-600">{t('hero.titleHighlight')}</span>
+        {menuOpen && (
+          <div
+            id="mobile-menu"
+            className="border-t border-stone-200 bg-stone-50 px-4 py-4 md:hidden"
+          >
+            <nav className="flex flex-col gap-1" aria-label="Móvil">
+              {[
+                ['#servicios', t('nav.services')],
+                ['#proceso', t('nav.process')],
+                ['#nosotros', t('nav.about')],
+                ['#faq', t('nav.faq')],
+                ['#contacto', t('nav.contact')],
+              ].map(([href, label]) => (
+                <a
+                  key={href}
+                  href={href}
+                  className="rounded-lg px-3 py-3 text-base font-medium text-stone-800 hover:bg-stone-100"
+                  onClick={closeMenu}
+                >
+                  {label}
+                </a>
+              ))}
+              <a
+                href="#contacto"
+                className="mt-2 rounded-full bg-stone-900 px-4 py-3 text-center text-sm font-medium text-white"
+                onClick={closeMenu}
+              >
+                {t('nav.cta')}
+              </a>
+            </nav>
+          </div>
+        )}
+      </header>
+
+      <div id="contenido">
+        <section className="border-b border-stone-200/80 pt-28 pb-20 md:pt-32 md:pb-28">
+          <div className="mx-auto max-w-6xl px-4 sm:px-6">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-stone-500">
+              {t('hero.eyebrow')}
+            </p>
+            <h1 className="mt-4 max-w-3xl text-4xl font-semibold tracking-tight text-stone-900 md:text-5xl lg:text-[3.25rem] lg:leading-[1.1]">
+              {t('hero.title')}{' '}
+              <span className="text-stone-600">{t('hero.titleAccent')}</span>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
+            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-stone-600 md:text-xl">
               {t('hero.description')}
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-primary-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-primary-700 transition shadow-lg">
-                {t('hero.tryFree')}
-              </button>
-              <button className="border-2 border-primary-600 text-primary-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-primary-50 transition">
-                {t('hero.viewDemo')}
-              </button>
-            </div>
-            <div className="mt-12 flex justify-center items-center space-x-8 text-gray-500">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-gray-900">10K+</div>
-                <div className="text-sm">{t('hero.companies')}</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-gray-900">50M+</div>
-                <div className="text-sm">{t('hero.messagesSent')}</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-gray-900">99.9%</div>
-                <div className="text-sm">{t('hero.uptime')}</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Projects Section */}
-      <section id="proyectos" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              {t('projects.title')}
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              {t('projects.description')}
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="p-8 rounded-2xl border-2 border-primary-600 bg-primary-50 relative">
-              <div className="absolute top-4 right-4 bg-primary-600 text-white px-3 py-1 rounded-full text-xs font-semibold">
-                {t('projects.available')}
-              </div>
-              <div className="w-16 h-16 bg-primary-600 rounded-xl flex items-center justify-center mb-6">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-                </svg>
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-3">{t('projects.notifier.title')}</h3>
-              <p className="text-gray-600 mb-4">
-                {t('projects.notifier.description')}
-              </p>
-              <a href="#caracteristicas" className="text-primary-600 font-semibold hover:text-primary-700 transition">
-                {t('projects.notifier.learnMore')}
+            <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center">
+              <a
+                href="#contacto"
+                className="inline-flex items-center justify-center rounded-full bg-stone-900 px-6 py-3 text-sm font-medium text-white transition hover:bg-stone-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-600 focus-visible:ring-offset-2"
+              >
+                {t('hero.ctaPrimary')}
+              </a>
+              <a
+                href="#servicios"
+                className="inline-flex items-center justify-center rounded-full border border-stone-300 bg-white px-6 py-3 text-sm font-medium text-stone-800 transition hover:border-stone-400 hover:bg-stone-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-600 focus-visible:ring-offset-2"
+              >
+                {t('hero.ctaSecondary')}
               </a>
             </div>
-            <div className="p-8 rounded-2xl border-2 border-gray-200 bg-gray-50 relative">
-              <div className="absolute top-4 right-4 bg-gray-600 text-white px-3 py-1 rounded-full text-xs font-semibold">
-                {t('projects.comingSoon')}
-              </div>
-              <div className="w-16 h-16 bg-gray-400 rounded-xl flex items-center justify-center mb-6">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-                </svg>
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-3">{t('projects.moreProjects.title')}</h3>
-              <p className="text-gray-600 mb-4">
-                {t('projects.moreProjects.description')}
-              </p>
-              <span className="text-gray-500 font-semibold">{t('projects.comingSoon')}</span>
-            </div>
-            <div className="p-8 rounded-2xl border-2 border-gray-200 bg-gray-50 relative">
-              <div className="absolute top-4 right-4 bg-gray-600 text-white px-3 py-1 rounded-full text-xs font-semibold">
-                {t('projects.inProduction')}
-              </div>
-              <div className="w-16 h-16 bg-gray-400 rounded-xl flex items-center justify-center mb-6">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-3">{t('projects.inDevelopment.title')}</h3>
-              <p className="text-gray-600 mb-4">
-                {t('projects.inDevelopment.description')}
-              </p>
-              <span className="text-gray-500 font-semibold">{t('projects.inProduction')}</span>
-            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Features Section */}
-      <section id="caracteristicas" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-50 to-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              {t('features.title')}
+        <section id="servicios" className="scroll-mt-24 border-b border-stone-200/80 py-20 md:py-28">
+          <div className="mx-auto max-w-6xl px-4 sm:px-6">
+            <h2 className="text-3xl font-semibold tracking-tight text-stone-900 md:text-4xl">
+              {t('services.title')}
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              {t('features.description')}
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="p-6 rounded-xl border border-gray-200 hover:shadow-lg transition">
-              <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">{t('features.instantDelivery.title')}</h3>
-              <p className="text-gray-600">
-                {t('features.instantDelivery.description')}
-              </p>
-            </div>
-            <div className="p-6 rounded-xl border border-gray-200 hover:shadow-lg transition">
-              <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">{t('features.security.title')}</h3>
-              <p className="text-gray-600">
-                {t('features.security.description')}
-              </p>
-            </div>
-            <div className="p-6 rounded-xl border border-gray-200 hover:shadow-lg transition">
-              <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">{t('features.analytics.title')}</h3>
-              <p className="text-gray-600">
-                {t('features.analytics.description')}
-              </p>
-            </div>
-            <div className="p-6 rounded-xl border border-gray-200 hover:shadow-lg transition">
-              <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">{t('features.multichannel.title')}</h3>
-              <p className="text-gray-600">
-                {t('features.multichannel.description')}
-              </p>
-            </div>
-            <div className="p-6 rounded-xl border border-gray-200 hover:shadow-lg transition">
-              <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">{t('features.api.title')}</h3>
-              <p className="text-gray-600">
-                {t('features.api.description')}
-              </p>
-            </div>
-            <div className="p-6 rounded-xl border border-gray-200 hover:shadow-lg transition">
-              <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">{t('features.scheduling.title')}</h3>
-              <p className="text-gray-600">
-                {t('features.scheduling.description')}
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+            <p className="mt-4 max-w-2xl text-lg text-stone-600">{t('services.subtitle')}</p>
 
-      {/* About Section */}
-      <section id="sobre-nosotros" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              {t('about.title')}
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              {t('about.description')}
-            </p>
+            <div className="mt-12 grid gap-6 md:grid-cols-2">
+              {[
+                {
+                  title: t('services.software.title'),
+                  body: t('services.software.description'),
+                  icon: (
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                  ),
+                },
+                {
+                  title: t('services.consulting.title'),
+                  body: t('services.consulting.description'),
+                  icon: (
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+                  ),
+                },
+                {
+                  title: t('services.platforms.title'),
+                  body: t('services.platforms.description'),
+                  icon: (
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
+                  ),
+                },
+                {
+                  title: t('services.security.title'),
+                  body: t('services.security.description'),
+                  icon: (
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-1.061-1.764l-7-3.5a2 2 0 00-1.878 0l-7 3.5A2 2 0 003 9v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                  ),
+                  extra: true,
+                },
+              ].map((card) => (
+                <article
+                  key={card.title}
+                  className="flex flex-col rounded-2xl border border-stone-200 bg-white p-6 shadow-sm transition hover:border-stone-300 hover:shadow-md"
+                >
+                  <div className="flex items-start gap-4">
+                    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-stone-100 text-stone-800">
+                      <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
+                        {card.icon}
+                      </svg>
+                    </span>
+                    <div>
+                      <h3 className="text-lg font-semibold text-stone-900">{card.title}</h3>
+                      <p className="mt-2 text-stone-600 leading-relaxed">{card.body}</p>
+                      {card.extra && (
+                        <ul className="mt-4 grid grid-cols-1 gap-2 text-sm text-stone-600 sm:grid-cols-2">
+                          <li className="flex items-center gap-2">
+                            <span className="h-1 w-1 rounded-full bg-primary-600" aria-hidden />
+                            {t('services.security.bullets.alarms')}
+                          </li>
+                          <li className="flex items-center gap-2">
+                            <span className="h-1 w-1 rounded-full bg-primary-600" aria-hidden />
+                            {t('services.security.bullets.cameras')}
+                          </li>
+                          <li className="flex items-center gap-2">
+                            <span className="h-1 w-1 rounded-full bg-primary-600" aria-hidden />
+                            {t('services.security.bullets.fences')}
+                          </li>
+                          <li className="flex items-center gap-2">
+                            <span className="h-1 w-1 rounded-full bg-primary-600" aria-hidden />
+                            {t('services.security.bullets.automation')}
+                          </li>
+                        </ul>
+                      )}
+                    </div>
+                  </div>
+                </article>
+              ))}
+            </div>
           </div>
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+        </section>
+
+        <section id="proceso" className="scroll-mt-24 border-b border-stone-200/80 py-20 md:py-28">
+          <div className="mx-auto max-w-6xl px-4 sm:px-6">
+            <h2 className="text-3xl font-semibold tracking-tight text-stone-900 md:text-4xl">
+              {t('process.title')}
+            </h2>
+            <p className="mt-4 max-w-2xl text-lg text-stone-600">{t('process.subtitle')}</p>
+
+            <ol className="mt-12 grid gap-8 md:grid-cols-3">
+              {[
+                { n: '01', title: t('process.step1.title'), desc: t('process.step1.description') },
+                { n: '02', title: t('process.step2.title'), desc: t('process.step2.description') },
+                { n: '03', title: t('process.step3.title'), desc: t('process.step3.description') },
+              ].map((step) => (
+                <li key={step.n} className="relative border-l-2 border-stone-200 pl-6 md:border-l-0 md:border-t-2 md:pt-8 md:pl-0">
+                  <span className="absolute -left-[9px] top-0 flex h-4 w-4 rounded-full border-2 border-white bg-stone-900 md:left-0 md:-top-[9px]" aria-hidden />
+                  <span className="text-xs font-semibold text-stone-400">{step.n}</span>
+                  <h3 className="mt-2 text-lg font-semibold text-stone-900">{step.title}</h3>
+                  <p className="mt-2 text-stone-600 leading-relaxed">{step.desc}</p>
+                </li>
+              ))}
+            </ol>
+          </div>
+        </section>
+
+        <section id="nosotros" className="scroll-mt-24 border-b border-stone-200/80 py-20 md:py-28">
+          <div className="mx-auto max-w-6xl px-4 sm:px-6">
+            <div className="grid gap-12 lg:grid-cols-2 lg:items-start lg:gap-16">
+              <div>
+                <h2 className="text-3xl font-semibold tracking-tight text-stone-900 md:text-4xl">
+                  {t('about.title')}
+                </h2>
+                <p className="mt-4 text-lg text-stone-600">{t('about.description')}</p>
+                <p className="mt-6 text-stone-600 leading-relaxed">{t('about.paragraph1')}</p>
+                <p className="mt-4 text-stone-600 leading-relaxed">{t('about.paragraph2')}</p>
+              </div>
+              <aside className="rounded-2xl border border-stone-200 bg-white p-8 shadow-sm">
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-stone-100 text-stone-700">
+                  <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                  </svg>
+                </div>
+                <p className="mt-6 font-semibold text-stone-900">{t('about.highlight')}</p>
+                <p className="mt-1 text-sm text-primary-700">{t('about.role')}</p>
+              </aside>
+            </div>
+          </div>
+        </section>
+
+        <section className="border-b border-stone-200/80 bg-stone-900 py-16 text-white md:py-20">
+          <div className="mx-auto max-w-6xl px-4 sm:px-6 md:flex md:items-center md:justify-between md:gap-12">
             <div>
-              <h3 className="text-3xl font-bold text-gray-900 mb-6">
-                {t('about.heading')}
-              </h3>
-              <p className="text-lg text-gray-600 mb-6">
-                {t('about.paragraph1')}
-              </p>
-              <p className="text-lg text-gray-600 mb-6">
-                {t('about.paragraph2')}
-              </p>
-              <p className="text-lg text-gray-600">
-                {t('about.paragraph3')}
-              </p>
+              <h2 className="text-2xl font-semibold tracking-tight md:text-3xl">{t('cta.title')}</h2>
+              <p className="mt-3 max-w-xl text-stone-300">{t('cta.description')}</p>
             </div>
-            <div className="bg-gradient-to-br from-primary-50 to-primary-100 p-8 rounded-2xl">
-              <div className="text-center">
-                <div className="w-32 h-32 bg-primary-600 rounded-full mx-auto mb-6 flex items-center justify-center">
-                  <svg className="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                  </svg>
-                </div>
-                <h4 className="text-2xl font-bold text-gray-900 mb-2">
-                  {t('about.ceo.name')}
-                </h4>
-                <p className="text-primary-600 font-semibold mb-4">{t('about.ceo.title')}</p>
-                <p className="text-gray-600">
-                  {t('about.ceo.description')}
-                </p>
-              </div>
-            </div>
+            <a
+              href="#contacto"
+              className="mt-8 inline-flex shrink-0 items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-medium text-stone-900 transition hover:bg-stone-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-400 focus-visible:ring-offset-2 focus-visible:ring-offset-stone-900 md:mt-0"
+            >
+              {t('cta.button')}
+            </a>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Benefits Section */}
-      <section id="beneficios" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-primary-50 to-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              {t('benefits.title')}
+        <section id="faq" className="scroll-mt-24 border-b border-stone-200/80 py-20 md:py-28">
+          <div className="mx-auto max-w-3xl px-4 sm:px-6">
+            <h2 className="text-3xl font-semibold tracking-tight text-stone-900 md:text-4xl">
+              {t('faq.title')}
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              {t('benefits.description')}
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <div className="space-y-6">
-                <div className="flex items-start">
-                  <div className="flex-shrink-0 w-8 h-8 bg-primary-600 rounded-full flex items-center justify-center">
-                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                  </div>
-                  <div className="ml-4">
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">{t('benefits.roi.title')}</h3>
-                    <p className="text-gray-600">
-                      {t('benefits.roi.description')}
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-start">
-                  <div className="flex-shrink-0 w-8 h-8 bg-primary-600 rounded-full flex items-center justify-center">
-                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                  </div>
-                  <div className="ml-4">
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">{t('benefits.saveTime.title')}</h3>
-                    <p className="text-gray-600">
-                      {t('benefits.saveTime.description')}
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-start">
-                  <div className="flex-shrink-0 w-8 h-8 bg-primary-600 rounded-full flex items-center justify-center">
-                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                  </div>
-                  <div className="ml-4">
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">{t('benefits.scalability.title')}</h3>
-                    <p className="text-gray-600">
-                      {t('benefits.scalability.description')}
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-start">
-                  <div className="flex-shrink-0 w-8 h-8 bg-primary-600 rounded-full flex items-center justify-center">
-                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                  </div>
-                  <div className="ml-4">
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">{t('benefits.support.title')}</h3>
-                    <p className="text-gray-600">
-                      {t('benefits.support.description')}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="bg-white p-8 rounded-2xl shadow-xl">
-              <div className="space-y-4">
-                <div className="flex items-center justify-between p-4 bg-primary-50 rounded-lg">
-                  <span className="text-gray-700 font-medium">{t('benefits.stats.messagesToday')}</span>
-                  <span className="text-2xl font-bold text-primary-600">1,234,567</span>
-                </div>
-                <div className="flex items-center justify-between p-4 bg-primary-50 rounded-lg">
-                  <span className="text-gray-700 font-medium">{t('benefits.stats.deliveryRate')}</span>
-                  <span className="text-2xl font-bold text-green-600">99.8%</span>
-                </div>
-                <div className="flex items-center justify-between p-4 bg-primary-50 rounded-lg">
-                  <span className="text-gray-700 font-medium">{t('benefits.stats.avgTime')}</span>
-                  <span className="text-2xl font-bold text-primary-600">0.3s</span>
-                </div>
-                <div className="flex items-center justify-between p-4 bg-primary-50 rounded-lg">
-                  <span className="text-gray-700 font-medium">{t('benefits.stats.activeClients')}</span>
-                  <span className="text-2xl font-bold text-primary-600">10,234</span>
-                </div>
-              </div>
+            <div className="mt-10 space-y-3">
+              {(['q1', 'q2', 'q3', 'q4'] as const).map((key) => (
+                <details
+                  key={key}
+                  className="group rounded-xl border border-stone-200 bg-white px-5 py-4 shadow-sm open:shadow-md"
+                >
+                  <summary className="cursor-pointer list-none font-medium text-stone-900 [&::-webkit-details-marker]:hidden">
+                    <span className="flex items-center justify-between gap-4">
+                      {t(`faq.${key}.question`)}
+                      <span className="text-stone-400 transition group-open:rotate-180" aria-hidden>
+                        <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                        </svg>
+                      </span>
+                    </span>
+                  </summary>
+                  <p className="mt-3 text-stone-600 leading-relaxed border-t border-stone-100 pt-3">
+                    {t(`faq.${key}.answer`)}
+                  </p>
+                </details>
+              ))}
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Pricing Section */}
-      <section id="precios" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              {t('pricing.title')}
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              {t('pricing.description')}
-            </p>
-          </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="p-8 rounded-2xl border-2 border-gray-200 hover:border-primary-600 transition">
-              <h3 className="text-2xl font-bold text-gray-900 mb-2">{t('pricing.starter.name')}</h3>
-              <div className="mb-6">
-                <span className="text-4xl font-bold text-gray-900">€29</span>
-                <span className="text-gray-600">{t('pricing.starter.price')}</span>
-              </div>
-              <ul className="space-y-4 mb-8">
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span className="text-gray-600">{t('pricing.starter.features.messages')}</span>
-                </li>
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span className="text-gray-600">{t('pricing.starter.features.support')}</span>
-                </li>
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span className="text-gray-600">{t('pricing.starter.features.api')}</span>
-                </li>
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span className="text-gray-600">{t('pricing.starter.features.dashboard')}</span>
-                </li>
-              </ul>
-              <button className="w-full bg-gray-200 text-gray-900 px-6 py-3 rounded-lg font-semibold hover:bg-gray-300 transition">
-                {t('pricing.starter.button')}
-              </button>
-            </div>
-            <div className="p-8 rounded-2xl border-2 border-primary-600 bg-primary-50 relative">
-              <div className="absolute top-0 right-0 bg-primary-600 text-white px-4 py-1 rounded-bl-lg rounded-tr-2xl text-sm font-semibold">
-                {t('pricing.professional.badge')}
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-2">{t('pricing.professional.name')}</h3>
-              <div className="mb-6">
-                <span className="text-4xl font-bold text-gray-900">€99</span>
-                <span className="text-gray-600">{t('pricing.professional.price')}</span>
-              </div>
-              <ul className="space-y-4 mb-8">
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span className="text-gray-600">{t('pricing.professional.features.messages')}</span>
-                </li>
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span className="text-gray-600">{t('pricing.professional.features.support')}</span>
-                </li>
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span className="text-gray-600">{t('pricing.professional.features.api')}</span>
-                </li>
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span className="text-gray-600">{t('pricing.professional.features.analytics')}</span>
-                </li>
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span className="text-gray-600">{t('pricing.professional.features.scheduling')}</span>
-                </li>
-              </ul>
-              <button className="w-full bg-primary-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-700 transition">
-                {t('pricing.professional.button')}
-              </button>
-            </div>
-            <div className="p-8 rounded-2xl border-2 border-gray-200 hover:border-primary-600 transition">
-              <h3 className="text-2xl font-bold text-gray-900 mb-2">{t('pricing.enterprise.name')}</h3>
-              <div className="mb-6">
-                <span className="text-4xl font-bold text-gray-900">{t('pricing.enterprise.price')}</span>
-              </div>
-              <ul className="space-y-4 mb-8">
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span className="text-gray-600">{t('pricing.enterprise.features.unlimited')}</span>
-                </li>
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span className="text-gray-600">{t('pricing.enterprise.features.support')}</span>
-                </li>
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span className="text-gray-600">{t('pricing.enterprise.features.sla')}</span>
-                </li>
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span className="text-gray-600">{t('pricing.enterprise.features.onboarding')}</span>
-                </li>
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span className="text-gray-600">{t('pricing.enterprise.features.manager')}</span>
-                </li>
-              </ul>
-              <button className="w-full bg-gray-200 text-gray-900 px-6 py-3 rounded-lg font-semibold hover:bg-gray-300 transition">
-                {t('pricing.enterprise.button')}
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-primary-600 to-primary-700">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            {t('cta.title')}
-          </h2>
-          <p className="text-xl text-primary-100 mb-8">
-            {t('cta.description')}
-          </p>
-          <button className="bg-white text-primary-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-primary-50 transition shadow-lg">
-            {t('cta.button')}
-          </button>
-        </div>
-      </section>
-
-      {/* Contact Section */}
-      <section id="contacto" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+        <section id="contacto" className="scroll-mt-24 py-20 md:py-28">
+          <div className="mx-auto max-w-6xl px-4 sm:px-6">
+            <h2 className="text-3xl font-semibold tracking-tight text-stone-900 md:text-4xl">
               {t('contact.title')}
             </h2>
-            <p className="text-xl text-gray-600">
-              {t('contact.description')}
-            </p>
-          </div>
-          <div className="bg-gray-50 rounded-2xl p-8 md:p-12">
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                  {t('contact.email')}
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-600 focus:border-transparent"
-                  placeholder={t('contact.emailPlaceholder')}
-                  required
-                />
-              </div>
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                  {t('contact.message')}
-                </label>
-                <textarea
-                  id="message"
-                  rows={5}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-600 focus:border-transparent"
-                  placeholder={t('contact.messagePlaceholder')}
-                  required
-                />
-              </div>
-              <button
-                type="submit"
-                className="w-full bg-primary-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-700 transition"
-              >
-                {t('contact.send')}
-              </button>
-            </form>
-            <div className="mt-8 pt-8 border-t border-gray-200">
-              <div className="grid md:grid-cols-2 gap-6 text-center">
-                <div>
-                  <div className="text-sm text-gray-600 mb-1">{t('contact.emailLabel')}</div>
-                  <div className="text-primary-600 font-semibold">ventas@bitflow.bid</div>
-                </div>
-                <div>
-                  <div className="text-sm text-gray-600 mb-1">{t('contact.phoneLabel')}</div>
-                  <div className="text-primary-600 font-semibold">+593 988541665</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+            <p className="mt-4 max-w-2xl text-lg text-stone-600">{t('contact.subtitle')}</p>
 
-      {/* Footer */}
-      <footer className="bg-gray-900 text-gray-300 py-12 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-4 gap-8 mb-8">
-            <div>
-              <img 
-                src="https://bitflow-public.s3.us-east-1.amazonaws.com/Bitflow-logo.png" 
-                alt="BITFLOW Logo" 
-                className="h-10 w-auto mb-4 brightness-0 invert"
-              />
-              <p className="text-sm">
-                {t('footer.description')}
-              </p>
-            </div>
-            <div>
-              <h4 className="text-white font-semibold mb-4">{t('footer.product')}</h4>
-              <ul className="space-y-2 text-sm">
-                <li><a href="#caracteristicas" className="hover:text-white transition">{t('footer.links.features')}</a></li>
-                <li><a href="#precios" className="hover:text-white transition">{t('footer.links.pricing')}</a></li>
-                <li><a href="#" className="hover:text-white transition">{t('footer.links.api')}</a></li>
-                <li><a href="#" className="hover:text-white transition">{t('footer.links.docs')}</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-white font-semibold mb-4">{t('footer.company')}</h4>
-              <ul className="space-y-2 text-sm">
-                <li><a href="#sobre-nosotros" className="hover:text-white transition">{t('footer.links.about')}</a></li>
-                <li><a href="#proyectos" className="hover:text-white transition">{t('footer.links.projects')}</a></li>
-                <li><a href="#" className="hover:text-white transition">{t('footer.links.blog')}</a></li>
-                <li><a href="#contacto" className="hover:text-white transition">{t('footer.links.contact')}</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-white font-semibold mb-4">{t('footer.legal')}</h4>
-              <ul className="space-y-2 text-sm">
-                <li><a href="#" className="hover:text-white transition">{t('footer.links.privacy')}</a></li>
-                <li><a href="#" className="hover:text-white transition">{t('footer.links.terms')}</a></li>
-                <li><a href="#" className="hover:text-white transition">{t('footer.links.cookies')}</a></li>
-                <li><a href="#" className="hover:text-white transition">{t('footer.links.gdpr')}</a></li>
-              </ul>
+            <div className="mt-12 grid gap-12 lg:grid-cols-5">
+              <div className="lg:col-span-3">
+                <form onSubmit={handleSubmit} className="space-y-5">
+                  <div>
+                    <label htmlFor="nombre" className="block text-sm font-medium text-stone-700">
+                      {t('contact.name')}
+                    </label>
+                    <input
+                      id="nombre"
+                      name="name"
+                      type="text"
+                      autoComplete="name"
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
+                      required
+                      className="mt-1.5 w-full rounded-xl border border-stone-200 bg-white px-4 py-3 text-stone-900 shadow-sm placeholder:text-stone-400 focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-500/20"
+                      placeholder={t('contact.namePlaceholder')}
+                    />
+                  </div>
+                  <div className="grid gap-5 sm:grid-cols-2">
+                    <div>
+                      <label htmlFor="correo" className="block text-sm font-medium text-stone-700">
+                        {t('contact.email')}
+                      </label>
+                      <input
+                        id="correo"
+                        name="email"
+                        type="email"
+                        autoComplete="email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        required
+                        className="mt-1.5 w-full rounded-xl border border-stone-200 bg-white px-4 py-3 text-stone-900 shadow-sm placeholder:text-stone-400 focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-500/20"
+                        placeholder={t('contact.emailPlaceholder')}
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="telefono" className="block text-sm font-medium text-stone-700">
+                        {t('contact.phone')}
+                      </label>
+                      <input
+                        id="telefono"
+                        name="phone"
+                        type="tel"
+                        autoComplete="tel"
+                        value={phone}
+                        onChange={(e) => setPhone(e.target.value)}
+                        className="mt-1.5 w-full rounded-xl border border-stone-200 bg-white px-4 py-3 text-stone-900 shadow-sm placeholder:text-stone-400 focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-500/20"
+                        placeholder={t('contact.phonePlaceholder')}
+                      />
+                    </div>
+                  </div>
+                  <div>
+                    <label htmlFor="servicio" className="block text-sm font-medium text-stone-700">
+                      {t('contact.service')}
+                    </label>
+                    <select
+                      id="servicio"
+                      name="service"
+                      value={service}
+                      onChange={(e) => setService(e.target.value)}
+                      required
+                      className="mt-1.5 w-full rounded-xl border border-stone-200 bg-white px-4 py-3 text-stone-900 shadow-sm focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-500/20"
+                    >
+                      <option value="">{t('contact.servicePlaceholder')}</option>
+                      <option value="software">{t('contact.serviceSoftware')}</option>
+                      <option value="consulting">{t('contact.serviceConsulting')}</option>
+                      <option value="platforms">{t('contact.servicePlatforms')}</option>
+                      <option value="security">{t('contact.serviceSecurity')}</option>
+                      <option value="other">{t('contact.serviceOther')}</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label htmlFor="mensaje" className="block text-sm font-medium text-stone-700">
+                      {t('contact.message')}
+                    </label>
+                    <textarea
+                      id="mensaje"
+                      name="message"
+                      rows={5}
+                      value={message}
+                      onChange={(e) => setMessage(e.target.value)}
+                      required
+                      className="mt-1.5 w-full resize-y rounded-xl border border-stone-200 bg-white px-4 py-3 text-stone-900 shadow-sm placeholder:text-stone-400 focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-500/20"
+                      placeholder={t('contact.messagePlaceholder')}
+                    />
+                  </div>
+                  <button
+                    type="submit"
+                    className="w-full rounded-full bg-stone-900 py-3.5 text-sm font-medium text-white transition hover:bg-stone-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-600 focus-visible:ring-offset-2 sm:w-auto sm:px-10"
+                  >
+                    {t('contact.send')}
+                  </button>
+                </form>
+              </div>
+
+              <div className="lg:col-span-2">
+                <div className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
+                  <h3 className="text-sm font-semibold uppercase tracking-wider text-stone-500">
+                    {t('contact.channelsTitle')}
+                  </h3>
+                  <ul className="mt-6 space-y-5">
+                    <li>
+                      <p className="text-xs text-stone-500">{t('contact.emailLabel')}</p>
+                      <a
+                        href={`mailto:${EMAIL}`}
+                        className="mt-1 block text-base font-medium text-primary-700 hover:text-primary-800"
+                      >
+                        {EMAIL}
+                      </a>
+                    </li>
+                    <li>
+                      <p className="text-xs text-stone-500">{t('contact.phoneLabel')}</p>
+                      <a href={`tel:+${PHONE_WHATSAPP}`} className="mt-1 block text-base font-medium text-stone-900">
+                        {PHONE_DISPLAY}
+                      </a>
+                    </li>
+                  </ul>
+                  <a
+                    href={`https://wa.me/${PHONE_WHATSAPP}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-8 flex w-full items-center justify-center gap-2 rounded-full border border-stone-200 bg-stone-50 py-3 text-sm font-medium text-stone-900 transition hover:bg-stone-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-600 focus-visible:ring-offset-2"
+                  >
+                    <svg className="h-5 w-5 text-[#25D366]" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+                      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                    </svg>
+                    {t('contact.whatsapp')}
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
-          <div className="border-t border-gray-800 pt-8 text-center text-sm">
-            <p>&copy; {new Date().getFullYear()} BITFLOW. {t('footer.copyright')}</p>
+        </section>
+      </div>
+
+      <footer className="border-t border-stone-200 bg-white py-12">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+          <div className="flex flex-col gap-10 md:flex-row md:items-start md:justify-between">
+            <div className="max-w-sm">
+              <img src={LOGO_URL} alt="" className="h-8 w-auto opacity-90" width={120} height={36} />
+              <p className="mt-4 text-sm text-stone-600">{t('footer.tagline')}</p>
+            </div>
+            <div className="grid grid-cols-2 gap-10 sm:grid-cols-3">
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-wider text-stone-500">{t('footer.services')}</p>
+                <ul className="mt-4 space-y-2 text-sm">
+                  <li>
+                    <a href="#servicios" className="text-stone-600 hover:text-stone-900">
+                      {t('footer.links.services')}
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#proceso" className="text-stone-600 hover:text-stone-900">
+                      {t('footer.links.process')}
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-wider text-stone-500">{t('footer.company')}</p>
+                <ul className="mt-4 space-y-2 text-sm">
+                  <li>
+                    <a href="#nosotros" className="text-stone-600 hover:text-stone-900">
+                      {t('footer.links.about')}
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#contacto" className="text-stone-600 hover:text-stone-900">
+                      {t('footer.links.contact')}
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-wider text-stone-500">{t('footer.legal')}</p>
+                <ul className="mt-4 space-y-2 text-sm">
+                  <li>
+                    <a href="#" className="text-stone-600 hover:text-stone-900">
+                      {t('footer.links.privacy')}
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="text-stone-600 hover:text-stone-900">
+                      {t('footer.links.terms')}
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
+          <p className="mt-12 border-t border-stone-100 pt-8 text-center text-sm text-stone-500">
+            &copy; {new Date().getFullYear()} BITFLOW. {t('footer.rights')}
+          </p>
         </div>
       </footer>
     </main>
   )
 }
-

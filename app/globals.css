@@ -3,19 +3,31 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --surface: 250 250 249;
+  --foreground: 28 25 23;
+  --muted: 120 113 108;
+  --border: 231 229 228;
+  --accent: 2 132 199;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: rgb(var(--foreground));
+  background: rgb(var(--surface));
+}
+
+::selection {
+  background-color: rgb(224 242 254);
+  color: rgb(12 74 110);
 }
 
 @layer utilities {
@@ -23,5 +35,3 @@ body {
     text-wrap: balance;
   }
 }
-
-
