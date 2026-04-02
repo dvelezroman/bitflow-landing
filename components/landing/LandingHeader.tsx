@@ -27,8 +27,10 @@ export function LandingHeader() {
 
   const mobileLinks: [string, string][] = [
     ['#servicios', t('nav.services')],
+    ['#marcas-alianzas', t('nav.partners')],
     ['#experiencia', t('nav.showcase')],
     ['#casos', t('nav.cases')],
+    ['#casos-exitosos', t('nav.successStories')],
     ['#testimonios', t('nav.testimonials')],
     ['#proceso', t('nav.process')],
     ['#nosotros', t('nav.about')],
@@ -49,15 +51,21 @@ export function LandingHeader() {
           />
         </a>
 
-        <nav className="hidden items-center gap-6 lg:flex" aria-label="Principal">
+        <nav className="hidden items-center gap-4 text-[0.8125rem] xl:flex xl:gap-5 xl:text-sm" aria-label="Principal">
           <a href="#servicios" className={navLinkClass}>
             {t('nav.services')}
+          </a>
+          <a href="#marcas-alianzas" className={navLinkClass}>
+            {t('nav.partners')}
           </a>
           <a href="#experiencia" className={navLinkClass}>
             {t('nav.showcase')}
           </a>
           <a href="#casos" className={navLinkClass}>
             {t('nav.cases')}
+          </a>
+          <a href="#casos-exitosos" className={navLinkClass}>
+            {t('nav.successStories')}
           </a>
           <a href="#testimonios" className={navLinkClass}>
             {t('nav.testimonials')}
@@ -83,13 +91,13 @@ export function LandingHeader() {
           </div>
           <a
             href="#contacto"
-            className="hidden rounded-full bg-stone-900 px-4 py-2 text-sm font-medium text-white transition hover:bg-stone-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-600 focus-visible:ring-offset-2 lg:inline-flex"
+            className="hidden rounded-full bg-stone-900 px-4 py-2 text-sm font-medium text-white transition hover:bg-stone-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-600 focus-visible:ring-offset-2 xl:inline-flex"
           >
             {t('nav.cta')}
           </a>
           <button
             type="button"
-            className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-stone-200 bg-white text-stone-800 lg:hidden"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-stone-200 bg-white text-stone-800 xl:hidden"
             onClick={() => setMenuOpen((o) => !o)}
             aria-expanded={menuOpen}
             aria-controls="mobile-menu"
@@ -109,7 +117,7 @@ export function LandingHeader() {
       </div>
 
       {menuOpen && (
-        <div id="mobile-menu" className="border-t border-stone-200 bg-stone-50 px-4 py-4 lg:hidden">
+        <div id="mobile-menu" className="border-t border-stone-200 bg-stone-50 px-4 py-4 xl:hidden">
           <nav className="flex flex-col gap-1" aria-label="Móvil">
             {mobileLinks.map(([href, label]) => (
               <a

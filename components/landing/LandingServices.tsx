@@ -43,6 +43,19 @@ export function LandingServices() {
         <h2 className="text-3xl font-semibold tracking-tight text-stone-900 md:text-4xl">{t('services.title')}</h2>
         <p className="mt-4 max-w-2xl text-lg text-stone-600">{t('services.subtitle')}</p>
 
+        <div className="mt-10 rounded-2xl border border-stone-200 bg-stone-900 px-6 py-8 text-stone-100 shadow-sm md:px-8 md:py-9">
+          <h3 className="text-lg font-semibold tracking-tight text-white md:text-xl">{t('services.engineering.title')}</h3>
+          <p className="mt-3 max-w-3xl text-sm leading-relaxed text-stone-300 md:text-base">{t('services.engineering.intro')}</p>
+          <ul className="mt-6 space-y-3 border-t border-stone-700 pt-6 text-sm text-stone-200 md:text-[0.9375rem]">
+            {[0, 1, 2].map((i) => (
+              <li key={i} className="flex gap-3">
+                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary-400" aria-hidden />
+                <span>{t(`services.engineering.points.${i}`)}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
         <div className="mt-12 grid gap-6 md:grid-cols-2">
           {cards.map((card) => (
             <article

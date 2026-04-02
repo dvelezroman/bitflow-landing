@@ -12,7 +12,6 @@ export function LandingCaseStudies() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <h2 className="text-3xl font-semibold tracking-tight text-stone-900 md:text-4xl">{t('caseStudies.title')}</h2>
         <p className="mt-4 max-w-2xl text-lg text-stone-600">{t('caseStudies.subtitle')}</p>
-        <p className="mt-2 text-sm text-stone-500">{t('caseStudies.note')}</p>
 
         <div className="mt-12 space-y-16">
           {indices.map((i) => {

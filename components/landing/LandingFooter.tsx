@@ -24,8 +24,18 @@ export function LandingFooter() {
                   </a>
                 </li>
                 <li>
+                  <a href="#marcas-alianzas" className="text-stone-600 hover:text-stone-900">
+                    {t('footer.links.partners')}
+                  </a>
+                </li>
+                <li>
                   <a href="#casos" className="text-stone-600 hover:text-stone-900">
                     {t('footer.links.cases')}
+                  </a>
+                </li>
+                <li>
+                  <a href="#casos-exitosos" className="text-stone-600 hover:text-stone-900">
+                    {t('footer.links.successStories')}
                   </a>
                 </li>
                 <li>

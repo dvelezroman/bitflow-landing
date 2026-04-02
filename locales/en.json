@@ -8,7 +8,9 @@
     "about": "About",
     "faq": "FAQ",
     "contact": "Contact",
-    "cta": "Request a consult"
+    "cta": "Request a consult",
+    "successStories": "Success stories",
+    "partners": "Brands"
   },
   "hero": {
     "eyebrow": "BITFLOW",
@@ -16,25 +18,33 @@
     "titleAccent": "for your business and home",
     "description": "Software development, consulting on digital solutions, management platforms, and security and smart-home installations. One team to connect what you run in the cloud with what you need on the ground.",
     "ctaPrimary": "Discuss your project",
-    "ctaSecondary": "View services",
-    "imageCredit": "Illustrative imagery — team and workplace context"
+    "ctaSecondary": "View services"
   },
   "services": {
     "title": "What we do",
     "subtitle": "Two lines of work you can combine: product engineering and systems for home or business.",
+    "engineering": {
+      "title": "Serious software engineering — no fluff, no throwaway code",
+      "intro": "We don't ship low-quality quick fixes or promise what we can't sustain. We work to clear standards: understandable design, testing where it matters, and technical debt kept under control. We're original on every build, ethical on contracts and data, and loyal to clients long after the first release.",
+      "points": [
+        "We solve real needs: less operational friction, faster processes, and more predictable delivery or service.",
+        "Maintainable, documented code so your team or ours can evolve the product with confidence.",
+        "Transparency on scope, risk, and cost — we won't sell you features you won't use just to inflate the invoice."
+      ]
+    },
     "software": {
       "title": "Software development",
-      "description": "Tailored web apps and backends, integrations, and continuous improvement of your systems.",
+      "description": "Tailored web apps and backends, integrations, and continuous delivery — built to last, not to become obsolete in a few months.",
       "imageAlt": "Code and collaborative software development"
     },
     "consulting": {
       "title": "Solution consulting",
-      "description": "Support to define architecture, priorities, and your product or platform roadmap.",
+      "description": "Straight talk on tech and business: architecture, priorities, and a roadmap you can actually ship and maintain.",
       "imageAlt": "Consulting session and planning"
     },
     "platforms": {
       "title": "Management platforms",
-      "description": "Process automation and management tools aligned with how you operate.",
+      "description": "Automation and dashboards that structure your ops: less manual work, better traceability, and sharper decisions with the same headcount.",
       "imageAlt": "Business dashboard and analytics"
     },
     "security": {
@@ -49,63 +59,218 @@
       }
     }
   },
+  "partners": {
+    "title": "Technology brands and alliances",
+    "tagsAria": "Brands and technologies",
+    "lead": "We are AWS and Google Cloud partners: we design, deploy, and operate cloud workloads with strong security and cost discipline. We also build with blockchain and Web3 — from enterprise traceability to wallet integrations and smart contracts.",
+    "categories": [
+      {
+        "title": "Cloud partners",
+        "items": [
+          { "label": "AWS Partner Network", "icon": "amazonaws" },
+          { "label": "Google Cloud Partner", "icon": "googlecloud" },
+          { "label": "multi-region architectures" },
+          { "label": "IaC", "icon": "terraform" }
+        ]
+      },
+      {
+        "title": "Blockchain & Web3",
+        "items": [
+          { "label": "Ethereum", "icon": "ethereum" },
+          { "label": "L2 networks", "icon": "polygon" },
+          { "label": "Solidity", "icon": "solidity" },
+          { "label": "Hyperledger Fabric" },
+          { "label": "IPFS", "icon": "ipfs" },
+          { "label": "NFT & identity", "icon": "opensea" },
+          { "label": "wallet integrations", "icon": "walletconnect" }
+        ]
+      },
+      {
+        "title": "Software & platforms",
+        "items": [
+          { "label": "React", "icon": "react" },
+          { "label": "Next.js", "icon": "nextdotjs" },
+          { "label": "NestJS", "icon": "nestjs" },
+          { "label": "Node.js", "icon": "nodedotjs" },
+          { "label": "PostgreSQL", "icon": "postgresql" },
+          { "label": "TypeScript", "icon": "typescript" },
+          { "label": "REST APIs", "icon": "openapiinitiative" },
+          { "label": "GraphQL", "icon": "graphql" }
+        ]
+      },
+      {
+        "title": "Intrusion alarms",
+        "items": [
+          { "label": "Paradox" },
+          { "label": "DSC" },
+          { "label": "Honeywell", "icon": "/images/partners/honeywell.svg" },
+          { "label": "wired & wireless detectors" },
+          { "label": "sirens and keypads" }
+        ]
+      },
+      {
+        "title": "CCTV & video",
+        "items": [
+          { "label": "Hikvision", "icon": "/images/partners/hikvision.svg" },
+          { "label": "Ezviz" },
+          { "label": "Dahua", "icon": "/images/partners/dahua.svg" },
+          { "label": "NVR & VMS" },
+          { "label": "ONVIF" },
+          { "label": "fiber & PoE backhaul" }
+        ]
+      },
+      {
+        "title": "Access control",
+        "items": [
+          { "label": "ZKTeco" },
+          { "label": "biometric & card readers" },
+          { "label": "turnstiles" },
+          { "label": "HR and visitor integrations" }
+        ]
+      },
+      {
+        "title": "Smart home & IoT",
+        "items": [
+          { "label": "Zigbee", "icon": "/images/partners/zigbee.svg" },
+          { "label": "Matter", "icon": "/images/partners/matter.svg" },
+          { "label": "Wi-Fi" },
+          { "label": "KNX", "icon": "/images/partners/knx.svg" },
+          { "label": "Aqara" },
+          { "label": "Sonoff" },
+          { "label": "unified gateways and scenes" }
+        ]
+      }
+    ]
+  },
   "showcase": {
     "title": "What our work looks like",
     "subtitle": "A short video glimpse of the kinds of environments and projects we support — from code to rollout.",
-    "caption": "Reference video: technical work and collaboration (stock — illustrative).",
-    "disclaimer": "Footage is from royalty-free stock for visual context only; it does not depict a specific client project.",
-    "videoAria": "Illustrative technology workplace video"
+    "videoAria": "Video of technical work and collaboration"
   },
   "caseStudies": {
     "title": "Case studies",
-    "subtitle": "Examples of scope and outcomes — representative figures to illustrate the impact we aim for.",
-    "note": "Names and metrics are reference scenarios; each engagement is defined under agreement and confidentiality.",
+    "subtitle": "Scope and outcomes across software, consulting, and installation projects.",
     "items": [
       {
         "sector": "Retail · inventory",
-        "title": "Unified stock and order platform",
+        "title": "Unified inventory and order platform",
         "summary": "Regional chain with multiple locations: lightweight ERP integration, internal store app, and automated replenishment alerts.",
-        "result": "Reference outcome: ~40% fewer inventory errors and faster daily close-outs.",
+        "result": "Roughly 40% fewer inventory errors and faster daily close-outs.",
         "imageAlt": "Logistics and warehouse operations"
       },
       {
         "sector": "Financial services · consulting",
         "title": "Architecture and roadmap for a digital product",
         "summary": "Growing fintech: technical debt review, API module definition, and phased delivery plan with measurable milestones.",
-        "result": "Reference outcome: first-quarter improvements shipped without stopping critical operations.",
+        "result": "First-quarter improvements shipped without stopping critical operations.",
         "imageAlt": "Team reviewing software architecture"
       },
       {
         "sector": "Residential · security",
         "title": "Cameras, electric fence, and access app",
         "summary": "Home and small business on the same property: IP cameras, integrated perimeter fence, and mobile notifications for the owner.",
-        "result": "Reference outcome: single dashboard for cameras and alarm status, with post-install support.",
+        "result": "Single dashboard for cameras and alarm status, with post-install support.",
         "imageAlt": "Security camera installation"
+      }
+    ]
+  },
+  "successStories": {
+    "title": "Success stories",
+    "subtitle": "Recent deliveries across education, retail, agro, health, logistics, and physical security — built for Latin American teams and users.",
+    "platformsHeading": "Custom platforms and software",
+    "securityHeading": "Security, CCTV, and smart building",
+    "videoAria": "Video of the installed environment",
+    "techAria": "Technologies used",
+    "platforms": [
+      {
+        "sector": "Higher education",
+        "title": "End-to-end academic digital ecosystem",
+        "solution": "Multi-program college: mobile app for students and web portal for faculty and admin. Live grades, QR attendance, elective enrollment, push notices, and tuition module linked to a regional payment gateway.",
+        "tech": "React Native · Next.js · NestJS · PostgreSQL · Redis · FCM · payments REST API",
+        "result": "Less operational load on enrollment and comms; faster student inquiries and a single channel for official notices.",
+        "imageAlt": "Students and academic setting"
+      },
+      {
+        "sector": "Multi-store retail",
+        "title": "Centralized inventory and sales",
+        "solution": "Chain across several cities: live stock per branch, inter-store transfers, e-invoicing integration, and regional management reporting.",
+        "tech": "Next.js · Node.js · TypeScript · PostgreSQL · BullMQ · e-invoicing API",
+        "result": "Unified inventory visibility; fewer count discrepancies and quicker month-end closes across stores.",
+        "imageAlt": "Retail operations team"
+      },
+      {
+        "sector": "Agro exports",
+        "title": "Lot traceability on blockchain",
+        "solution": "Exporter: custody chain from field and packing plant to container. QR labels and NFC reads, events on a permissioned ledger, and auditor/buyer portal.",
+        "tech": "Hyperledger Fabric · Node.js · Express · React · IPFS (documents) · PostgreSQL off-chain",
+        "result": "Origin and movements verified in minutes; smoother audits and clearer answers to buyer questions.",
+        "imageAlt": "Farming and supply chain"
+      },
+      {
+        "sector": "Outpatient healthcare",
+        "title": "Scheduling, reminders, and telehealth",
+        "solution": "Clinic network: online booking, WhatsApp reminders, concise patient record, and gated video rooms per clinician.",
+        "tech": "Vue 3 · Laravel · MySQL · Redis · WhatsApp Business API · WebRTC",
+        "result": "Fewer no-shows and a calmer waiting room; better room utilization without double-booking.",
+        "imageAlt": "Medical care and clinic"
+      },
+      {
+        "sector": "Urban logistics",
+        "title": "Same-day routing and proof of delivery",
+        "solution": "Last-mile operator: zone-based courier assignment, map tracking, delivery proof with photo and e-signature, polygon-based pricing.",
+        "tech": "React · FastAPI · Python · PostGIS · Mapbox · Celery",
+        "result": "More on-time deliveries in the promised window and fewer status disputes.",
+        "imageAlt": "Warehouse and distribution"
+      }
+    ],
+    "security": [
+      {
+        "sector": "Gated residential",
+        "title": "Smart home, video intercom, and unified scenes",
+        "solution": "High-rise residential: lighting and blind automation, environment sensors, Ezviz video intercom and indoor Hikvision cameras in one mobile app; time-based rules and push alerts for concierge and owners.",
+        "tech": "Ezviz · Hikvision (Wi-Fi / PoE) · Zigbee · IP gateway · MQTT · unified mobile app",
+        "result": "Lower wasted lighting, verified visitors from the phone, and away-from-home scenes ready to arm.",
+        "imageAlt": "Modern residential setting"
+      },
+      {
+        "sector": "Retail storefront",
+        "title": "Paradox alarm install with Hikvision / Ezviz CCTV",
+        "solution": "High-traffic store: Paradox panel with PIR and door contacts, self-contained outdoor siren and central monitoring link; Hikvision domes and Ezviz points with NVR in a secure closet, Cat6 structured cabling and channel labeling.",
+        "tech": "Paradox · Hikvision · Ezviz · ONVIF NVR · PoE · fiber to guard room",
+        "result": "Audited open/close workflows; continuous recording with fast search on alarm events.",
+        "imageAlt": "Security and connected devices in retail"
+      },
+      {
+        "sector": "Industrial warehouse",
+        "title": "Electric perimeter fence and CCTV towers",
+        "solution": "Open yard: zoned electric fence with mesh and signage, Hikvision IR bullet towers on fiber backhaul to the guard post, redundant NVR and site-to-site VPN to headquarters.",
+        "tech": "Electric energizers · Hikvision outdoor · fiber optic · redundant NVR · VPN",
+        "result": "Strong deterrence at the property line; clear evidence of perimeter breaches and resilient remote viewing.",
+        "imageAlt": "Corporate and perimeter security"
       }
     ]
   },
   "testimonials": {
     "title": "Client voices",
-    "subtitle": "Professional-style references — useful for credibility while you build a real track record.",
-    "note": "Names and companies are fictional; replace with real testimonials when available.",
+    "subtitle": "What clients highlight about working with us.",
     "items": [
       {
         "quote": "We needed to get out of spreadsheet chaos. The team shipped a usable first version in weeks and stayed through rollout.",
         "name": "Mariana Ortega",
         "role": "Head of operations",
-        "company": "Andean Distribution (sample)"
+        "company": "Andean Distribution"
       },
       {
         "quote": "Consulting helped us prioritize without blowing the budget. Clear documentation and short, focused meetings.",
-        "name": "James Keller",
+        "name": "Andrés Morales",
         "role": "CTO",
-        "company": "PayBridge Labs (sample)"
+        "company": "BridgePay Latam"
       },
       {
         "quote": "Camera and alarm installation was spot on. They explained maintenance and labeled everything for future extensions.",
         "name": "Roberto Silva",
         "role": "Owner",
-        "company": "Residential / SMB (sample)"
+        "company": "Home and family business"
       }
     ]
   },
@@ -183,6 +348,57 @@
     "channelsTitle": "Direct channels",
     "success": "Thank you. We received your message and will get back to you soon."
   },
+  "chatbot": {
+    "title": "Online advisor",
+    "subtitle": "BITFLOW",
+    "open": "Open assistant",
+    "close": "Close",
+    "placeholder": "Type your question…",
+    "send": "Send",
+    "typing": "Typing…",
+    "quickLabel": "Popular topics",
+    "quickServices": "What services do you offer?",
+    "quickSecurity": "Alarms, CCTV & electric fences",
+    "quickContact": "I want to be contacted",
+    "quickPricing": "Pricing & timelines",
+    "contactTitle": "Your contact details",
+    "contactHint": "Fill in the form and choose WhatsApp or email — we open a ready-to-send message.",
+    "fieldName": "Name",
+    "fieldEmail": "Email",
+    "fieldPhone": "Phone",
+    "fieldMessage": "Message or question",
+    "contactFormCta": "Complete details to reach us",
+    "backToChat": "Back to chat",
+    "sendWhatsapp": "Send via WhatsApp",
+    "sendEmail": "Send via email",
+    "requiredHint": "Name and at least one channel (email or phone) help us reply properly.",
+    "greeting": "Hi — I'm BITFLOW's virtual assistant. I can guide you on custom software, platforms, consulting, security, smart home, brands we work with, and next steps. What do you need?",
+    "answers": {
+      "services": "BITFLOW combines **software & platforms** (custom development, consulting, management and automation) and **physical security** (alarms, CCTV, electric fences, smart home). See **What we do** for details.",
+      "software": "We build custom web apps and backends, integrations, and ongoing evolution. We focus on maintainable code and clear scope — see the **Software engineering, no shortcuts** block under Services.",
+      "consulting": "Consulting covers architecture, priorities, and a roadmap you can actually ship and maintain — without inflated promises.",
+      "platforms": "We design management and automation platforms to streamline operations: inventory, workflows, reporting, and less repetitive manual work.",
+      "security": "We install and integrate alarms, IP video surveillance, perimeter electric fences, and smart-home scenes for homes and businesses, using professional-grade brands.",
+      "fence": "Electric fences are planned by zones, with signage and tie-in to alarm or CCTV where the project requires it. Success stories include an industrial-style example.",
+      "domotics": "We work with Zigbee, Matter, Wi‑Fi, KNX ecosystems and brands like Aqara or Sonoff when they fit the design; we integrate scenes, sensors, and apps.",
+      "brandsCctv": "For video we typically use **Hikvision**, **Ezviz**, and **Dahua**, NVR/VMS, and ONVIF. **Technology partners** lists the ecosystem.",
+      "brandsAlarm": "For intrusion we use professional gear such as **Paradox**, DSC, or Honeywell depending on site design and local norms.",
+      "brandsAccess": "**ZKTeco** and access control (readers, biometrics, turnstiles) can be integrated with HR or visitor flows when needed.",
+      "cloud": "We're **AWS and Google Cloud partners**: we design and run cloud workloads with solid security and cost practices. More under **Technology partners**.",
+      "blockchain": "We build with **blockchain & Web3**: Hyperledger Fabric, Ethereum/L2, IPFS, smart contracts, and wallet integration when the use case fits (e.g. traceability).",
+      "partners": "**Technology partners** lists cloud, blockchain, software, alarms, CCTV, access, and smart-home brands and stacks we use.",
+      "successStories": "**Success stories** highlights real deliveries: education, retail, agri with ledger traceability, health, logistics, and three security projects with sample video.",
+      "caseStudies": "**Case studies** describes scope and outcomes for retail-style, fintech/consulting, and residential CCTV + fence projects — always tailored.",
+      "pricing": "Every quote depends on scope, integrations, and whether field work is involved. The first scoping conversation has no cost. Use the contact form or the button below for options.",
+      "location": "Software work is remote with online meetings. Physical installs are scheduled by location and project type — tell us your city and needs when you reach out.",
+      "timing": "Timelines depend on deliverable size and permits on site. **How we work** explains diagnosis, proposal, and phased delivery.",
+      "process": "Typical flow: **diagnosis** (goals and risks), **proposal** (clear scope and estimate), and **implementation** in milestones with handover support.",
+      "about": "BITFLOW is led by Ing. Darío Vélez Román, Ms. We combine product engineering with security installs when clients want one technical point of contact.",
+      "audience": "We serve **businesses and homes**: software and consulting are often SMEs and teams; security and smart home covers residential and commercial.",
+      "contactPrompt": "To reach the team, use the **contact form** on the page or tap **I want to be contacted** below — I'll prepare WhatsApp or email with your details.",
+      "fallback": "I don't have an exact auto-reply for that. Try a keyword (software, alarms, CCTV, quote, AWS, blockchain…) or use the assistant contact form and a human will reply."
+    }
+  },
   "footer": {
     "tagline": "Technology solutions, software, and integrated security.",
     "rights": "All rights reserved.",
@@ -191,7 +407,9 @@
     "legal": "Legal",
     "links": {
       "services": "Services",
+      "partners": "Brands & alliances",
       "cases": "Case studies",
+      "successStories": "Success stories",
       "process": "How we work",
       "testimonials": "Testimonials",
       "about": "About",

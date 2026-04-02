@@ -5,8 +5,10 @@ import {
   LandingHeader,
   LandingHero,
   LandingServices,
+  LandingPartners,
   LandingShowcaseVideo,
   LandingCaseStudies,
+  LandingSuccessStories,
   LandingProcess,
   LandingTestimonials,
   LandingAbout,
@@ -15,6 +17,7 @@ import {
   LandingContact,
   LandingFooter,
 } from '@/components/landing'
+import { ChatWidget } from '@/components/chatbot/ChatWidget'
 
 export default function Home() {
   const { language } = useI18n()
@@ -33,8 +36,10 @@ export default function Home() {
       <div id="contenido">
         <LandingHero />
         <LandingServices />
+        <LandingPartners />
         <LandingShowcaseVideo />
         <LandingCaseStudies />
+        <LandingSuccessStories />
         <LandingProcess />
         <LandingTestimonials />
         <LandingAbout />
@@ -44,6 +49,8 @@ export default function Home() {
       </div>
 
       <LandingFooter />
+
+      <ChatWidget />
     </main>
   )
 }

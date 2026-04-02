@@ -54,7 +54,6 @@ export function LandingHero() {
               />
             </div>
           </div>
-          <p className="mt-3 text-center text-xs text-stone-500">{t('hero.imageCredit')}</p>
         </div>
       </div>
     </section>

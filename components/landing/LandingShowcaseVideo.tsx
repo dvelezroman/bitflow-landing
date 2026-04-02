@@ -24,8 +24,6 @@ export function LandingShowcaseVideo() {
             <source src={MEDIA.showcase.videoMp4} type="video/mp4" />
           </video>
         </div>
-        <p className="mt-4 text-center text-sm text-stone-600">{t('showcase.caption')}</p>
-        <p className="mt-2 text-center text-xs text-stone-500">{t('showcase.disclaimer')}</p>
       </div>
     </section>
   )

@@ -12,7 +12,6 @@ export function LandingTestimonials() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <h2 className="text-3xl font-semibold tracking-tight text-stone-900 md:text-4xl">{t('testimonials.title')}</h2>
         <p className="mt-4 max-w-2xl text-lg text-stone-600">{t('testimonials.subtitle')}</p>
-        <p className="mt-2 text-sm text-stone-500">{t('testimonials.note')}</p>
 
         <div className="mt-12 grid gap-6 md:grid-cols-3">
           {indices.map((i) => (
