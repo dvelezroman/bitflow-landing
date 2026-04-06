@@ -75,16 +75,15 @@ export function LandingSuccessStories() {
         </h3>
         <div className="mt-6 grid gap-10 lg:grid-cols-3">
           {securityIndices.map((i) => {
-            const item = MEDIA.successStories.security[i]
-            const hasVideo = 'video' in item && Boolean(item.video)
+            const { image } = MEDIA.successStories.security[i]
             return (
               <article
                 key={`s-${i}`}
-                className="flex flex-col overflow-hidden rounded-2xl border border-stone-200 bg-stone-50/50 shadow-sm"
+                className="flex flex-col overflow-hidden rounded-2xl border border-stone-200 bg-stone-50/50 shadow-sm transition hover:border-stone-300 hover:shadow-md"
               >
                 <div className="aspect-[4/3] bg-stone-200">
                   <img
-                    src={item.image}
+                    src={image}
                     alt={t(`successStories.security.${i}.imageAlt`)}
                     width={800}
                     height={600}
@@ -103,20 +102,6 @@ export function LandingSuccessStories() {
                     {t(`successStories.security.${i}.result`)}
                   </p>
                 </div>
-                {hasVideo && item.video ? (
-                  <div className="border-t border-stone-200 bg-stone-900">
-                    <video
-                      className="aspect-video w-full object-cover"
-                      controls
-                      playsInline
-                      preload="metadata"
-                      poster={item.image}
-                      aria-label={t('successStories.videoAria')}
-                    >
-                      <source src={item.video} type="video/mp4" />
-                    </video>
-                  </div>
-                ) : null}
               </article>
             )
           })}

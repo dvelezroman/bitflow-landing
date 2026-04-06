@@ -1,7 +1,7 @@
 {
   "nav": {
     "services": "Servicios",
-    "showcase": "Experiencia",
+    "showcase": "Flujo",
     "cases": "Casos",
     "testimonials": "Clientes",
     "process": "Cómo trabajamos",
@@ -143,9 +143,16 @@
     ]
   },
   "showcase": {
-    "title": "Cómo trabajamos en la práctica",
-    "subtitle": "Un vistazo en vídeo al tipo de entornos y proyectos que acompañamos — desde el código hasta el despliegue.",
-    "videoAria": "Vídeo de trabajo y colaboración técnica"
+    "title": "Cómo fluye un proyecto con BITFLOW",
+    "subtitle": "Dos líneas de trabajo — software y seguridad en campo — que siguen el mismo ritmo: entender, proponer y ejecutar con claridad.",
+    "diagramAria": "Diagrama: ramas de software y seguridad convergen en tres etapas de proceso",
+    "flowIntro": "Punto de partida",
+    "laneSoftware": "Software y plataformas",
+    "laneSoftwareHint": "Productos digitales, APIs, nube, integraciones y evolución continua del código.",
+    "laneSecurity": "Seguridad y domótica",
+    "laneSecurityHint": "Alarmas, CCTV, acceso, cercos y hogar conectado con instalación y puesta en marcha.",
+    "mergeHint": "Mismo método para ambos",
+    "footnote": "Los plazos dependen del alcance, integraciones y permisos en obra; el detalle lo acordamos en la propuesta."
   },
   "caseStudies": {
     "title": "Casos de estudio",
@@ -179,7 +186,6 @@
     "subtitle": "Entregas recientes en educación, retail, agro, salud, logística y seguridad física — con equipos y usuarios en contexto latinoamericano.",
     "platformsHeading": "Plataformas y software a medida",
     "securityHeading": "Seguridad, videovigilancia y domótica",
-    "videoAria": "Vídeo del entorno instalado",
     "techAria": "Tecnologías utilizadas",
     "platforms": [
       {
@@ -387,7 +393,7 @@
       "cloud": "Somos **partners de AWS y Google Cloud**: diseñamos y operamos cargas en la nube con buenas prácticas de seguridad y costo. Más detalle en «Marcas y alianzas».",
       "blockchain": "Desarrollamos con **blockchain y Web3**: Hyperledger Fabric, Ethereum/L2, IPFS, contratos inteligentes e integración con wallets cuando el caso lo amerita (p. ej. trazabilidad).",
       "partners": "En «Marcas y alianzas tecnológicas» verás nube, blockchain, software, alarmas, CCTV, acceso y domótica con las marcas y tecnologías que manejamos.",
-      "successStories": "«Casos exitosos» resume entregas reales: educación, retail, agro con trazabilidad en ledger, salud, logística y tres proyectos de seguridad con vídeo orientativo.",
+      "successStories": "«Casos exitosos» resume entregas reales: educación, retail, agro con trazabilidad en ledger, salud, logística y tres proyectos de seguridad con imagen ilustrativa por caso.",
       "caseStudies": "«Casos de estudio» describe alcance y resultados tipo retail, fintech/consultoría y residencial con CCTV y cerco — siempre adaptados a cada cliente.",
       "pricing": "Cada proyecto se cotiza según alcance, integraciones y si hay campo (instalación). La primera conversación para acotar necesidad no tiene costo. Usa el formulario de contacto o el botón de abajo para que te respondamos con opciones.",
       "location": "Cubrimos proyectos de software de forma remota con reuniones en línea. Las instalaciones físicas las acordamos según ubicación y tipo de obra — indícanos ciudad y necesidad al contactar.",

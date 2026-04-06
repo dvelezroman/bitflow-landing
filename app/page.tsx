@@ -6,7 +6,7 @@ import {
   LandingHero,
   LandingServices,
   LandingPartners,
-  LandingShowcaseVideo,
+  LandingShowcaseFlow,
   LandingCaseStudies,
   LandingSuccessStories,
   LandingProcess,
@@ -37,7 +37,7 @@ export default function Home() {
         <LandingHero />
         <LandingServices />
         <LandingPartners />
-        <LandingShowcaseVideo />
+        <LandingShowcaseFlow />
         <LandingCaseStudies />
         <LandingSuccessStories />
         <LandingProcess />

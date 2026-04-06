@@ -1,7 +1,7 @@
 {
   "nav": {
     "services": "Services",
-    "showcase": "Showcase",
+    "showcase": "Flow",
     "cases": "Case studies",
     "testimonials": "Clients",
     "process": "How we work",
@@ -143,9 +143,16 @@
     ]
   },
   "showcase": {
-    "title": "What our work looks like",
-    "subtitle": "A short video glimpse of the kinds of environments and projects we support — from code to rollout.",
-    "videoAria": "Video of technical work and collaboration"
+    "title": "How a BITFLOW engagement flows",
+    "subtitle": "Two tracks — software and field security — following the same cadence: understand, propose, and deliver with clarity.",
+    "diagramAria": "Diagram: software and security paths merge into a three-stage process",
+    "flowIntro": "Where projects start",
+    "laneSoftware": "Software & platforms",
+    "laneSoftwareHint": "Digital products, APIs, cloud, integrations, and ongoing code evolution.",
+    "laneSecurity": "Security & smart home",
+    "laneSecurityHint": "Alarms, CCTV, access, fences, and connected-home work with installation and go-live.",
+    "mergeHint": "One method for both",
+    "footnote": "Timelines depend on scope, integrations, and site permits; specifics land in the proposal."
   },
   "caseStudies": {
     "title": "Case studies",
@@ -179,7 +186,6 @@
     "subtitle": "Recent deliveries across education, retail, agro, health, logistics, and physical security — built for Latin American teams and users.",
     "platformsHeading": "Custom platforms and software",
     "securityHeading": "Security, CCTV, and smart building",
-    "videoAria": "Video of the installed environment",
     "techAria": "Technologies used",
     "platforms": [
       {
@@ -387,7 +393,7 @@
       "cloud": "We're **AWS and Google Cloud partners**: we design and run cloud workloads with solid security and cost practices. More under **Technology partners**.",
       "blockchain": "We build with **blockchain & Web3**: Hyperledger Fabric, Ethereum/L2, IPFS, smart contracts, and wallet integration when the use case fits (e.g. traceability).",
       "partners": "**Technology partners** lists cloud, blockchain, software, alarms, CCTV, access, and smart-home brands and stacks we use.",
-      "successStories": "**Success stories** highlights real deliveries: education, retail, agri with ledger traceability, health, logistics, and three security projects with sample video.",
+      "successStories": "**Success stories** highlights real deliveries: education, retail, agri with ledger traceability, health, logistics, and three security projects each with a representative image.",
       "caseStudies": "**Case studies** describes scope and outcomes for retail-style, fintech/consulting, and residential CCTV + fence projects — always tailored.",
       "pricing": "Every quote depends on scope, integrations, and whether field work is involved. The first scoping conversation has no cost. Use the contact form or the button below for options.",
       "location": "Software work is remote with online meetings. Physical installs are scheduled by location and project type — tell us your city and needs when you reach out.",
