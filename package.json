@@ -2,18 +2,19 @@
   "name": "bitflow-landing",
   "version": "1.0.0",
   "private": true,
+  "description": "Landing estática BITFLOW (export a carpeta out/)",
   "scripts": {
     "prebuild": "node -e \"require('fs').rmSync('out',{recursive:true,force:true})\"",
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
-    "export": "next build && next export"
+    "start": "serve out -l 3000",
+    "lint": "next lint"
   },
   "dependencies": {
     "next": "^14.0.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "serve": "^14.2.6",
     "simple-icons": "^11.15.0"
   },
   "devDependencies": {

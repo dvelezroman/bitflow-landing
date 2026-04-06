@@ -1,3 +1,5 @@
+'use client'
+
 import type { SimpleIcon } from 'simple-icons'
 import {
   siAmazonaws,
