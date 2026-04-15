@@ -25,25 +25,18 @@ const cards = [
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
     ),
   },
-  {
-    key: 'security' as const,
-    media: MEDIA.services.security,
-    icon: (
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-1.061-1.764l-7-3.5a2 2 0 00-1.878 0l-7 3.5A2 2 0 003 9v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-    ),
-  },
 ]
 
 export function LandingServices() {
   const { t } = useI18n()
 
   return (
-    <section id="servicios" className="scroll-mt-24 border-b border-stone-200/80 py-20 md:py-28">
+    <section id="servicios" className="scroll-mt-20 md:scroll-mt-24 border-b border-stone-200/80 py-16 sm:py-20 md:py-28">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <h2 className="text-3xl font-semibold tracking-tight text-stone-900 md:text-4xl">{t('services.title')}</h2>
-        <p className="mt-4 max-w-2xl text-lg text-stone-600">{t('services.subtitle')}</p>
+        <h2 className="text-balance text-2xl font-semibold tracking-tight text-stone-900 sm:text-3xl md:text-4xl">{t('services.title')}</h2>
+        <p className="mt-4 max-w-2xl text-base text-stone-600 sm:text-lg">{t('services.subtitle')}</p>
 
-        <div className="mt-10 rounded-2xl border border-stone-200 bg-stone-900 px-6 py-8 text-stone-100 shadow-sm md:px-8 md:py-9">
+        <div className="mt-10 rounded-2xl border border-stone-700/30 bg-gradient-to-br from-stone-900 via-stone-900 to-stone-950 px-5 py-7 text-stone-100 shadow-soft-lg sm:rounded-3xl sm:px-8 sm:py-9">
           <h3 className="text-lg font-semibold tracking-tight text-white md:text-xl">{t('services.engineering.title')}</h3>
           <p className="mt-3 max-w-3xl text-sm leading-relaxed text-stone-300 md:text-base">{t('services.engineering.intro')}</p>
           <ul className="mt-6 space-y-3 border-t border-stone-700 pt-6 text-sm text-stone-200 md:text-[0.9375rem]">
@@ -56,13 +49,13 @@ export function LandingServices() {
           </ul>
         </div>
 
-        <div className="mt-12 grid gap-6 md:grid-cols-2">
+        <div className="mt-10 grid gap-4 sm:mt-12 sm:gap-5 md:grid-cols-3">
           {cards.map((card) => (
             <article
               key={card.key}
-              className="flex flex-col overflow-hidden rounded-2xl border border-stone-200 bg-white shadow-sm transition hover:border-stone-300 hover:shadow-md"
+              className="flex flex-col overflow-hidden rounded-2xl border border-stone-200/80 bg-white/95 shadow-soft backdrop-blur-sm transition hover:border-primary-200/50 hover:shadow-soft-lg sm:rounded-3xl"
             >
-              <div className="relative aspect-[21/9] bg-stone-200">
+              <div className="relative aspect-[16/10] bg-stone-200 sm:aspect-[21/9]">
                 <img
                   src={card.media}
                   alt={t(`services.${card.key}.imageAlt`)}
@@ -72,9 +65,9 @@ export function LandingServices() {
                   loading="lazy"
                 />
               </div>
-              <div className="flex flex-1 flex-col p-6">
-                <div className="flex items-start gap-4">
-                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-stone-100 text-stone-800">
+              <div className="flex flex-1 flex-col p-5 sm:p-6">
+                <div className="flex items-start gap-3 sm:gap-4">
+                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-primary-50 to-sky-50 text-stone-800 ring-1 ring-primary-100/80">
                     <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
                       {card.icon}
                     </svg>
@@ -82,16 +75,6 @@ export function LandingServices() {
                   <div className="min-w-0">
                     <h3 className="text-lg font-semibold text-stone-900">{t(`services.${card.key}.title`)}</h3>
                     <p className="mt-2 text-stone-600 leading-relaxed">{t(`services.${card.key}.description`)}</p>
-                    {card.key === 'security' ? (
-                      <ul className="mt-4 grid grid-cols-1 gap-2 text-sm text-stone-600 sm:grid-cols-2">
-                        {(['alarms', 'cameras', 'fences', 'automation'] as const).map((b) => (
-                          <li key={b} className="flex items-center gap-2">
-                            <span className="h-1 w-1 shrink-0 rounded-full bg-primary-600" aria-hidden />
-                            {t(`services.security.bullets.${b}`)}
-                          </li>
-                        ))}
-                      </ul>
-                    ) : null}
                   </div>
                 </div>
               </div>

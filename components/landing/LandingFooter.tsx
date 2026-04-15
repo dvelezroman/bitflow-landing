@@ -7,7 +7,7 @@ export function LandingFooter() {
   const { t } = useI18n()
 
   return (
-    <footer className="border-t border-stone-200 bg-white py-12">
+    <footer className="border-t border-stone-200/80 bg-white/90 py-10 pb-[max(2.5rem,env(safe-area-inset-bottom,0px)+1.5rem)] backdrop-blur-sm sm:py-12 md:pb-12 supports-[backdrop-filter]:bg-white/80">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="flex flex-col gap-10 md:flex-row md:items-start md:justify-between">
           <div className="max-w-sm">
@@ -18,6 +18,11 @@ export function LandingFooter() {
             <div>
               <p className="text-xs font-semibold uppercase tracking-wider text-stone-500">{t('footer.services')}</p>
               <ul className="mt-4 space-y-2 text-sm">
+                <li>
+                  <a href="#historia" className="text-stone-600 hover:text-stone-900">
+                    {t('footer.links.story')}
+                  </a>
+                </li>
                 <li>
                   <a href="#servicios" className="text-stone-600 hover:text-stone-900">
                     {t('footer.links.services')}

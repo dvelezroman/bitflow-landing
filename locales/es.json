@@ -1,6 +1,7 @@
 {
   "nav": {
     "services": "Servicios",
+    "story": "Por qué BITFLOW",
     "showcase": "Flujo",
     "cases": "Casos",
     "testimonials": "Clientes",
@@ -14,18 +15,45 @@
   },
   "hero": {
     "eyebrow": "BITFLOW",
-    "title": "Tecnología y tranquilidad",
-    "titleAccent": "para tu negocio y tu hogar",
-    "description": "Desarrollo de software, consultoría en soluciones digitales, plataformas de gestión e instalaciones de seguridad y domótica. Un solo equipo para integrar lo digital con lo que necesitas en el día a día.",
+    "title": "Software serio para empresas",
+    "titleAccent": "que no pueden permitirse el humo",
+    "description": "Desarrollo, plataformas y consultoría con criterio de ingeniería: código mantenible, alcance honesto y soluciones pensadas para años en producción — no demos que brillan y luego nadie sostiene.",
     "ctaPrimary": "Hablemos de tu proyecto",
     "ctaSecondary": "Ver servicios"
   },
+  "story": {
+    "eyebrow": "Nuestra historia",
+    "title": "Nacimos cansados del mismo guion: promesas grandes y entregas frágiles.",
+    "lead": "BITFLOW existe para quienes necesitan un partner digital que firme con el mismo criterio con el que duerme tranquilo: trabajo original, explicable y útil. Si tu negocio depende del software, mereces algo mejor que plantillas disfrazadas y parches eternos.",
+    "chapters": [
+      {
+        "title": "Tu operación no es un laboratorio de experimentos baratos",
+        "body": "Cada decisión técnica debería poder defenderse frente a tu director, tu auditor o tu cliente final. Por eso priorizamos claridad: arquitectura legible, riesgos visibles y entregas que se pueden operar el lunes siguiente, no solo en la demo del viernes."
+      },
+      {
+        "title": "No bullshit software",
+        "body": "No vendemos magia vacía; no entregamos plagios ni reempaquetamos el trabajo de terceros como si fuera propio; no te colamos funciones que solo sirven para inflar la factura. Construimos software real: probado donde importa, documentado cuando aporta y honesto sobre sus límites."
+      },
+      {
+        "title": "Hecho para evolucionar, no para demoler al año",
+        "body": "Preferimos decir “no” a un requerimiento que sabemos que te romperá el sistema a decir “sí” por cerrar la venta. Pensamos en la persona que mantendrá el código dentro de dos años — que a veces seas tú, a veces nosotros, y a veces alguien nuevo que merece contexto, no un cementerio de parches."
+      },
+      {
+        "title": "De la idea al largo plazo, en el mismo idioma",
+        "body": "Integramos APIs, nube, datos y producto en un solo hilo narrativo: menos reuniones de traducción entre “el de negocio” y “el de sistemas”, más decisiones compartidas y trazabilidad de por qué se hizo cada cosa."
+      }
+    ],
+    "manifestoKicker": "Nuestra promesa",
+    "manifestoTitle": "Software útil, mantenible y sin letra chica moral.",
+    "manifestoBody": "En BITFLOW hacemos soluciones digitales para cualquier empresa que valore el tiempo, el dinero y la reputación: ingeniería que respeta a tus usuarios, a tus equipos y al futuro del producto. Eso es lo que nos diferencia del ruido del mercado.",
+    "closing": "Si buscas un equipo que te diga la verdad técnica y te acompañe a construir algo que dure, ya llegaste al lugar correcto."
+  },
   "services": {
     "title": "Qué hacemos",
-    "subtitle": "Dos líneas de trabajo que puedes combinar: ingeniería de producto y sistemas para el hogar o la empresa.",
+    "subtitle": "Un solo foco: producto digital de calidad — desde la primera conversación hasta el soporte evolutivo.",
     "engineering": {
       "title": "Ingeniería de software, sin atajos ni humo",
-      "intro": "No improvisamos entregables de baja calidad ni prometemos lo que no podemos sostener. Trabajamos con estándares claros: diseño entendible, pruebas donde aportan y deuda técnica controlada. Somos originales en cada proyecto, éticos en contrato y datos, y leales al cliente más allá del primer release.",
+      "intro": "No improvisamos entregables frágiles ni prometemos lo que no podemos sostener. Estándares claros: diseño entendible, pruebas donde aportan, deuda técnica controlada y propiedad intelectual limpia — lo que construimos es tuyo, no un copy-paste disfrazado.",
       "points": [
         "Resolvemos necesidades reales: menos fricción operativa, procesos más rápidos y producción o servicio más predecible.",
         "Código mantenible y documentado para que tu equipo o el nuestro pueda evolucionar el producto con confianza.",
@@ -46,23 +74,12 @@
       "title": "Plataformas de gestión",
       "description": "Automatización y paneles que ordenan tu operación: menos trabajo manual, más trazabilidad y mejores decisiones con los mismos recursos.",
       "imageAlt": "Panel de control y analítica de negocio"
-    },
-    "security": {
-      "title": "Seguridad y domótica",
-      "description": "Alarmas, videovigilancia, cercos eléctricos y automatización del hogar o negocio.",
-      "imageAlt": "Hogar conectado y seguridad inteligente",
-      "bullets": {
-        "alarms": "Alarmas y sensores",
-        "cameras": "Sistemas de cámaras",
-        "fences": "Cercos eléctricos",
-        "automation": "Automatización e integración"
-      }
     }
   },
   "partners": {
     "title": "Marcas y alianzas tecnológicas",
     "tagsAria": "Marcas y tecnologías",
-    "lead": "Somos partners de AWS y Google Cloud: diseñamos, desplegamos y operamos cargas en la nube con buenas prácticas de seguridad y costo. También construimos productos con blockchain y Web3 — desde trazabilidad empresarial hasta integraciones con wallets y contratos inteligentes.",
+    "lead": "Somos partners de AWS y Google Cloud: diseñamos, desplegamos y operamos cargas en la nube con buenas prácticas de ciberseguridad y control de costos. También construimos productos con blockchain y Web3 — desde trazabilidad empresarial hasta integraciones con wallets y contratos inteligentes.",
     "categories": [
       {
         "title": "Partners en la nube",
@@ -99,64 +116,32 @@
         ]
       },
       {
-        "title": "Alarmas y detección",
+        "title": "Calidad y operación",
         "items": [
-          { "label": "Paradox" },
-          { "label": "DSC" },
-          { "label": "Honeywell", "icon": "/images/partners/honeywell.svg" },
-          { "label": "detectores cableados e inalámbricos" },
-          { "label": "sirenas y teclados" }
-        ]
-      },
-      {
-        "title": "Videovigilancia y CCTV",
-        "items": [
-          { "label": "Hikvision", "icon": "/images/partners/hikvision.svg" },
-          { "label": "Ezviz" },
-          { "label": "Dahua", "icon": "/images/partners/dahua.svg" },
-          { "label": "NVR y VMS" },
-          { "label": "ONVIF" },
-          { "label": "enlaces de fibra y PoE" }
-        ]
-      },
-      {
-        "title": "Control de acceso",
-        "items": [
-          { "label": "ZKTeco" },
-          { "label": "lectores biométricos y de tarjeta" },
-          { "label": "torniquetes" },
-          { "label": "integración con nómina y visitas" }
-        ]
-      },
-      {
-        "title": "Domótica e IoT",
-        "items": [
-          { "label": "Zigbee", "icon": "/images/partners/zigbee.svg" },
-          { "label": "Matter", "icon": "/images/partners/matter.svg" },
-          { "label": "Wi-Fi" },
-          { "label": "KNX", "icon": "/images/partners/knx.svg" },
-          { "label": "Aqara" },
-          { "label": "Sonoff" },
-          { "label": "gateways y escenas unificadas" }
+          { "label": "pruebas automatizadas" },
+          { "label": "CI/CD" },
+          { "label": "observabilidad y logs" },
+          { "label": "revisiones de código" },
+          { "label": "documentación viva" }
         ]
       }
     ]
   },
   "showcase": {
     "title": "Cómo fluye un proyecto con BITFLOW",
-    "subtitle": "Dos líneas de trabajo — software y seguridad en campo — que siguen el mismo ritmo: entender, proponer y ejecutar con claridad.",
-    "diagramAria": "Diagrama: ramas de software y seguridad convergen en tres etapas de proceso",
+    "subtitle": "Dos frentes complementarios — construir bien y sostener en el tiempo — con el mismo ritmo: entender, proponer y ejecutar con claridad.",
+    "diagramAria": "Diagrama: construcción de producto y sostenibilidad convergen en tres etapas de proceso",
     "flowIntro": "Punto de partida",
-    "laneSoftware": "Software y plataformas",
-    "laneSoftwareHint": "Productos digitales, APIs, nube, integraciones y evolución continua del código.",
-    "laneSecurity": "Seguridad y domótica",
-    "laneSecurityHint": "Alarmas, CCTV, acceso, cercos y hogar conectado con instalación y puesta en marcha.",
-    "mergeHint": "Mismo método para ambos",
-    "footnote": "Los plazos dependen del alcance, integraciones y permisos en obra; el detalle lo acordamos en la propuesta."
+    "laneSoftware": "De cero a producción",
+    "laneSoftwareHint": "Productos digitales, APIs, nube, integraciones y releases que tu equipo puede operar.",
+    "laneSustain": "Hecho para durar",
+    "laneSustainHint": "Calidad, pruebas, documentación y soporte evolutivo — sin deuda tóxica escondida bajo la alfombra.",
+    "mergeHint": "Un solo método, una sola conversación honesta",
+    "footnote": "Los plazos dependen del alcance y las integraciones; el detalle lo acordamos en la propuesta, sin sorpresas de letra chica."
   },
   "caseStudies": {
     "title": "Casos de estudio",
-    "subtitle": "Alcance y resultados en proyectos de software, consultoría e instalaciones.",
+    "subtitle": "Alcance y resultados en proyectos de software, plataformas y consultoría.",
     "items": [
       {
         "sector": "Retail · inventario",
@@ -173,19 +158,18 @@
         "imageAlt": "Equipo analizando arquitectura de software"
       },
       {
-        "sector": "Residencial · seguridad",
-        "title": "Videovigilancia, cerco y app de acceso",
-        "summary": "Vivienda y pequeño negocio en la misma propiedad: cámaras IP, cerco perimetral integrado y notificaciones al móvil del propietario.",
-        "result": "Panel único para cámaras y estado de alarma, con soporte tras la instalación.",
-        "imageAlt": "Instalación de cámaras de seguridad"
+        "sector": "Salud · operación",
+        "title": "Plataforma de agenda y teleconsulta multi-sede",
+        "summary": "Red de consultorios: reservas en línea, recordatorios por mensajería, ficha resumida y videollamadas con control de acceso por profesional.",
+        "result": "Menos inasistencias, agendas más llenas sin choques y una sola fuente de verdad para recepción y médicos.",
+        "imageAlt": "Equipo de salud y tecnología en consultorio"
       }
     ]
   },
   "successStories": {
     "title": "Casos exitosos",
-    "subtitle": "Entregas recientes en educación, retail, agro, salud, logística y seguridad física — con equipos y usuarios en contexto latinoamericano.",
+    "subtitle": "Entregas recientes en educación, retail, agro, salud y logística — pensadas para equipos y usuarios en contexto latinoamericano.",
     "platformsHeading": "Plataformas y software a medida",
-    "securityHeading": "Seguridad, videovigilancia y domótica",
     "techAria": "Tecnologías utilizadas",
     "platforms": [
       {
@@ -228,32 +212,6 @@
         "result": "Más entregas cumplidas en la ventana prometida y menos reclamos por estado del pedido.",
         "imageAlt": "Almacén y distribución"
       }
-    ],
-    "security": [
-      {
-        "sector": "Condominio residencial",
-        "title": "Domótica, videoportero y escenas en hogar conectado",
-        "solution": "Torre residencial: automatización de iluminación y persianas, sensores de ambiente, videoportero IP Ezviz y cámaras interiores Hikvision integradas a una sola app; reglas por horario y notificaciones push para portería y residentes.",
-        "tech": "Ezviz · Hikvision (Wi-Fi / PoE) · Zigbee · gateway IP · MQTT · app móvil unificada",
-        "result": "Menos consumo improductivo de luz, visitas verificadas desde el móvil y escenas listas para ausencias prolongadas.",
-        "imageAlt": "Entorno residencial moderno"
-      },
-      {
-        "sector": "Comercio minorista",
-        "title": "Instalación de alarma Paradox y CCTV Hikvision / Ezviz",
-        "solution": "Local de alto flujo: tablero Paradox con detectores PIR y magnéticos, sirena autoalimentada y enlace a central; domos IP Hikvision y puntos Ezviz con NVR en bóveda, cableado estructurado Cat6 y etiquetado de canal.",
-        "tech": "Paradox · Hikvision · Ezviz · NVR ONVIF · PoE · fibra hacia caseta",
-        "result": "Apertura y cierre con trazabilidad; grabación continua con búsqueda rápida por evento de alarma.",
-        "imageAlt": "Seguridad y dispositivos conectados en comercio"
-      },
-      {
-        "sector": "Nave industrial",
-        "title": "Cerco eléctrico perimetral y torres de videovigilancia",
-        "solution": "Perímetro abierto: electrificado en varias zonas con seccionamiento, malla y señalética; torretas con balas IR Hikvision, enlace por fibra a caseta y monitoreo remoto con VPN sitio a sitio.",
-        "tech": "Electrificadores perimetrales · Hikvision exterior · fibra óptica · NVR redundante · VPN",
-        "result": "Disuasión efectiva en borde de propiedad; evidencia clara de intentos de ingreso y continuidad ante cortes locales.",
-        "imageAlt": "Entorno corporativo y seguridad perimetral"
-      }
     ]
   },
   "testimonials": {
@@ -273,10 +231,10 @@
         "company": "BridgePay Latam"
       },
       {
-        "quote": "Instalación de cámaras y alarma impecable. Explicaron el mantenimiento y dejaron todo etiquetado para futuras ampliaciones.",
+        "quote": "Nos ayudaron a integrar un legacy difícil sin detener operaciones. Documentación clara y entregas por hitos que se podían revisar.",
         "name": "Roberto Silva",
-        "role": "Propietario",
-        "company": "Vivienda y negocio familiar"
+        "role": "Director de sistemas",
+        "company": "Logística Urbana Sur"
       }
     ]
   },
@@ -293,14 +251,14 @@
     },
     "step3": {
       "title": "Implementación",
-      "description": "Ejecución por entregas, comunicación frecuente y soporte al cierre y después del go-live."
+      "description": "Ejecución por entregas, comunicación frecuente y soporte evolutivo después del go-live."
     }
   },
   "about": {
     "title": "Sobre BITFLOW",
-    "description": "Equipo enfocado en soluciones reales, sin humo: código, infraestructura y campo cuando hace falta.",
-    "paragraph1": "BITFLOW une desarrollo de software y proyectos de seguridad y automatización para quienes necesitan un partner técnico cercano.",
-    "paragraph2": "Trabajamos con pymes, profesionales independientes y hogares que buscan modernizar procesos o reforzar seguridad con instalaciones serias.",
+    "description": "Equipo enfocado en producto digital serio: código que se puede leer, operar y evolucionar.",
+    "paragraph1": "BITFLOW acompaña a empresas y equipos que necesitan un partner de ingeniería alineado al negocio — desde arquitectura y nube hasta el detalle del front que usan tus usuarios cada día.",
+    "paragraph2": "Trabajamos con pymes, scale-ups y áreas de TI que quieren modernizar sin apostar a soluciones frágiles o dependencia opaca de un proveedor.",
     "highlight": "Ing. Darío Vélez Román, Ms.",
     "role": "CEO y fundador",
     "imageAlt": "Equipo colaborando en proyecto tecnológico"
@@ -313,8 +271,8 @@
   "faq": {
     "title": "Preguntas frecuentes",
     "q1": {
-      "question": "¿Atienden solo empresas o también hogares?",
-      "answer": "Ambos. El desarrollo y la consultoría suelen orientarse a negocios y equipos; seguridad y domótica incluye instalaciones residenciales y comerciales."
+      "question": "¿Trabajan solo con empresas grandes?",
+      "answer": "No necesariamente. Nos adaptamos a pymes y equipos medianos: lo importante es que el proyecto tenga impacto real y que podamos comprometernos con la calidad que prometemos."
     },
     "q2": {
       "question": "¿Cómo se cotiza un proyecto de software?",
@@ -322,11 +280,11 @@
     },
     "q3": {
       "question": "¿Ofrecen mantenimiento o soporte después?",
-      "answer": "Sí. Podemos acordar soporte evolutivo, monitoreo o visitas según el tipo de solución instalada o desarrollada."
+      "answer": "Sí. Acordamos soporte evolutivo, mejoras continuas o monitoreo según el producto y el nivel de criticidad para tu negocio."
     },
     "q4": {
-      "question": "¿En qué zona realizan instalaciones de seguridad?",
-      "answer": "Lo acordamos según el proyecto. Indícanos ubicación y tipo de instalación en el formulario y te confirmamos disponibilidad."
+      "question": "¿El código y la propiedad intelectual son nuestras?",
+      "answer": "Sí, salvo que pactemos explícitamente otra cosa: lo que desarrollamos para tu proyecto es tuyo, sin reutilizarlo en competencia ni venderte trabajo de terceros como propio."
     }
   },
   "contact": {
@@ -343,10 +301,10 @@
     "serviceSoftware": "Desarrollo de software",
     "serviceConsulting": "Consultoría",
     "servicePlatforms": "Plataformas de gestión",
-    "serviceSecurity": "Seguridad y domótica",
+    "serviceIntegrations": "Integraciones, APIs y legacy",
     "serviceOther": "Otro / varios",
     "message": "Mensaje",
-    "messagePlaceholder": "Describe tu necesidad, plazos o ubicación si aplica.",
+    "messagePlaceholder": "Describe tu necesidad, plazos y contexto (stack actual, volumen de usuarios, integraciones).",
     "send": "Enviar mensaje",
     "whatsapp": "WhatsApp",
     "emailLabel": "Correo",
@@ -364,7 +322,7 @@
     "typing": "Escribiendo…",
     "quickLabel": "Temas frecuentes",
     "quickServices": "¿Qué servicios ofrecen?",
-    "quickSecurity": "Alarmas, CCTV y cercos",
+    "quickPhilosophy": "¿Por qué BITFLOW?",
     "quickContact": "Quiero que me contacten",
     "quickPricing": "Cotización y plazos",
     "contactTitle": "Datos para contactarte",
@@ -378,40 +336,37 @@
     "sendWhatsapp": "Enviar por WhatsApp",
     "sendEmail": "Enviar por correo",
     "requiredHint": "Nombre y al menos un medio (correo o teléfono) ayudan a responderte mejor.",
-    "greeting": "Hola. Soy el asistente virtual de BITFLOW. Puedo orientarte sobre desarrollo de software, plataformas, consultoría, seguridad, domótica, marcas con las que trabajamos y cómo dar el siguiente paso. ¿En qué te ayudo?",
+    "greeting": "Hola. Soy el asistente virtual de BITFLOW. Puedo orientarte sobre desarrollo de software, plataformas, consultoría, filosofía de trabajo («No bullshit software»), marcas con las que trabajamos y cómo dar el siguiente paso. ¿En qué te ayudo?",
     "answers": {
-      "services": "BITFLOW une dos líneas: **software y plataformas** (desarrollo a medida, consultoría, gestión y automatización) y **seguridad física** (alarmas, CCTV, cercos eléctricos, domótica). En la sección «Qué hacemos» tienes el detalle de cada bloque.",
+      "philosophy": "BITFLOW apuesta por **No bullshit software**: entregas honestas, código mantenible, sin plagios ni reempaquetado ajeno, y transparencia total en alcance y riesgos. Lee la sección **«Por qué BITFLOW»** en la página: ahí está nuestra historia y promesa.",
+      "services": "Nos centramos en **software y plataformas digitales**: desarrollo a medida, consultoría, integraciones, nube y automatización de operaciones. En **«Qué hacemos»** tienes el detalle.",
       "software": "Desarrollamos aplicaciones web y backends a medida, integraciones y evolución continua. Priorizamos código mantenible y transparencia en alcance — ver el recuadro «Ingeniería de software, sin atajos ni humo» en Servicios.",
       "consulting": "La consultoría cubre arquitectura, prioridades y roadmap alineado a lo que puedes ejecutar y mantener, sin promesas infladas.",
       "platforms": "Diseñamos plataformas de gestión y automatización para ordenar operaciones: inventarios, flujos, reportes y menos trabajo manual repetitivo.",
-      "security": "Instalamos y integramos alarmas, videovigilancia IP, cercos perimetrales eléctricos y escenas de domótica para hogar y negocio, con marcas profesionales del sector.",
-      "fence": "Los cercos eléctricos los planteamos por zonas, con señalética y enlace a tu sistema de alarma o CCTV según el proyecto. Los casos exitosos muestran un ejemplo tipo industrial.",
-      "domotics": "Trabajamos con ecosistemas Zigbee, Matter, Wi-Fi, KNX y marcas como Aqara o Sonoff cuando encajan con el diseño del cliente; integramos escenas, sensores y apps.",
-      "brandsCctv": "En videovigilancia solemos trabajar con **Hikvision**, **Ezviz** y **Dahua**, NVR/VMS y estándar ONVIF. La sección «Marcas y alianzas» lista el ecosistema.",
-      "brandsAlarm": "En intrusiones usamos equipos profesionales como **Paradox**, DSC o Honeywell según el diseño del sitio y la normativa local.",
-      "brandsAccess": "**ZKTeco** y soluciones de control de acceso (lectores, biométricos, torniquetes) las integramos con nómina o visitas cuando el proyecto lo requiere.",
+      "integrations": "Conectamos sistemas existentes (ERP, pasarelas, legacy) con APIs modernas, colas y contratos claros — sin romper lo que ya te factura hoy.",
       "cloud": "Somos **partners de AWS y Google Cloud**: diseñamos y operamos cargas en la nube con buenas prácticas de seguridad y costo. Más detalle en «Marcas y alianzas».",
       "blockchain": "Desarrollamos con **blockchain y Web3**: Hyperledger Fabric, Ethereum/L2, IPFS, contratos inteligentes e integración con wallets cuando el caso lo amerita (p. ej. trazabilidad).",
-      "partners": "En «Marcas y alianzas tecnológicas» verás nube, blockchain, software, alarmas, CCTV, acceso y domótica con las marcas y tecnologías que manejamos.",
-      "successStories": "«Casos exitosos» resume entregas reales: educación, retail, agro con trazabilidad en ledger, salud, logística y tres proyectos de seguridad con imagen ilustrativa por caso.",
-      "caseStudies": "«Casos de estudio» describe alcance y resultados tipo retail, fintech/consultoría y residencial con CCTV y cerco — siempre adaptados a cada cliente.",
-      "pricing": "Cada proyecto se cotiza según alcance, integraciones y si hay campo (instalación). La primera conversación para acotar necesidad no tiene costo. Usa el formulario de contacto o el botón de abajo para que te respondamos con opciones.",
-      "location": "Cubrimos proyectos de software de forma remota con reuniones en línea. Las instalaciones físicas las acordamos según ubicación y tipo de obra — indícanos ciudad y necesidad al contactar.",
-      "timing": "Los plazos dependen del tamaño del entregable y de permisos en obra. En «Cómo trabajamos» explicamos diagnóstico, propuesta e implementación por entregas.",
+      "partners": "En «Marcas y alianzas tecnológicas» verás nube, blockchain, stacks de software y prácticas de calidad y operación que usamos en proyectos reales.",
+      "successStories": "«Casos exitosos» resume entregas reales en educación, retail, agro con trazabilidad en ledger, salud y logística — cada una con contexto latinoamericano.",
+      "caseStudies": "«Casos de estudio» describe alcance y resultados tipo retail, fintech/consultoría y salud/operación — siempre adaptados a cada cliente.",
+      "pricing": "Cada proyecto se cotiza según alcance e integraciones. La primera conversación para acotar la necesidad no tiene costo. Usa el formulario de contacto o el botón de abajo para opciones concretas.",
+      "location": "Trabajamos **en remoto** con reuniones en línea, alineados a tu zona horaria. Si necesitas onsite puntuales, lo conversamos en la propuesta.",
+      "timing": "Los plazos dependen del tamaño del entregable y de las integraciones. En «Cómo trabajamos» explicamos diagnóstico, propuesta e implementación por entregas.",
       "process": "Flujo típico: **diagnóstico** (objetivos y riesgos), **propuesta** (alcance y estimación clara) e **implementación** por entregas con soporte al cierre.",
-      "about": "BITFLOW está liderada por el Ing. Darío Vélez Román, Ms. Unimos ingeniería de producto con instalaciones de seguridad cuando el cliente necesita un solo interlocutor técnico.",
-      "audience": "Atendemos **empresas y hogares**: software y consultoría suelen ser pymes y equipos; seguridad y domótica incluye residencial y comercial.",
+      "about": "BITFLOW está liderada por el Ing. Darío Vélez Román, Ms. Unimos criterio de producto, arquitectura y ejecución para equipos que no pueden permitirse entregas frágiles.",
+      "audience": "Atendemos **empresas y equipos de producto/TI**: desde pymes en crecimiento hasta iniciativas en organizaciones mayores que buscan un partner técnico serio.",
       "contactPrompt": "Para hablar con el equipo, desplázate al **formulario de contacto** en la página o usa el botón **«Quiero que me contacten»** aquí abajo: preparo tu mensaje para WhatsApp o correo con tus datos.",
-      "fallback": "No tengo una respuesta automática exacta para eso. Reformula con una palabra clave (software, alarmas, CCTV, cotización, AWS, blockchain…) o deja tus datos con el formulario de contacto del asistente y te responde una persona del equipo."
+      "fallback": "No tengo una respuesta automática exacta para eso. Reformula con una palabra clave (software, integraciones, cotización, AWS, blockchain, calidad…) o deja tus datos con el formulario de contacto del asistente y te responde una persona del equipo."
     }
   },
   "footer": {
-    "tagline": "Soluciones tecnológicas, software y seguridad integrada.",
+    "tagline": "Software y plataformas digitales con criterio de ingeniería — sin humo.",
     "rights": "Todos los derechos reservados.",
     "services": "Servicios",
     "company": "Empresa",
     "legal": "Legal",
     "links": {
+      "story": "Por qué BITFLOW",
       "services": "Servicios",
       "partners": "Marcas y alianzas",
       "cases": "Casos",

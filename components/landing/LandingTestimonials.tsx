@@ -8,16 +8,18 @@ export function LandingTestimonials() {
   const indices = Array.from({ length: TESTIMONIAL_COUNT }, (_, i) => i)
 
   return (
-    <section id="testimonios" className="scroll-mt-24 border-b border-stone-200/80 bg-white py-20 md:py-28">
+    <section id="testimonios" className="scroll-mt-20 md:scroll-mt-24 border-b border-stone-200/80 bg-white/85 py-16 backdrop-blur-sm sm:py-20 md:py-28 supports-[backdrop-filter]:bg-white/75">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <h2 className="text-3xl font-semibold tracking-tight text-stone-900 md:text-4xl">{t('testimonials.title')}</h2>
-        <p className="mt-4 max-w-2xl text-lg text-stone-600">{t('testimonials.subtitle')}</p>
+        <h2 className="text-balance text-2xl font-semibold tracking-tight text-stone-900 sm:text-3xl md:text-4xl">
+          {t('testimonials.title')}
+        </h2>
+        <p className="mt-4 max-w-2xl text-base leading-relaxed text-stone-600 sm:text-lg">{t('testimonials.subtitle')}</p>
 
-        <div className="mt-12 grid gap-6 md:grid-cols-3">
+        <div className="mt-10 grid gap-4 sm:mt-12 sm:gap-5 md:grid-cols-3 md:gap-6">
           {indices.map((i) => (
             <figure
               key={i}
-              className="flex flex-col rounded-2xl border border-stone-200 bg-stone-50/80 p-6 shadow-sm"
+              className="flex flex-col rounded-2xl border border-stone-200/80 bg-white/90 p-5 shadow-soft backdrop-blur-sm sm:rounded-3xl sm:p-6"
             >
               <div className="flex items-center gap-4">
                 <img

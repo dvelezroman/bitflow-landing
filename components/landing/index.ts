@@ -1,5 +1,6 @@
 export { LandingHeader } from './LandingHeader'
 export { LandingHero } from './LandingHero'
+export { LandingStory } from './LandingStory'
 export { LandingServices } from './LandingServices'
 export { LandingPartners } from './LandingPartners'
 export { LandingShowcaseFlow } from './LandingShowcaseFlow'

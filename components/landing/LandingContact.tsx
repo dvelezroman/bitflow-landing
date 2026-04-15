@@ -23,14 +23,17 @@ export function LandingContact() {
   }
 
   return (
-    <section id="contacto" className="scroll-mt-24 py-20 md:py-28">
+    <section
+      id="contacto"
+      className="scroll-mt-20 md:scroll-mt-24 pt-16 sm:pt-20 md:pt-28 pb-[max(4.5rem,calc(2.5rem+env(safe-area-inset-bottom,0px)))] sm:pb-20 md:pb-28"
+    >
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <h2 className="text-3xl font-semibold tracking-tight text-stone-900 md:text-4xl">{t('contact.title')}</h2>
-        <p className="mt-4 max-w-2xl text-lg text-stone-600">{t('contact.subtitle')}</p>
+        <h2 className="text-balance text-2xl font-semibold tracking-tight text-stone-900 sm:text-3xl md:text-4xl">{t('contact.title')}</h2>
+        <p className="mt-4 max-w-2xl text-base leading-relaxed text-stone-600 sm:text-lg">{t('contact.subtitle')}</p>
 
-        <div className="mt-12 grid gap-12 lg:grid-cols-5">
+        <div className="mt-10 grid gap-10 sm:mt-12 sm:gap-12 lg:grid-cols-5">
           <div className="lg:col-span-3">
-            <form onSubmit={handleSubmit} className="space-y-5">
+            <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5">
               <div>
                 <label htmlFor="nombre" className="block text-sm font-medium text-stone-700">
                   {t('contact.name')}
@@ -43,7 +46,7 @@ export function LandingContact() {
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   required
-                  className="mt-1.5 w-full rounded-xl border border-stone-200 bg-white px-4 py-3 text-stone-900 shadow-sm placeholder:text-stone-400 focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-500/20"
+                  className="mt-2 min-h-[48px] w-full rounded-xl border border-stone-200/90 bg-white px-4 text-base text-stone-900 shadow-sm placeholder:text-stone-400 focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-500/25 sm:mt-1.5 sm:text-sm"
                   placeholder={t('contact.namePlaceholder')}
                 />
               </div>
@@ -60,7 +63,7 @@ export function LandingContact() {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required
-                    className="mt-1.5 w-full rounded-xl border border-stone-200 bg-white px-4 py-3 text-stone-900 shadow-sm placeholder:text-stone-400 focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-500/20"
+                    className="mt-2 min-h-[48px] w-full rounded-xl border border-stone-200/90 bg-white px-4 text-base text-stone-900 shadow-sm placeholder:text-stone-400 focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-500/25 sm:mt-1.5 sm:text-sm"
                     placeholder={t('contact.emailPlaceholder')}
                   />
                 </div>
@@ -75,7 +78,7 @@ export function LandingContact() {
                     autoComplete="tel"
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
-                    className="mt-1.5 w-full rounded-xl border border-stone-200 bg-white px-4 py-3 text-stone-900 shadow-sm placeholder:text-stone-400 focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-500/20"
+                    className="mt-2 min-h-[48px] w-full rounded-xl border border-stone-200/90 bg-white px-4 text-base text-stone-900 shadow-sm placeholder:text-stone-400 focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-500/25 sm:mt-1.5 sm:text-sm"
                     placeholder={t('contact.phonePlaceholder')}
                   />
                 </div>
@@ -90,13 +93,13 @@ export function LandingContact() {
                   value={service}
                   onChange={(e) => setService(e.target.value)}
                   required
-                  className="mt-1.5 w-full rounded-xl border border-stone-200 bg-white px-4 py-3 text-stone-900 shadow-sm focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-500/20"
+                  className="mt-2 min-h-[48px] w-full rounded-xl border border-stone-200/90 bg-white px-4 text-base text-stone-900 shadow-sm focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-500/25 sm:mt-1.5 sm:text-sm"
                 >
                   <option value="">{t('contact.servicePlaceholder')}</option>
                   <option value="software">{t('contact.serviceSoftware')}</option>
                   <option value="consulting">{t('contact.serviceConsulting')}</option>
                   <option value="platforms">{t('contact.servicePlatforms')}</option>
-                  <option value="security">{t('contact.serviceSecurity')}</option>
+                  <option value="integrations">{t('contact.serviceIntegrations')}</option>
                   <option value="other">{t('contact.serviceOther')}</option>
                 </select>
               </div>
@@ -111,13 +114,13 @@ export function LandingContact() {
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
                   required
-                  className="mt-1.5 w-full resize-y rounded-xl border border-stone-200 bg-white px-4 py-3 text-stone-900 shadow-sm placeholder:text-stone-400 focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-500/20"
+                  className="mt-2 min-h-[10rem] w-full resize-y rounded-xl border border-stone-200/90 bg-white px-4 py-3 text-base text-stone-900 shadow-sm placeholder:text-stone-400 focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-500/25 sm:mt-1.5 sm:text-sm"
                   placeholder={t('contact.messagePlaceholder')}
                 />
               </div>
               <button
                 type="submit"
-                className="w-full rounded-full bg-stone-900 py-3.5 text-sm font-medium text-white transition hover:bg-stone-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-600 focus-visible:ring-offset-2 sm:w-auto sm:px-10"
+                className="w-full min-h-[48px] rounded-full bg-gradient-to-br from-stone-900 to-stone-800 py-3 text-sm font-semibold text-white shadow-soft transition hover:from-stone-800 hover:to-stone-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 active:scale-[0.99] sm:w-auto sm:px-10"
               >
                 {t('contact.send')}
               </button>

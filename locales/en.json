@@ -1,6 +1,7 @@
 {
   "nav": {
     "services": "Services",
+    "story": "Why BITFLOW",
     "showcase": "Flow",
     "cases": "Case studies",
     "testimonials": "Clients",
@@ -14,18 +15,45 @@
   },
   "hero": {
     "eyebrow": "BITFLOW",
-    "title": "Technology and peace of mind",
-    "titleAccent": "for your business and home",
-    "description": "Software development, consulting on digital solutions, management platforms, and security and smart-home installations. One team to connect what you run in the cloud with what you need on the ground.",
+    "title": "Serious software for companies",
+    "titleAccent": "that can't afford fluff",
+    "description": "Development, platforms, and consulting with real engineering discipline: maintainable code, honest scope, and solutions meant to run for years — not demos that shine and nobody maintains.",
     "ctaPrimary": "Discuss your project",
     "ctaSecondary": "View services"
   },
+  "story": {
+    "eyebrow": "Our story",
+    "title": "We got tired of the same script: big promises, fragile deliveries.",
+    "lead": "BITFLOW exists for teams that need a digital partner who signs with the same standards they sleep on: original, explainable, useful work. If your business depends on software, you deserve better than disguised templates and endless patches.",
+    "chapters": [
+      {
+        "title": "Your operation isn't a playground for cheap experiments",
+        "body": "Every technical choice should hold up in front of your CFO, your auditor, or your end customer. That's why we bias toward clarity: readable architecture, visible risks, and releases your team can run the Monday after — not only in a Friday demo."
+      },
+      {
+        "title": "No bullshit software",
+        "body": "We don't sell empty magic; we don't ship plagiarism or repackage someone else's work as ours; we don't sneak in billable features you won't use. We build real software: tested where it counts, documented when it helps, and honest about its limits."
+      },
+      {
+        "title": "Built to evolve, not to rip out next year",
+        "body": "We'd rather say \"no\" to a requirement we know will break your system than say \"yes\" just to close the sale. We think about whoever maintains the code two years out — sometimes you, sometimes us, and sometimes someone new who deserves context, not a graveyard of hacks."
+      },
+      {
+        "title": "From idea to long term, in the same language",
+        "body": "We thread APIs, cloud, data, and product into one narrative: fewer \"business vs IT\" translation meetings, more shared decisions and traceability for why each choice was made."
+      }
+    ],
+    "manifestoKicker": "Our promise",
+    "manifestoTitle": "Useful, maintainable software — without moral fine print.",
+    "manifestoBody": "At BITFLOW we build digital solutions for any company that values time, money, and reputation: engineering that respects your users, your teams, and the future of the product. That's what sets us apart from market noise.",
+    "closing": "If you want a team that tells you the technical truth and helps you build something that lasts, you're already in the right place."
+  },
   "services": {
     "title": "What we do",
-    "subtitle": "Two lines of work you can combine: product engineering and systems for home or business.",
+    "subtitle": "One focus: high-quality digital product — from first conversation to evolutionary support.",
     "engineering": {
       "title": "Serious software engineering — no fluff, no throwaway code",
-      "intro": "We don't ship low-quality quick fixes or promise what we can't sustain. We work to clear standards: understandable design, testing where it matters, and technical debt kept under control. We're original on every build, ethical on contracts and data, and loyal to clients long after the first release.",
+      "intro": "We don't ship fragile throwaways or promise what we can't sustain. Clear standards: understandable design, testing where it matters, controlled technical debt, and clean IP — what we build is yours, not disguised copy-paste.",
       "points": [
         "We solve real needs: less operational friction, faster processes, and more predictable delivery or service.",
         "Maintainable, documented code so your team or ours can evolve the product with confidence.",
@@ -46,23 +74,12 @@
       "title": "Management platforms",
       "description": "Automation and dashboards that structure your ops: less manual work, better traceability, and sharper decisions with the same headcount.",
       "imageAlt": "Business dashboard and analytics"
-    },
-    "security": {
-      "title": "Security & smart home",
-      "description": "Alarms, video surveillance, electric fencing, and automation for home or business.",
-      "imageAlt": "Connected home and smart security",
-      "bullets": {
-        "alarms": "Alarms and sensors",
-        "cameras": "Camera systems",
-        "fences": "Electric fencing",
-        "automation": "Automation and integration"
-      }
     }
   },
   "partners": {
     "title": "Technology brands and alliances",
     "tagsAria": "Brands and technologies",
-    "lead": "We are AWS and Google Cloud partners: we design, deploy, and operate cloud workloads with strong security and cost discipline. We also build with blockchain and Web3 — from enterprise traceability to wallet integrations and smart contracts.",
+    "lead": "We are AWS and Google Cloud partners: we design, deploy, and operate cloud workloads with solid cybersecurity practices and cost discipline. We also build with blockchain and Web3 — from enterprise traceability to wallet integrations and smart contracts.",
     "categories": [
       {
         "title": "Cloud partners",
@@ -99,64 +116,32 @@
         ]
       },
       {
-        "title": "Intrusion alarms",
+        "title": "Quality & operations",
         "items": [
-          { "label": "Paradox" },
-          { "label": "DSC" },
-          { "label": "Honeywell", "icon": "/images/partners/honeywell.svg" },
-          { "label": "wired & wireless detectors" },
-          { "label": "sirens and keypads" }
-        ]
-      },
-      {
-        "title": "CCTV & video",
-        "items": [
-          { "label": "Hikvision", "icon": "/images/partners/hikvision.svg" },
-          { "label": "Ezviz" },
-          { "label": "Dahua", "icon": "/images/partners/dahua.svg" },
-          { "label": "NVR & VMS" },
-          { "label": "ONVIF" },
-          { "label": "fiber & PoE backhaul" }
-        ]
-      },
-      {
-        "title": "Access control",
-        "items": [
-          { "label": "ZKTeco" },
-          { "label": "biometric & card readers" },
-          { "label": "turnstiles" },
-          { "label": "HR and visitor integrations" }
-        ]
-      },
-      {
-        "title": "Smart home & IoT",
-        "items": [
-          { "label": "Zigbee", "icon": "/images/partners/zigbee.svg" },
-          { "label": "Matter", "icon": "/images/partners/matter.svg" },
-          { "label": "Wi-Fi" },
-          { "label": "KNX", "icon": "/images/partners/knx.svg" },
-          { "label": "Aqara" },
-          { "label": "Sonoff" },
-          { "label": "unified gateways and scenes" }
+          { "label": "automated testing" },
+          { "label": "CI/CD" },
+          { "label": "observability & logging" },
+          { "label": "code review" },
+          { "label": "living documentation" }
         ]
       }
     ]
   },
   "showcase": {
     "title": "How a BITFLOW engagement flows",
-    "subtitle": "Two tracks — software and field security — following the same cadence: understand, propose, and deliver with clarity.",
-    "diagramAria": "Diagram: software and security paths merge into a three-stage process",
+    "subtitle": "Two complementary fronts — build well and sustain over time — with the same cadence: understand, propose, and deliver with clarity.",
+    "diagramAria": "Diagram: product build and sustainability merge into a three-stage process",
     "flowIntro": "Where projects start",
-    "laneSoftware": "Software & platforms",
-    "laneSoftwareHint": "Digital products, APIs, cloud, integrations, and ongoing code evolution.",
-    "laneSecurity": "Security & smart home",
-    "laneSecurityHint": "Alarms, CCTV, access, fences, and connected-home work with installation and go-live.",
-    "mergeHint": "One method for both",
-    "footnote": "Timelines depend on scope, integrations, and site permits; specifics land in the proposal."
+    "laneSoftware": "From zero to production",
+    "laneSoftwareHint": "Digital products, APIs, cloud, integrations, and releases your team can operate.",
+    "laneSustain": "Built to last",
+    "laneSustainHint": "Quality, tests, documentation, and evolutionary support — without toxic debt hidden under the rug.",
+    "mergeHint": "One method, one honest conversation",
+    "footnote": "Timelines depend on scope and integrations; specifics land in the proposal — without sneaky fine print."
   },
   "caseStudies": {
     "title": "Case studies",
-    "subtitle": "Scope and outcomes across software, consulting, and installation projects.",
+    "subtitle": "Scope and outcomes across software, platforms, and consulting.",
     "items": [
       {
         "sector": "Retail · inventory",
@@ -173,19 +158,18 @@
         "imageAlt": "Team reviewing software architecture"
       },
       {
-        "sector": "Residential · security",
-        "title": "Cameras, electric fence, and access app",
-        "summary": "Home and small business on the same property: IP cameras, integrated perimeter fence, and mobile notifications for the owner.",
-        "result": "Single dashboard for cameras and alarm status, with post-install support.",
-        "imageAlt": "Security camera installation"
+        "sector": "Healthcare · operations",
+        "title": "Scheduling and telehealth platform across branches",
+        "summary": "Clinic network: online booking, messaging reminders, concise patient record, and video rooms with per-clinician access control.",
+        "result": "Fewer no-shows, fuller schedules without clashes, and one source of truth for front desk and clinicians.",
+        "imageAlt": "Healthcare team and technology in a clinic"
       }
     ]
   },
   "successStories": {
     "title": "Success stories",
-    "subtitle": "Recent deliveries across education, retail, agro, health, logistics, and physical security — built for Latin American teams and users.",
+    "subtitle": "Recent deliveries across education, retail, agro, health, and logistics — built for Latin American teams and users.",
     "platformsHeading": "Custom platforms and software",
-    "securityHeading": "Security, CCTV, and smart building",
     "techAria": "Technologies used",
     "platforms": [
       {
@@ -228,32 +212,6 @@
         "result": "More on-time deliveries in the promised window and fewer status disputes.",
         "imageAlt": "Warehouse and distribution"
       }
-    ],
-    "security": [
-      {
-        "sector": "Gated residential",
-        "title": "Smart home, video intercom, and unified scenes",
-        "solution": "High-rise residential: lighting and blind automation, environment sensors, Ezviz video intercom and indoor Hikvision cameras in one mobile app; time-based rules and push alerts for concierge and owners.",
-        "tech": "Ezviz · Hikvision (Wi-Fi / PoE) · Zigbee · IP gateway · MQTT · unified mobile app",
-        "result": "Lower wasted lighting, verified visitors from the phone, and away-from-home scenes ready to arm.",
-        "imageAlt": "Modern residential setting"
-      },
-      {
-        "sector": "Retail storefront",
-        "title": "Paradox alarm install with Hikvision / Ezviz CCTV",
-        "solution": "High-traffic store: Paradox panel with PIR and door contacts, self-contained outdoor siren and central monitoring link; Hikvision domes and Ezviz points with NVR in a secure closet, Cat6 structured cabling and channel labeling.",
-        "tech": "Paradox · Hikvision · Ezviz · ONVIF NVR · PoE · fiber to guard room",
-        "result": "Audited open/close workflows; continuous recording with fast search on alarm events.",
-        "imageAlt": "Security and connected devices in retail"
-      },
-      {
-        "sector": "Industrial warehouse",
-        "title": "Electric perimeter fence and CCTV towers",
-        "solution": "Open yard: zoned electric fence with mesh and signage, Hikvision IR bullet towers on fiber backhaul to the guard post, redundant NVR and site-to-site VPN to headquarters.",
-        "tech": "Electric energizers · Hikvision outdoor · fiber optic · redundant NVR · VPN",
-        "result": "Strong deterrence at the property line; clear evidence of perimeter breaches and resilient remote viewing.",
-        "imageAlt": "Corporate and perimeter security"
-      }
     ]
   },
   "testimonials": {
@@ -273,10 +231,10 @@
         "company": "BridgePay Latam"
       },
       {
-        "quote": "Camera and alarm installation was spot on. They explained maintenance and labeled everything for future extensions.",
+        "quote": "They helped us integrate a difficult legacy without stopping operations. Clear documentation and milestone deliveries we could actually review.",
         "name": "Roberto Silva",
-        "role": "Owner",
-        "company": "Home and family business"
+        "role": "Head of systems",
+        "company": "Urban Logistics South"
       }
     ]
   },
@@ -293,14 +251,14 @@
     },
     "step3": {
       "title": "Delivery",
-      "description": "Incremental delivery, frequent communication, and support at go-live and beyond."
+      "description": "Incremental delivery, frequent communication, and evolutionary support after go-live."
     }
   },
   "about": {
     "title": "About BITFLOW",
-    "description": "A team focused on real outcomes: code, infrastructure, and field work when it matters.",
-    "paragraph1": "BITFLOW brings together software development and security and automation projects for those who need a technical partner close to the work.",
-    "paragraph2": "We work with SMBs, independents, and households that want to modernize operations or strengthen security with serious installations.",
+    "description": "A team focused on serious digital product: code you can read, run, and evolve.",
+    "paragraph1": "BITFLOW supports companies and teams that need an engineering partner aligned with the business — from architecture and cloud to the front-line details your users touch every day.",
+    "paragraph2": "We work with SMBs, scale-ups, and IT groups modernizing without betting on fragile solutions or opaque vendor dependency.",
     "highlight": "Eng. Darío Vélez Román, Ms.",
     "role": "CEO & founder",
     "imageAlt": "Team collaborating on a technology project"
@@ -313,8 +271,8 @@
   "faq": {
     "title": "Frequently asked questions",
     "q1": {
-      "question": "Do you serve only businesses or also homes?",
-      "answer": "Both. Development and consulting usually target businesses and teams; security and smart home includes residential and commercial installations."
+      "question": "Do you only work with large enterprises?",
+      "answer": "Not necessarily. We fit SMBs and mid-sized teams — what matters is real impact and a quality bar we can commit to."
     },
     "q2": {
       "question": "How is a software project quoted?",
@@ -322,11 +280,11 @@
     },
     "q3": {
       "question": "Do you offer maintenance or support afterward?",
-      "answer": "Yes. We can agree on evolutionary support, monitoring, or visits depending on the solution delivered."
+      "answer": "Yes. We agree evolutionary support, continuous improvement, or monitoring depending on the product and how critical it is to your business."
     },
     "q4": {
-      "question": "Which areas do you cover for security installations?",
-      "answer": "We align per project. Share location and type of installation in the form and we will confirm availability."
+      "question": "Is the code and IP ours?",
+      "answer": "Yes, unless we explicitly agree otherwise: what we build for your project is yours — we don't resell it to competitors or pass third-party work as our own."
     }
   },
   "contact": {
@@ -343,10 +301,10 @@
     "serviceSoftware": "Software development",
     "serviceConsulting": "Consulting",
     "servicePlatforms": "Management platforms",
-    "serviceSecurity": "Security & smart home",
+    "serviceIntegrations": "Integrations, APIs & legacy",
     "serviceOther": "Other / multiple",
     "message": "Message",
-    "messagePlaceholder": "Describe your need, timeline, or location if relevant.",
+    "messagePlaceholder": "Describe your need, timeline, and context (current stack, user volume, integrations).",
     "send": "Send message",
     "whatsapp": "WhatsApp",
     "emailLabel": "Email",
@@ -364,7 +322,7 @@
     "typing": "Typing…",
     "quickLabel": "Popular topics",
     "quickServices": "What services do you offer?",
-    "quickSecurity": "Alarms, CCTV & electric fences",
+    "quickPhilosophy": "Why BITFLOW?",
     "quickContact": "I want to be contacted",
     "quickPricing": "Pricing & timelines",
     "contactTitle": "Your contact details",
@@ -378,40 +336,37 @@
     "sendWhatsapp": "Send via WhatsApp",
     "sendEmail": "Send via email",
     "requiredHint": "Name and at least one channel (email or phone) help us reply properly.",
-    "greeting": "Hi — I'm BITFLOW's virtual assistant. I can guide you on custom software, platforms, consulting, security, smart home, brands we work with, and next steps. What do you need?",
+    "greeting": "Hi — I'm BITFLOW's virtual assistant. I can guide you on custom software, platforms, consulting, how we work (**No bullshit software**), brands we use, and next steps. What do you need?",
     "answers": {
-      "services": "BITFLOW combines **software & platforms** (custom development, consulting, management and automation) and **physical security** (alarms, CCTV, electric fences, smart home). See **What we do** for details.",
-      "software": "We build custom web apps and backends, integrations, and ongoing evolution. We focus on maintainable code and clear scope — see the **Software engineering, no shortcuts** block under Services.",
+      "philosophy": "BITFLOW stands for **No bullshit software**: honest delivery, maintainable code, no plagiarism or repackaged third-party work, and full transparency on scope and risk. Read the **Why BITFLOW** section on the page for our story and promise.",
+      "services": "We focus on **software & digital platforms**: custom development, consulting, integrations, cloud, and operations automation. See **What we do** for detail.",
+      "software": "We build custom web apps and backends, integrations, and ongoing evolution. We focus on maintainable code and clear scope — see the **Serious software engineering** block under Services.",
       "consulting": "Consulting covers architecture, priorities, and a roadmap you can actually ship and maintain — without inflated promises.",
       "platforms": "We design management and automation platforms to streamline operations: inventory, workflows, reporting, and less repetitive manual work.",
-      "security": "We install and integrate alarms, IP video surveillance, perimeter electric fences, and smart-home scenes for homes and businesses, using professional-grade brands.",
-      "fence": "Electric fences are planned by zones, with signage and tie-in to alarm or CCTV where the project requires it. Success stories include an industrial-style example.",
-      "domotics": "We work with Zigbee, Matter, Wi‑Fi, KNX ecosystems and brands like Aqara or Sonoff when they fit the design; we integrate scenes, sensors, and apps.",
-      "brandsCctv": "For video we typically use **Hikvision**, **Ezviz**, and **Dahua**, NVR/VMS, and ONVIF. **Technology partners** lists the ecosystem.",
-      "brandsAlarm": "For intrusion we use professional gear such as **Paradox**, DSC, or Honeywell depending on site design and local norms.",
-      "brandsAccess": "**ZKTeco** and access control (readers, biometrics, turnstiles) can be integrated with HR or visitor flows when needed.",
+      "integrations": "We connect existing systems (ERP, gateways, legacy) with modern APIs, queues, and clear contracts — without breaking what already pays the bills.",
       "cloud": "We're **AWS and Google Cloud partners**: we design and run cloud workloads with solid security and cost practices. More under **Technology partners**.",
       "blockchain": "We build with **blockchain & Web3**: Hyperledger Fabric, Ethereum/L2, IPFS, smart contracts, and wallet integration when the use case fits (e.g. traceability).",
-      "partners": "**Technology partners** lists cloud, blockchain, software, alarms, CCTV, access, and smart-home brands and stacks we use.",
-      "successStories": "**Success stories** highlights real deliveries: education, retail, agri with ledger traceability, health, logistics, and three security projects each with a representative image.",
-      "caseStudies": "**Case studies** describes scope and outcomes for retail-style, fintech/consulting, and residential CCTV + fence projects — always tailored.",
-      "pricing": "Every quote depends on scope, integrations, and whether field work is involved. The first scoping conversation has no cost. Use the contact form or the button below for options.",
-      "location": "Software work is remote with online meetings. Physical installs are scheduled by location and project type — tell us your city and needs when you reach out.",
-      "timing": "Timelines depend on deliverable size and permits on site. **How we work** explains diagnosis, proposal, and phased delivery.",
+      "partners": "**Technology partners** lists cloud, blockchain, software stacks, and quality/ops practices we use on real projects.",
+      "successStories": "**Success stories** highlights real work in education, retail, agri with ledger traceability, health, and logistics — each in a Latin American context.",
+      "caseStudies": "**Case studies** describes scope and outcomes for retail-style, fintech/consulting, and healthcare/ops scenarios — always tailored.",
+      "pricing": "Every quote depends on scope and integrations. The first scoping conversation has no cost. Use the contact form or the button below for concrete options.",
+      "location": "We work **remotely** with online meetings, aligned to your time zone. If you need occasional onsite work, we discuss it in the proposal.",
+      "timing": "Timelines depend on deliverable size and integrations. **How we work** explains diagnosis, proposal, and phased delivery.",
       "process": "Typical flow: **diagnosis** (goals and risks), **proposal** (clear scope and estimate), and **implementation** in milestones with handover support.",
-      "about": "BITFLOW is led by Ing. Darío Vélez Román, Ms. We combine product engineering with security installs when clients want one technical point of contact.",
-      "audience": "We serve **businesses and homes**: software and consulting are often SMEs and teams; security and smart home covers residential and commercial.",
+      "about": "BITFLOW is led by Eng. Darío Vélez Román, Ms. We bring product judgment, architecture, and execution for teams that can't afford fragile delivery.",
+      "audience": "We serve **companies and product/IT teams** — from growing SMBs to initiatives inside larger orgs that want a serious technical partner.",
       "contactPrompt": "To reach the team, use the **contact form** on the page or tap **I want to be contacted** below — I'll prepare WhatsApp or email with your details.",
-      "fallback": "I don't have an exact auto-reply for that. Try a keyword (software, alarms, CCTV, quote, AWS, blockchain…) or use the assistant contact form and a human will reply."
+      "fallback": "I don't have an exact auto-reply for that. Try a keyword (software, integrations, quote, AWS, blockchain, quality…) or use the assistant contact form and a human will reply."
     }
   },
   "footer": {
-    "tagline": "Technology solutions, software, and integrated security.",
+    "tagline": "Digital software and platforms with engineering judgment — no fluff.",
     "rights": "All rights reserved.",
     "services": "Services",
     "company": "Company",
     "legal": "Legal",
     "links": {
+      "story": "Why BITFLOW",
       "services": "Services",
       "partners": "Brands & alliances",
       "cases": "Case studies",

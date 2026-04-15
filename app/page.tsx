@@ -4,6 +4,7 @@ import { useI18n } from '@/lib/i18n'
 import {
   LandingHeader,
   LandingHero,
+  LandingStory,
   LandingServices,
   LandingPartners,
   LandingShowcaseFlow,
@@ -23,7 +24,7 @@ export default function Home() {
   const { language } = useI18n()
 
   return (
-    <main className="min-h-screen bg-stone-50 text-stone-900">
+    <main className="page-backdrop relative min-h-dvh overflow-x-hidden text-stone-900">
       <a
         href="#contenido"
         className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded-md focus:bg-white focus:px-4 focus:py-2 focus:text-sm focus:shadow-lg"
@@ -35,6 +36,7 @@ export default function Home() {
 
       <div id="contenido">
         <LandingHero />
+        <LandingStory />
         <LandingServices />
         <LandingPartners />
         <LandingShowcaseFlow />

@@ -2,9 +2,9 @@ import { MetadataRoute } from 'next'
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'BITFLOW - Notificaciones Instantáneas',
+    name: 'BITFLOW — Software y soluciones digitales',
     short_name: 'BITFLOW',
-    description: 'Plataforma líder en notificaciones por mensajería instantánea para empresas',
+    description: 'Desarrollo de software, plataformas y consultoría con criterio de ingeniería.',
     start_url: '/',
     display: 'standalone',
     background_color: '#ffffff',

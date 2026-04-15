@@ -6,7 +6,7 @@ import es from '@/locales/es.json'
 import en from '@/locales/en.json'
 import { PartnerSimpleIcon } from './partner-icons'
 
-const CATEGORY_COUNT = 7
+const CATEGORY_COUNT = 4
 
 type PartnerItem = { label: string; icon?: string }
 
@@ -65,12 +65,17 @@ export function LandingPartners() {
   const indices = Array.from({ length: CATEGORY_COUNT }, (_, i) => i)
 
   return (
-    <section id="marcas-alianzas" className="scroll-mt-24 border-b border-stone-200/80 bg-stone-100/40 py-20 md:py-28">
+    <section
+      id="marcas-alianzas"
+      className="scroll-mt-20 md:scroll-mt-24 border-b border-stone-200/80 bg-white/55 py-16 backdrop-blur-md sm:py-20 md:py-28 supports-[backdrop-filter]:bg-white/45"
+    >
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <h2 className="text-3xl font-semibold tracking-tight text-stone-900 md:text-4xl">{t('partners.title')}</h2>
-        <p className="mt-5 max-w-3xl text-lg leading-relaxed text-stone-600">{t('partners.lead')}</p>
+        <h2 className="text-balance text-2xl font-semibold tracking-tight text-stone-900 sm:text-3xl md:text-4xl">
+          {t('partners.title')}
+        </h2>
+        <p className="mt-4 max-w-3xl text-base leading-relaxed text-stone-600 sm:mt-5 sm:text-lg">{t('partners.lead')}</p>
 
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-10 grid gap-4 sm:mt-12 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3">
           {indices.map((i) => {
             const cat = categories[i]
             const title = cat?.title ?? ''
@@ -79,7 +84,7 @@ export function LandingPartners() {
             return (
               <div
                 key={i}
-                className="rounded-2xl border border-stone-200 bg-white p-5 shadow-sm transition hover:border-stone-300 hover:shadow-md"
+                className="rounded-2xl border border-stone-200/80 bg-white/90 p-4 shadow-soft backdrop-blur-sm transition hover:border-primary-200/40 hover:shadow-soft-lg sm:rounded-3xl sm:p-5"
               >
                 <h3 className="text-base font-semibold text-stone-900">{title}</h3>
                 {items?.length ? (

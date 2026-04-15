@@ -149,7 +149,7 @@ export function ChatWidget() {
     window.location.href = `mailto:${SITE.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
   }
 
-  const quick = (key: 'quickServices' | 'quickSecurity' | 'quickContact' | 'quickPricing') => {
+  const quick = (key: 'quickServices' | 'quickPhilosophy' | 'quickContact' | 'quickPricing') => {
     const label = t(`chatbot.${key}`)
     if (key === 'quickContact') {
       setMessages((prev) => [...prev, { id: `u-${Date.now()}`, role: 'user', text: label }])
@@ -165,7 +165,7 @@ export function ChatWidget() {
   }
 
   return (
-    <div className="pointer-events-none fixed bottom-0 right-0 z-[90] flex flex-col items-end gap-3 p-4 sm:p-6">
+    <div className="pointer-events-none fixed bottom-0 right-0 z-[90] flex flex-col items-end gap-3 p-4 pb-[max(1rem,env(safe-area-inset-bottom,0px)+0.5rem)] sm:p-6 sm:pb-6">
       {open && (
         <div
           className="pointer-events-auto flex h-[min(28rem,calc(100vh-7rem))] w-[min(100vw-2rem,22rem)] min-h-0 flex-col overflow-hidden rounded-2xl border border-stone-200 bg-white shadow-xl shadow-stone-900/10"
@@ -292,7 +292,7 @@ export function ChatWidget() {
                   {t('chatbot.quickLabel')}
                 </p>
                 <div className="mb-2 flex flex-wrap gap-1.5">
-                  {(['quickServices', 'quickSecurity', 'quickPricing', 'quickContact'] as const).map((k) => (
+                  {(['quickServices', 'quickPhilosophy', 'quickPricing', 'quickContact'] as const).map((k) => (
                     <button
                       key={k}
                       type="button"

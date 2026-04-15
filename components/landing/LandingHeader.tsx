@@ -5,7 +5,7 @@ import { useI18n } from '@/lib/i18n'
 import { SITE } from '@/lib/site'
 
 const navLinkClass =
-  'text-sm font-medium text-stone-600 transition hover:text-stone-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-600 focus-visible:ring-offset-2 rounded px-1'
+  'rounded-lg px-2 py-2 text-sm font-medium text-stone-600 transition hover:bg-stone-100/80 hover:text-stone-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2'
 
 export function LandingHeader() {
   const { t, language, setLanguage } = useI18n()
@@ -16,8 +16,8 @@ export function LandingHeader() {
     <button
       type="button"
       onClick={() => setLanguage(lang)}
-      className={`rounded-md px-2.5 py-1 text-xs font-medium transition ${
-        language === lang ? 'bg-stone-900 text-white' : 'text-stone-500 hover:text-stone-800'
+      className={`min-h-[40px] min-w-[44px] rounded-lg px-3 text-xs font-semibold transition ${
+        language === lang ? 'bg-stone-900 text-white shadow-sm' : 'text-stone-600 hover:bg-stone-100 hover:text-stone-900'
       }`}
       aria-pressed={language === lang}
     >
@@ -27,6 +27,7 @@ export function LandingHeader() {
 
   const mobileLinks: [string, string][] = [
     ['#servicios', t('nav.services')],
+    ['#historia', t('nav.story')],
     ['#marcas-alianzas', t('nav.partners')],
     ['#experiencia', t('nav.showcase')],
     ['#casos', t('nav.cases')],
@@ -39,8 +40,8 @@ export function LandingHeader() {
   ]
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-stone-200/80 bg-stone-50/90 backdrop-blur-md">
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-stone-200/60 bg-white/80 pt-[env(safe-area-inset-top,0px)] shadow-sm shadow-stone-900/5 backdrop-blur-xl supports-[backdrop-filter]:bg-white/70">
+      <div className="mx-auto flex min-h-[3.25rem] max-w-6xl items-center justify-between gap-3 px-4 py-2 sm:min-h-16 sm:gap-4 sm:px-6 sm:py-0">
         <a href="#" className="flex shrink-0 items-center gap-2" onClick={closeMenu}>
           <img
             src={SITE.logoUrl}
@@ -54,6 +55,9 @@ export function LandingHeader() {
         <nav className="hidden items-center gap-4 text-[0.8125rem] xl:flex xl:gap-5 xl:text-sm" aria-label="Principal">
           <a href="#servicios" className={navLinkClass}>
             {t('nav.services')}
+          </a>
+          <a href="#historia" className={navLinkClass}>
+            {t('nav.story')}
           </a>
           <a href="#marcas-alianzas" className={navLinkClass}>
             {t('nav.partners')}
@@ -85,19 +89,19 @@ export function LandingHeader() {
         </nav>
 
         <div className="flex items-center gap-2 md:gap-3">
-          <div className="flex rounded-lg border border-stone-200 bg-white p-0.5" role="group" aria-label="Idioma">
+          <div className="flex shrink-0 overflow-hidden rounded-xl border border-stone-200/90 bg-stone-50/80 p-0.5 shadow-sm" role="group" aria-label="Idioma">
             <LangBtn lang="es" label="ES" />
             <LangBtn lang="en" label="EN" />
           </div>
           <a
             href="#contacto"
-            className="hidden rounded-full bg-stone-900 px-4 py-2 text-sm font-medium text-white transition hover:bg-stone-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-600 focus-visible:ring-offset-2 xl:inline-flex"
+            className="hidden min-h-[44px] min-w-[44px] items-center justify-center rounded-full bg-gradient-to-br from-stone-900 to-stone-800 px-4 text-sm font-medium text-white shadow-soft transition hover:from-stone-800 hover:to-stone-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 md:inline-flex"
           >
             {t('nav.cta')}
           </a>
           <button
             type="button"
-            className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-stone-200 bg-white text-stone-800 xl:hidden"
+            className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-stone-200/90 bg-white text-stone-800 shadow-sm transition active:scale-[0.98] xl:hidden"
             onClick={() => setMenuOpen((o) => !o)}
             aria-expanded={menuOpen}
             aria-controls="mobile-menu"
@@ -117,13 +121,19 @@ export function LandingHeader() {
       </div>
 
       {menuOpen && (
-        <div id="mobile-menu" className="border-t border-stone-200 bg-stone-50 px-4 py-4 xl:hidden">
-          <nav className="flex flex-col gap-1" aria-label="Móvil">
+        <div
+          id="mobile-menu"
+          className="border-t border-stone-200/80 bg-white/95 px-4 py-3 backdrop-blur-md supports-[backdrop-filter]:bg-white/90 xl:hidden"
+        >
+          <nav
+            className="flex max-h-[min(70dvh,calc(100dvh-5rem))] flex-col gap-0.5 overflow-y-auto overscroll-y-contain pb-[max(0.75rem,env(safe-area-inset-bottom))]"
+            aria-label="Móvil"
+          >
             {mobileLinks.map(([href, label]) => (
               <a
                 key={href}
                 href={href}
-                className="rounded-lg px-3 py-3 text-base font-medium text-stone-800 hover:bg-stone-100"
+                className="rounded-xl px-3 py-3.5 text-base font-medium text-stone-800 active:bg-stone-100 hover:bg-stone-50"
                 onClick={closeMenu}
               >
                 {label}
@@ -131,7 +141,7 @@ export function LandingHeader() {
             ))}
             <a
               href="#contacto"
-              className="mt-2 rounded-full bg-stone-900 px-4 py-3 text-center text-sm font-medium text-white"
+              className="mt-2 flex min-h-[48px] items-center justify-center rounded-full bg-gradient-to-br from-stone-900 to-stone-800 px-4 text-center text-sm font-medium text-white shadow-soft"
               onClick={closeMenu}
             >
               {t('nav.cta')}

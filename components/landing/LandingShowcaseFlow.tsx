@@ -10,19 +10,6 @@ function IconCode({ className }: { className?: string }) {
   )
 }
 
-function IconShield({ className }: { className?: string }) {
-  return (
-    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" aria-hidden>
-      <path
-        d="M12 3l8 4v6c0 5-3.4 9.4-8 10-4.6-.6-8-5-8-10V7l8-4z"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      <path d="M9 12l2 2 4-4" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
-  )
-}
-
 function IconListen({ className }: { className?: string }) {
   return (
     <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" aria-hidden>
@@ -69,21 +56,24 @@ export function LandingShowcaseFlow() {
   ]
 
   return (
-    <section id="experiencia" className="scroll-mt-24 border-b border-stone-200/80 bg-gradient-to-b from-stone-100/80 to-stone-50 py-20 md:py-28">
+    <section
+      id="experiencia"
+      className="scroll-mt-20 md:scroll-mt-24 border-b border-stone-200/80 bg-gradient-to-b from-sky-50/50 via-white/80 to-stone-50/90 py-16 sm:py-20 md:py-28"
+    >
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <h2 className="text-3xl font-semibold tracking-tight text-stone-900 md:text-4xl">{t('showcase.title')}</h2>
-        <p className="mt-4 max-w-2xl text-lg text-stone-600">{t('showcase.subtitle')}</p>
+        <h2 className="text-balance text-2xl font-semibold tracking-tight text-stone-900 sm:text-3xl md:text-4xl">{t('showcase.title')}</h2>
+        <p className="mt-4 max-w-2xl text-base leading-relaxed text-stone-600 sm:text-lg">{t('showcase.subtitle')}</p>
 
         <div
-          className="mt-12 rounded-2xl border border-stone-200 bg-white p-6 shadow-sm md:p-10"
+          className="mt-10 rounded-2xl border border-stone-200/80 bg-white/95 p-5 shadow-soft-lg backdrop-blur-sm sm:mt-12 sm:rounded-3xl sm:p-8 md:p-10"
           role="img"
           aria-label={t('showcase.diagramAria')}
         >
           <p className="text-center text-xs font-semibold uppercase tracking-wider text-stone-400">{t('showcase.flowIntro')}</p>
 
-          <div className="mt-6 grid gap-6 md:grid-cols-2 md:gap-8">
-            <div className="flex gap-4 rounded-xl border border-sky-200/80 bg-gradient-to-br from-sky-50 to-white p-5">
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-sky-600 text-white">
+          <div className="mt-5 grid gap-3 sm:mt-6 sm:gap-4 md:grid-cols-2 md:gap-6">
+            <div className="flex gap-3 rounded-2xl border border-sky-200/90 bg-gradient-to-br from-sky-50 to-white p-4 shadow-sm sm:gap-4 sm:rounded-2xl sm:p-5">
+              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-sky-600 text-white shadow-sm sm:h-12 sm:w-12">
                 <IconCode className="h-6 w-6" />
               </div>
               <div>
@@ -91,13 +81,13 @@ export function LandingShowcaseFlow() {
                 <p className="mt-1 text-sm leading-relaxed text-stone-600">{t('showcase.laneSoftwareHint')}</p>
               </div>
             </div>
-            <div className="flex gap-4 rounded-xl border border-amber-200/80 bg-gradient-to-br from-amber-50/90 to-white p-5">
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-amber-700 text-white">
-                <IconShield className="h-6 w-6" />
+            <div className="flex gap-3 rounded-2xl border border-emerald-200/90 bg-gradient-to-br from-emerald-50/90 to-white p-4 shadow-sm sm:gap-4 sm:rounded-2xl sm:p-5">
+              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-emerald-700 text-white shadow-sm sm:h-12 sm:w-12">
+                <IconShip className="h-6 w-6" />
               </div>
               <div>
-                <p className="text-sm font-semibold text-stone-900">{t('showcase.laneSecurity')}</p>
-                <p className="mt-1 text-sm leading-relaxed text-stone-600">{t('showcase.laneSecurityHint')}</p>
+                <p className="text-sm font-semibold text-stone-900">{t('showcase.laneSustain')}</p>
+                <p className="mt-1 text-sm leading-relaxed text-stone-600">{t('showcase.laneSustainHint')}</p>
               </div>
             </div>
           </div>
@@ -109,10 +99,10 @@ export function LandingShowcaseFlow() {
             <FlowArrowDown className="mt-2 h-10 w-12 text-stone-400" />
           </div>
 
-          <div className="rounded-xl border border-stone-100 bg-stone-50/80 p-6 md:p-8">
-            <ol className="grid gap-10 md:grid-cols-3 md:gap-8">
+          <div className="rounded-2xl border border-stone-200/60 bg-gradient-to-b from-stone-50/90 to-white/80 p-5 sm:rounded-2xl sm:p-6 md:p-8">
+            <ol className="grid gap-8 sm:gap-10 md:grid-cols-3 md:gap-8">
               {steps.map((step, i) => (
-                <li key={step.title} className="flex gap-4 md:flex-col md:items-center md:text-center">
+                <li key={step.title} className="flex gap-3 sm:gap-4 md:flex-col md:items-center md:text-center">
                   <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border-2 border-white bg-stone-900 text-white shadow-md ring-4 ring-stone-100">
                     <step.Icon className="h-5 w-5" />
                   </span>

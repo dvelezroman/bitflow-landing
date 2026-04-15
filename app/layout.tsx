@@ -10,23 +10,23 @@ const plusJakarta = Plus_Jakarta_Sans({
 })
 
 export const metadata: Metadata = {
-  title: 'BITFLOW — Software, consultoría y seguridad integrada',
+  title: 'BITFLOW — Desarrollo de software y soluciones digitales',
   description:
-    'Desarrollo de software, consultoría en soluciones digitales, plataformas de gestión e instalaciones de seguridad y domótica. BITFLOW acompaña a empresas y hogares.',
+    'Software a medida, plataformas y consultoría con criterio de ingeniería. BITFLOW: No bullshit software — código mantenible, honesto y pensado para durar.',
   keywords:
-    'desarrollo software, consultoría TI, plataformas gestión, domótica, alarmas, cámaras, cercos eléctricos, BITFLOW',
+    'desarrollo software, consultoría TI, plataformas gestión, integraciones API, nube AWS Google Cloud, blockchain, BITFLOW',
   authors: [{ name: 'BITFLOW' }],
   openGraph: {
-    title: 'BITFLOW — Software, consultoría y seguridad integrada',
+    title: 'BITFLOW — Desarrollo de software y soluciones digitales',
     description:
-      'Soluciones tecnológicas, desarrollo a medida y sistemas de seguridad para negocio y hogar.',
+      'Soluciones digitales serias para empresas: producto, nube, integraciones y calidad sin humo.',
     type: 'website',
     locale: 'es_ES',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'BITFLOW',
-    description: 'Software, consultoría y seguridad integrada.',
+    description: 'No bullshit software — desarrollo y plataformas digitales para empresas.',
   },
   robots: {
     index: true,
@@ -42,6 +42,10 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#fafaf9' },
+    { media: '(prefers-color-scheme: dark)', color: '#0c0a09' },
+  ],
 }
 
 export default function RootLayout({
@@ -54,7 +58,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="https://bitflow-public.s3.us-east-1.amazonaws.com/Bitflow-logo.png" />
       </head>
-      <body className={`${plusJakarta.className} antialiased`}>
+      <body className={`${plusJakarta.className} font-sans antialiased`}>
         <I18nProvider>{children}</I18nProvider>
       </body>
     </html>
