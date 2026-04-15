@@ -1,7 +1,7 @@
 'use client'
 
 import { useI18n } from '@/lib/i18n'
-import { MEDIA, TESTIMONIAL_COUNT } from '@/content/media'
+import { TESTIMONIAL_COUNT } from '@/content/media'
 
 export function LandingTestimonials() {
   const { t } = useI18n()
@@ -21,21 +21,11 @@ export function LandingTestimonials() {
               key={i}
               className="flex flex-col rounded-2xl border border-stone-200/80 bg-white/90 p-5 shadow-soft backdrop-blur-sm sm:rounded-3xl sm:p-6"
             >
-              <div className="flex items-center gap-4">
-                <img
-                  src={MEDIA.testimonials[i].avatar}
-                  alt=""
-                  width={56}
-                  height={56}
-                  className="h-14 w-14 rounded-full object-cover ring-2 ring-white"
-                  loading="lazy"
-                />
-                <div>
-                  <figcaption className="font-semibold text-stone-900">{t(`testimonials.items.${i}.name`)}</figcaption>
-                  <p className="text-sm text-stone-600">{t(`testimonials.items.${i}.role`)}</p>
-                  <p className="text-xs text-stone-500">{t(`testimonials.items.${i}.company`)}</p>
-                </div>
-              </div>
+              <figcaption>
+                <span className="block font-semibold text-stone-900">{t(`testimonials.items.${i}.name`)}</span>
+                <span className="mt-0.5 block text-sm text-stone-600">{t(`testimonials.items.${i}.role`)}</span>
+                <span className="mt-0.5 block text-xs text-stone-500">{t(`testimonials.items.${i}.company`)}</span>
+              </figcaption>
               <blockquote className="mt-5 flex-1 text-stone-700 leading-relaxed">
                 <span className="text-3xl font-serif leading-none text-stone-300" aria-hidden>
                   &ldquo;

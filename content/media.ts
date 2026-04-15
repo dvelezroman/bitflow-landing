@@ -15,16 +15,6 @@ export const MEDIA = {
     consulting: `${IMG}/service-consulting.jpg`,
     platforms: `${IMG}/service-platforms.jpg`,
   },
-  caseStudies: [
-    { image: `${IMG}/case-warehouse.jpg` },
-    { image: `${IMG}/case-fintech.jpg` },
-    { image: `${IMG}/success-health.jpg` },
-  ] as const,
-  testimonials: [
-    { avatar: `${IMG}/avatar-1.jpg` },
-    { avatar: `${IMG}/avatar-2.jpg` },
-    { avatar: `${IMG}/avatar-3.jpg` },
-  ] as const,
   about: {
     team: `${IMG}/about-team.jpg`,
   },
@@ -39,6 +29,6 @@ export const MEDIA = {
   },
 } as const
 
-export const CASE_STUDY_COUNT = MEDIA.caseStudies.length
-export const TESTIMONIAL_COUNT = MEDIA.testimonials.length
+/** Debe coincidir con `testimonials.items` en locales (es/en). */
+export const TESTIMONIAL_COUNT = 3
 export const SUCCESS_PLATFORM_COUNT = MEDIA.successStories.platforms.length

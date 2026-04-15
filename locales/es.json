@@ -3,7 +3,6 @@
     "services": "Servicios",
     "story": "Por qué BITFLOW",
     "showcase": "Flujo",
-    "cases": "Casos",
     "testimonials": "Clientes",
     "process": "Cómo trabajamos",
     "about": "Nosotros",
@@ -11,6 +10,7 @@
     "contact": "Contacto",
     "cta": "Solicitar consulta",
     "successStories": "Casos exitosos",
+    "projects": "Proyectos",
     "partners": "Marcas"
   },
   "hero": {
@@ -138,33 +138,6 @@
     "laneSustainHint": "Calidad, pruebas, documentación y soporte evolutivo — sin deuda tóxica escondida bajo la alfombra.",
     "mergeHint": "Un solo método, una sola conversación honesta",
     "footnote": "Los plazos dependen del alcance y las integraciones; el detalle lo acordamos en la propuesta, sin sorpresas de letra chica."
-  },
-  "caseStudies": {
-    "title": "Casos de estudio",
-    "subtitle": "Alcance y resultados en proyectos de software, plataformas y consultoría.",
-    "items": [
-      {
-        "sector": "Retail · inventario",
-        "title": "Plataforma unificada de inventario y pedidos",
-        "summary": "Cadena regional con sucursales en varias ciudades: integración de ERP ligero, app interna para tiendas y alertas automáticas de reposición.",
-        "result": "Reducción cercana al 40% en errores de inventario y cierres diarios más rápidos.",
-        "imageAlt": "Operaciones logísticas y almacén"
-      },
-      {
-        "sector": "Servicios financieros · consultoría",
-        "title": "Arquitectura y roadmap para producto digital",
-        "summary": "Fintech en crecimiento: auditoría de deuda técnica, definición de módulos de API y plan de entregas por fases con hitos medibles.",
-        "result": "Mejoras del primer trimestre en producción sin interrumpir operaciones críticas.",
-        "imageAlt": "Equipo analizando arquitectura de software"
-      },
-      {
-        "sector": "Salud · operación",
-        "title": "Plataforma de agenda y teleconsulta multi-sede",
-        "summary": "Red de consultorios: reservas en línea, recordatorios por mensajería, ficha resumida y videollamadas con control de acceso por profesional.",
-        "result": "Menos inasistencias, agendas más llenas sin choques y una sola fuente de verdad para recepción y médicos.",
-        "imageAlt": "Equipo de salud y tecnología en consultorio"
-      }
-    ]
   },
   "successStories": {
     "title": "Casos exitosos",
@@ -312,6 +285,82 @@
     "channelsTitle": "Canales directos",
     "success": "Gracias. Hemos recibido tu mensaje y te contactaremos pronto."
   },
+  "projects": {
+    "title": "Proyectos desarrollados con BITFLOW",
+    "subtitle": "Productos y plataformas que hemos llevado de requerimiento a producción: contexto, stack, necesidad del cliente y resultado.",
+    "labels": {
+      "summary": "De qué se trata",
+      "need": "Necesidad del cliente",
+      "tech": "Tecnología",
+      "outcome": "Qué se logró"
+    },
+    "pipeline": "Otros proyectos en marcha — si lo que buscas encaja con este tipo de desafíos, conversemos.",
+    "items": [
+      {
+        "title": "Plataforma de gestión y trazabilidad de la cosecha del camarón",
+        "summary": "Sistema para registrar lotes, etapas de proceso y movimientos desde cosecha hasta despacho, con trazabilidad auditable para exportación y cumplimiento.",
+        "need": "Sustituir planillas y hojas dispersas por un solo flujo digital; demostrar origen y cadena de custodia ante compradores y auditorías.",
+        "tech": "Web app y API en Node.js/NestJS, PostgreSQL, almacenamiento de documentos, reportes y tableros; despliegue en nube con respaldos y roles por planta o centro.",
+        "outcome": "Visibilidad en tiempo casi real del inventario por lote, menos errores de trazado y respuesta más rápida ante consultas de clientes y certificaciones."
+      },
+      {
+        "title": "Plataforma de gestión educativa para clases presenciales y en línea",
+        "summary": "Entorno académico unificado: materiales, asistencia, calificaciones y comunicación entre docentes, estudiantes y administración.",
+        "need": "Operar presencial y virtual sin duplicar herramientas; reducir carga administrativa y dar claridad a familias y alumnos.",
+        "tech": "Frontend React/Next.js, backend modular, base relacional, notificaciones (correo/push según diseño), videollamadas integradas o enlazadas, roles y permisos por sede.",
+        "outcome": "Un solo canal para avisos oficiales, seguimiento de rendimiento más ordenado y menos fricción en matrícula y comunicación día a día."
+      },
+      {
+        "title": "Plataforma para medición de tiempos en eventos deportivos",
+        "summary": "Aplicación para capturar tiempos por participante o equipo, clasificaciones en vivo y publicación de resultados durante competencias.",
+        "need": "Abandonar cronometraje manual en papel o hojas compartidas; minimizar disputas y retrasos al publicar resultados oficiales.",
+        "tech": "App web responsiva y API de alto rendimiento, validaciones anti-duplicado, panel para jueces o oficiales, posible integración con lectores o entrada manual según evento.",
+        "outcome": "Resultados más confiables y rápidos, menos trabajo repetitivo para el staff y mejor experiencia para atletas y público."
+      },
+      {
+        "title": "Plataforma de gestión de pacientes y turnos de citas médicas",
+        "summary": "Agenda médica, historial resumido, recordatorios y flujo de recepción para consultorios o redes de salud ambulatoria.",
+        "need": "Reducir inasistencias, evitar solapamiento de agendas y ordenar la información del paciente sin depender solo de papel.",
+        "tech": "Vue o React según proyecto, backend con reglas de negocio de citas, integración con WhatsApp u otros canales de recordatorio, datos sensibles con buenas prácticas de acceso.",
+        "outcome": "Agenda más llena sin choques, menos ausencias y recepción con contexto antes de la consulta."
+      },
+      {
+        "title": "Plataforma de eventos",
+        "summary": "Gestión de inscripciones, pagos o confirmaciones, credenciales y comunicaciones para congresos, ferias o actividades corporativas.",
+        "need": "Centralizar inscritos, cupos y comunicación; evitar listas en correo y planillas que se desactualizan en horas.",
+        "tech": "Portal público + panel administrativo, integración con pasarela de pagos cuando aplica, generación de listados y exportación, notificaciones automatizadas.",
+        "outcome": "Operación del evento más predecible, menos reprocesos y mejor experiencia para asistentes y organizadores."
+      },
+      {
+        "title": "Aplicación con inteligencia artificial — recomendación gastronómica manabita",
+        "summary": "Experiencia móvil o web que sugiere platos, rutas o establecimientos según preferencias, contexto y patrimonio gastronómico regional.",
+        "need": "Ofrecer descubrimiento personalizado sin curar todo a mano; conectar turismo/cultura con datos estructurados y un tono local auténtico.",
+        "tech": "Cliente React Native o PWA, servicios de recomendación y reglas de negocio, integración con modelos o APIs de IA según diseño, contenido curado en base de datos.",
+        "outcome": "Usuarios encuentran opciones alineadas a su perfil más rápido; el cliente diferencia su propuesta con una experiencia moderna y local."
+      },
+      {
+        "title": "Landing profesional para escuela de idiomas",
+        "summary": "Sitio de alta conversión con propuesta clara, niveles, modalidades y llamados a la acción hacia contacto o matrícula.",
+        "need": "Presencia web seria que refleje calidad pedagógica; cargas rápidas en móvil y mensaje coherente en varios idiomas si aplica.",
+        "tech": "Next.js, contenido optimizado para SEO y rendimiento, formularios conectados a CRM o correo, diseño responsive y accesible.",
+        "outcome": "Más consultas calificadas, tiempo de carga bajo y una primera impresión alineada a la marca de la escuela."
+      },
+      {
+        "title": "Plataforma de gestión de vinculaciones y cartera para institución educativa",
+        "summary": "Control de matrículas, convenios, estados de cuenta y seguimiento financiero académico en un solo entorno institucional.",
+        "need": "Unificar vinculación de estudiantes y gestión de cobros/planes sin depender de múltiples Excels y correos interminables.",
+        "tech": "Aplicación web con roles (finanzas, secretaría, dirección), reportes y exportación, auditoría de cambios, respaldos y permisos granulares.",
+        "outcome": "Mayor claridad de cartera por programa y cohorte, menos reclamos por desalineación de datos y cierres contables más ágiles."
+      },
+      {
+        "title": "Plataforma de envío de mensajes masivos por WhatsApp",
+        "summary": "Herramienta para campañas y notificaciones a listas autorizadas, con plantillas, colas y trazabilidad de entregas.",
+        "need": "Escalar comunicación sin violar políticas de la plataforma; medir qué se envió y evitar duplicados o errores manuales masivos.",
+        "tech": "Backend con colas (BullMQ u similar), integración WhatsApp Business API, panel de campañas, logs y reintentos, infraestructura preparada para picos.",
+        "outcome": "Envíos masivos gobernados, mejor visibilidad de estado de mensajes y operación menos dependiente de hojas y copiar/pegar."
+      }
+    ]
+  },
   "chatbot": {
     "title": "Asesor en línea",
     "subtitle": "BITFLOW",
@@ -347,8 +396,8 @@
       "cloud": "Somos **partners de AWS y Google Cloud**: diseñamos y operamos cargas en la nube con buenas prácticas de seguridad y costo. Más detalle en «Marcas y alianzas».",
       "blockchain": "Desarrollamos con **blockchain y Web3**: Hyperledger Fabric, Ethereum/L2, IPFS, contratos inteligentes e integración con wallets cuando el caso lo amerita (p. ej. trazabilidad).",
       "partners": "En «Marcas y alianzas tecnológicas» verás nube, blockchain, stacks de software y prácticas de calidad y operación que usamos en proyectos reales.",
-      "successStories": "«Casos exitosos» resume entregas reales en educación, retail, agro con trazabilidad en ledger, salud y logística — cada una con contexto latinoamericano.",
-      "caseStudies": "«Casos de estudio» describe alcance y resultados tipo retail, fintech/consultoría y salud/operación — siempre adaptados a cada cliente.",
+      "successStories": "«Casos exitosos» resume entregas reales en educación, retail, agro con trazabilidad en ledger, salud y logística — cada una con contexto latinoamericano. Si buscabas «casos de estudio», aquí tienes el mismo nivel de detalle: alcance, tecnología y resultados.",
+      "projects": "La sección **Proyectos desarrollados con BITFLOW** describe productos reales: qué son, qué necesitaba el cliente, tecnología y resultado. Incluye camarón/trazabilidad, educación, deportes, salud, eventos, IA gastronómica, landing de idiomas, cartera educativa y WhatsApp masivo.",
       "pricing": "Cada proyecto se cotiza según alcance e integraciones. La primera conversación para acotar la necesidad no tiene costo. Usa el formulario de contacto o el botón de abajo para opciones concretas.",
       "location": "Trabajamos **en remoto** con reuniones en línea, alineados a tu zona horaria. Si necesitas onsite puntuales, lo conversamos en la propuesta.",
       "timing": "Los plazos dependen del tamaño del entregable y de las integraciones. En «Cómo trabajamos» explicamos diagnóstico, propuesta e implementación por entregas.",
@@ -369,8 +418,8 @@
       "story": "Por qué BITFLOW",
       "services": "Servicios",
       "partners": "Marcas y alianzas",
-      "cases": "Casos",
       "successStories": "Casos exitosos",
+      "projects": "Proyectos BITFLOW",
       "process": "Cómo trabajamos",
       "testimonials": "Opiniones",
       "about": "Nosotros",

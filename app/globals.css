@@ -73,6 +73,40 @@ body {
   }
 }
 
+/* Intro splash (LandingIntro) — nombres usados en animate-[intro-*] */
+@keyframes intro-logo-in {
+  from {
+    opacity: 0;
+    transform: scale(0.88) translateY(18px);
+    filter: blur(12px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes intro-orbit {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes intro-scan {
+  0% {
+    transform: translateX(-120%);
+    opacity: 0.35;
+  }
+  45% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(280%);
+    opacity: 0.35;
+  }
+}
+
 @layer components {
   /* Mobile-first page canvas: mesh + subtle grid (software / product UI vibe) */
   .page-backdrop {

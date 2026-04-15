@@ -2,14 +2,15 @@
 
 import { useI18n } from '@/lib/i18n'
 import {
+  LandingIntro,
   LandingHeader,
   LandingHero,
   LandingStory,
   LandingServices,
   LandingPartners,
   LandingShowcaseFlow,
-  LandingCaseStudies,
   LandingSuccessStories,
+  LandingProjects,
   LandingProcess,
   LandingTestimonials,
   LandingAbout,
@@ -25,6 +26,7 @@ export default function Home() {
 
   return (
     <main className="page-backdrop relative min-h-dvh overflow-x-hidden text-stone-900">
+      <LandingIntro />
       <a
         href="#contenido"
         className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded-md focus:bg-white focus:px-4 focus:py-2 focus:text-sm focus:shadow-lg"
@@ -40,8 +42,8 @@ export default function Home() {
         <LandingServices />
         <LandingPartners />
         <LandingShowcaseFlow />
-        <LandingCaseStudies />
         <LandingSuccessStories />
+        <LandingProjects />
         <LandingProcess />
         <LandingTestimonials />
         <LandingAbout />

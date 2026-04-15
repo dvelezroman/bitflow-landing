@@ -7,6 +7,10 @@ import { SITE } from '@/lib/site'
 const navLinkClass =
   'rounded-lg px-2 py-2 text-sm font-medium text-stone-600 transition hover:bg-stone-100/80 hover:text-stone-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2'
 
+/** Stable width across ES/EN; shared by desktop + mobile drawer CTA. */
+const navCtaClass =
+  'inline-flex min-h-[44px] items-center justify-center whitespace-nowrap rounded-full border border-white/15 bg-gradient-to-b from-stone-800 to-stone-950 px-5 text-[0.8125rem] font-semibold leading-none tracking-wide text-white shadow-[0_1px_0_rgba(255,255,255,0.06)_inset,0_2px_8px_-2px_rgba(15,23,42,0.35)] transition duration-200 hover:border-white/25 hover:from-stone-700 hover:to-stone-950 hover:shadow-[0_1px_0_rgba(255,255,255,0.08)_inset,0_8px_24px_-6px_rgba(15,23,42,0.45)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-400 focus-visible:ring-offset-2 active:scale-[0.98] sm:text-sm'
+
 export function LandingHeader() {
   const { t, language, setLanguage } = useI18n()
   const [menuOpen, setMenuOpen] = useState(false)
@@ -30,8 +34,8 @@ export function LandingHeader() {
     ['#historia', t('nav.story')],
     ['#marcas-alianzas', t('nav.partners')],
     ['#experiencia', t('nav.showcase')],
-    ['#casos', t('nav.cases')],
     ['#casos-exitosos', t('nav.successStories')],
+    ['#proyectos-bitflow', t('nav.projects')],
     ['#testimonios', t('nav.testimonials')],
     ['#proceso', t('nav.process')],
     ['#nosotros', t('nav.about')],
@@ -65,11 +69,11 @@ export function LandingHeader() {
           <a href="#experiencia" className={navLinkClass}>
             {t('nav.showcase')}
           </a>
-          <a href="#casos" className={navLinkClass}>
-            {t('nav.cases')}
-          </a>
           <a href="#casos-exitosos" className={navLinkClass}>
             {t('nav.successStories')}
+          </a>
+          <a href="#proyectos-bitflow" className={navLinkClass}>
+            {t('nav.projects')}
           </a>
           <a href="#testimonios" className={navLinkClass}>
             {t('nav.testimonials')}
@@ -95,7 +99,7 @@ export function LandingHeader() {
           </div>
           <a
             href="#contacto"
-            className="hidden min-h-[44px] min-w-[44px] items-center justify-center rounded-full bg-gradient-to-br from-stone-900 to-stone-800 px-4 text-sm font-medium text-white shadow-soft transition hover:from-stone-800 hover:to-stone-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 md:inline-flex"
+            className={`${navCtaClass} hidden md:inline-flex md:min-w-[15rem]`}
           >
             {t('nav.cta')}
           </a>
@@ -141,7 +145,7 @@ export function LandingHeader() {
             ))}
             <a
               href="#contacto"
-              className="mt-2 flex min-h-[48px] items-center justify-center rounded-full bg-gradient-to-br from-stone-900 to-stone-800 px-4 text-center text-sm font-medium text-white shadow-soft"
+              className={`${navCtaClass} mt-2 flex w-full min-h-[48px] text-center`}
               onClick={closeMenu}
             >
               {t('nav.cta')}

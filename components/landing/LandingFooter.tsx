@@ -34,13 +34,13 @@ export function LandingFooter() {
                   </a>
                 </li>
                 <li>
-                  <a href="#casos" className="text-stone-600 hover:text-stone-900">
-                    {t('footer.links.cases')}
+                  <a href="#casos-exitosos" className="text-stone-600 hover:text-stone-900">
+                    {t('footer.links.successStories')}
                   </a>
                 </li>
                 <li>
-                  <a href="#casos-exitosos" className="text-stone-600 hover:text-stone-900">
-                    {t('footer.links.successStories')}
+                  <a href="#proyectos-bitflow" className="text-stone-600 hover:text-stone-900">
+                    {t('footer.links.projects')}
                   </a>
                 </li>
                 <li>

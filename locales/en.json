@@ -3,7 +3,6 @@
     "services": "Services",
     "story": "Why BITFLOW",
     "showcase": "Flow",
-    "cases": "Case studies",
     "testimonials": "Clients",
     "process": "How we work",
     "about": "About",
@@ -11,6 +10,7 @@
     "contact": "Contact",
     "cta": "Request a consult",
     "successStories": "Success stories",
+    "projects": "Projects",
     "partners": "Brands"
   },
   "hero": {
@@ -138,33 +138,6 @@
     "laneSustainHint": "Quality, tests, documentation, and evolutionary support — without toxic debt hidden under the rug.",
     "mergeHint": "One method, one honest conversation",
     "footnote": "Timelines depend on scope and integrations; specifics land in the proposal — without sneaky fine print."
-  },
-  "caseStudies": {
-    "title": "Case studies",
-    "subtitle": "Scope and outcomes across software, platforms, and consulting.",
-    "items": [
-      {
-        "sector": "Retail · inventory",
-        "title": "Unified inventory and order platform",
-        "summary": "Regional chain with multiple locations: lightweight ERP integration, internal store app, and automated replenishment alerts.",
-        "result": "Roughly 40% fewer inventory errors and faster daily close-outs.",
-        "imageAlt": "Logistics and warehouse operations"
-      },
-      {
-        "sector": "Financial services · consulting",
-        "title": "Architecture and roadmap for a digital product",
-        "summary": "Growing fintech: technical debt review, API module definition, and phased delivery plan with measurable milestones.",
-        "result": "First-quarter improvements shipped without stopping critical operations.",
-        "imageAlt": "Team reviewing software architecture"
-      },
-      {
-        "sector": "Healthcare · operations",
-        "title": "Scheduling and telehealth platform across branches",
-        "summary": "Clinic network: online booking, messaging reminders, concise patient record, and video rooms with per-clinician access control.",
-        "result": "Fewer no-shows, fuller schedules without clashes, and one source of truth for front desk and clinicians.",
-        "imageAlt": "Healthcare team and technology in a clinic"
-      }
-    ]
   },
   "successStories": {
     "title": "Success stories",
@@ -312,6 +285,82 @@
     "channelsTitle": "Direct channels",
     "success": "Thank you. We received your message and will get back to you soon."
   },
+  "projects": {
+    "title": "Projects built with BITFLOW",
+    "subtitle": "Products and platforms we have taken from requirements to production: context, stack, client need, and outcome.",
+    "labels": {
+      "summary": "What it is",
+      "need": "Client need",
+      "tech": "Technology",
+      "outcome": "What we achieved"
+    },
+    "pipeline": "More projects in the pipeline — if your challenge looks like this, let’s talk.",
+    "items": [
+      {
+        "title": "Shrimp harvest management & traceability platform",
+        "summary": "System to record batches, process stages, and movements from harvest through dispatch, with auditable traceability for export and compliance.",
+        "need": "Replace spreadsheets and scattered files with one digital flow; demonstrate origin and chain of custody for buyers and audits.",
+        "tech": "Web app and API on Node.js/NestJS, PostgreSQL, document storage, reports and dashboards; cloud deployment with backups and roles per plant or site.",
+        "outcome": "Near–real-time visibility of inventory by batch, fewer traceability errors, and faster answers to customer and certification questions."
+      },
+      {
+        "title": "Educational management platform for in-person and online classes",
+        "summary": "Unified academic environment: materials, attendance, grades, and communication across faculty, students, and administration.",
+        "need": "Run in-person and remote without duplicating tools; cut admin load and give families and students clarity.",
+        "tech": "React/Next.js frontend, modular backend, relational database, notifications (email/push as designed), integrated or linked video, roles and permissions by campus.",
+        "outcome": "A single channel for official notices, cleaner performance tracking, and less friction in enrollment and day-to-day communication."
+      },
+      {
+        "title": "Sports event timing platform",
+        "summary": "Application to capture times per participant or team, live rankings, and publishing results during competitions.",
+        "need": "Move off paper or shared sheets; reduce disputes and delays when posting official results.",
+        "tech": "Responsive web app and high-throughput API, duplicate protection, panel for judges or officials, optional integration with readers or manual entry.",
+        "outcome": "More reliable, faster results, less repetitive work for staff, and a better experience for athletes and spectators."
+      },
+      {
+        "title": "Patient & medical appointment management platform",
+        "summary": "Medical scheduling, concise history, reminders, and front-desk flow for clinics or outpatient networks.",
+        "need": "Cut no-shows, prevent double-booking, and organize patient information beyond paper alone.",
+        "tech": "Vue or React depending on project, backend with appointment rules, WhatsApp or other reminder channels, access patterns aligned with sensitive data.",
+        "outcome": "A fuller schedule without clashes, fewer absences, and reception with context before the visit."
+      },
+      {
+        "title": "Events platform",
+        "summary": "Registration, payment or confirmation, badges, and communications for conferences, fairs, or corporate programs.",
+        "need": "Centralize attendees, capacity, and comms; avoid email threads and spreadsheets that go stale within hours.",
+        "tech": "Public portal + admin console, payment gateway when needed, lists and exports, automated notifications.",
+        "outcome": "More predictable event operations, fewer rework cycles, and a smoother experience for attendees and organizers."
+      },
+      {
+        "title": "AI-powered app — Manabí gastronomy recommendations",
+        "summary": "Mobile or web experience suggesting dishes, routes, or venues by preference, context, and regional culinary heritage.",
+        "need": "Deliver personalized discovery without hand-curating everything; connect tourism and culture with structured data and an authentic local voice.",
+        "tech": "React Native or PWA client, recommendation services and business rules, AI models or APIs as designed, curated content in a database.",
+        "outcome": "Users find options that fit their profile faster; the client differentiates with a modern, local-first experience."
+      },
+      {
+        "title": "Professional landing page for a language school",
+        "summary": "High-conversion site with clear value, levels, modalities, and calls to action toward contact or enrollment.",
+        "need": "A credible web presence that reflects teaching quality; fast mobile loads and consistent messaging, optionally multilingual.",
+        "tech": "Next.js, SEO- and performance-oriented content, forms wired to CRM or email, responsive accessible layout.",
+        "outcome": "More qualified inquiries, low load times, and a first impression aligned with the school’s brand."
+      },
+      {
+        "title": "Enrollment & portfolio management platform for an educational institution",
+        "summary": "Control of enrollments, agreements, account status, and academic-financial tracking in one institutional environment.",
+        "need": "Unify student linkage and billing/plans without relying on endless Excels and email chains.",
+        "tech": "Web app with roles (finance, registrar, leadership), reporting and export, change audit trails, backups, and granular permissions.",
+        "outcome": "Clearer portfolio visibility by program and cohort, fewer disputes from misaligned data, and faster month-end closes."
+      },
+      {
+        "title": "Bulk WhatsApp messaging platform",
+        "summary": "Tool for campaigns and notifications to authorized lists, with templates, queues, and delivery traceability.",
+        "need": "Scale communication without breaking platform policies; track what was sent and avoid mass manual copy-paste errors.",
+        "tech": "Backend with queues (e.g. BullMQ), WhatsApp Business API integration, campaign console, logs and retries, infra ready for traffic spikes.",
+        "outcome": "Governed bulk sends, better visibility of message status, and operations less dependent on spreadsheets."
+      }
+    ]
+  },
   "chatbot": {
     "title": "Online advisor",
     "subtitle": "BITFLOW",
@@ -347,8 +396,8 @@
       "cloud": "We're **AWS and Google Cloud partners**: we design and run cloud workloads with solid security and cost practices. More under **Technology partners**.",
       "blockchain": "We build with **blockchain & Web3**: Hyperledger Fabric, Ethereum/L2, IPFS, smart contracts, and wallet integration when the use case fits (e.g. traceability).",
       "partners": "**Technology partners** lists cloud, blockchain, software stacks, and quality/ops practices we use on real projects.",
-      "successStories": "**Success stories** highlights real work in education, retail, agri with ledger traceability, health, and logistics — each in a Latin American context.",
-      "caseStudies": "**Case studies** describes scope and outcomes for retail-style, fintech/consulting, and healthcare/ops scenarios — always tailored.",
+      "successStories": "**Success stories** highlights real work in education, retail, agri with ledger traceability, health, and logistics — each in a Latin American context. If you were looking for “case studies,” this is the same kind of detail: scope, tech, and outcomes.",
+      "projects": "The **Projects built with BITFLOW** section describes real products: overview, client need, technology, and outcome — including shrimp traceability, education, sports timing, health, events, AI gastronomy, language-school landing, institutional portfolio, and bulk WhatsApp.",
       "pricing": "Every quote depends on scope and integrations. The first scoping conversation has no cost. Use the contact form or the button below for concrete options.",
       "location": "We work **remotely** with online meetings, aligned to your time zone. If you need occasional onsite work, we discuss it in the proposal.",
       "timing": "Timelines depend on deliverable size and integrations. **How we work** explains diagnosis, proposal, and phased delivery.",
@@ -369,8 +418,8 @@
       "story": "Why BITFLOW",
       "services": "Services",
       "partners": "Brands & alliances",
-      "cases": "Case studies",
       "successStories": "Success stories",
+      "projects": "BITFLOW projects",
       "process": "How we work",
       "testimonials": "Testimonials",
       "about": "About",
