@@ -33,9 +33,9 @@ export const metadata: Metadata = {
     follow: true,
   },
   icons: {
-    icon: 'https://bitflow-public.s3.us-east-1.amazonaws.com/Bitflow-logo.png',
-    shortcut: 'https://bitflow-public.s3.us-east-1.amazonaws.com/Bitflow-logo.png',
-    apple: 'https://bitflow-public.s3.us-east-1.amazonaws.com/Bitflow-logo.png',
+    icon: 'images/company-logos-bitflow/logo-no_text-2.png',
+    shortcut: 'images/company-logos-bitflow/logo-no_text-2.png',
+    apple: 'images/company-logos-bitflow/logo-no_text-2.png',
   },
 }
 
