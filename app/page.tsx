@@ -25,7 +25,7 @@ export default function Home() {
   const { language } = useI18n()
 
   return (
-    <main className="page-backdrop relative min-h-dvh overflow-x-hidden text-stone-900">
+    <main className="relative overflow-x-hidden  min-h-dvh text-stone-900">
       <LandingIntro />
       <a
         href="#contenido"

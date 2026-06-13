@@ -4,6 +4,8 @@ import { useCallback, useEffect, useRef, useState } from 'react'
 import { useI18n } from '@/lib/i18n'
 import { SITE } from '@/lib/site'
 import { matchChatIntent, normalizeChatInput } from '@/lib/chatbot-intents'
+import Image from 'next/image'
+import { X } from 'lucide-react'
 
 type Role = 'user' | 'assistant'
 
@@ -172,9 +174,9 @@ export function ChatWidget() {
           role="dialog"
           aria-label={t('chatbot.title')}
         >
-          <header className="flex items-center justify-between border-b border-stone-100 bg-stone-900 px-4 py-3 text-white">
+          <header className="flex items-center justify-between px-4 py-3 text-white border-b border-stone-100 bg-stone-900">
             <div>
-              <p className="text-xs font-medium uppercase tracking-wider text-primary-300">{t('chatbot.subtitle')}</p>
+              <p className="text-xs font-medium tracking-wider uppercase text-primary-300">{t('chatbot.subtitle')}</p>
               <p className="text-sm font-semibold">{t('chatbot.title')}</p>
             </div>
             <button
@@ -182,18 +184,18 @@ export function ChatWidget() {
               onClick={() => {
                 setOpen(false)
               }}
-              className="rounded-lg px-2 py-1 text-xs text-stone-300 transition hover:bg-white/10 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-400"
+              className="px-2 py-1 text-xs transition rounded-lg text-stone-300 hover:bg-white/10 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-400"
             >
               {t('chatbot.close')}
             </button>
           </header>
 
           {panelMode === 'contact' ? (
-            <div className="flex min-h-0 flex-1 flex-col overflow-y-auto p-4">
+            <div className="flex flex-col flex-1 min-h-0 p-4 overflow-y-auto">
               <button
                 type="button"
                 onClick={() => setPanelMode('chat')}
-                className="mb-3 self-start text-xs font-medium text-primary-600 hover:text-primary-800"
+                className="self-start mb-3 text-xs font-medium text-primary-600 hover:text-primary-800"
               >
                 ← {t('chatbot.backToChat')}
               </button>
@@ -206,7 +208,7 @@ export function ChatWidget() {
                     value={cName}
                     onChange={(e) => setCName(e.target.value)}
                     autoComplete="name"
-                    className="mt-1 w-full rounded-lg border border-stone-200 px-3 py-2 text-sm text-stone-900 focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-500/20"
+                    className="w-full px-3 py-2 mt-1 text-sm border rounded-lg border-stone-200 text-stone-900 focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-500/20"
                   />
                 </div>
                 <div>
@@ -216,7 +218,7 @@ export function ChatWidget() {
                     value={cEmail}
                     onChange={(e) => setCEmail(e.target.value)}
                     autoComplete="email"
-                    className="mt-1 w-full rounded-lg border border-stone-200 px-3 py-2 text-sm text-stone-900 focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-500/20"
+                    className="w-full px-3 py-2 mt-1 text-sm border rounded-lg border-stone-200 text-stone-900 focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-500/20"
                   />
                 </div>
                 <div>
@@ -226,7 +228,7 @@ export function ChatWidget() {
                     value={cPhone}
                     onChange={(e) => setCPhone(e.target.value)}
                     autoComplete="tel"
-                    className="mt-1 w-full rounded-lg border border-stone-200 px-3 py-2 text-sm text-stone-900 focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-500/20"
+                    className="w-full px-3 py-2 mt-1 text-sm border rounded-lg border-stone-200 text-stone-900 focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-500/20"
                   />
                 </div>
                 <div>
@@ -235,7 +237,7 @@ export function ChatWidget() {
                     value={cMessage}
                     onChange={(e) => setCMessage(e.target.value)}
                     rows={3}
-                    className="mt-1 w-full resize-y rounded-lg border border-stone-200 px-3 py-2 text-sm text-stone-900 focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-500/20"
+                    className="w-full px-3 py-2 mt-1 text-sm border rounded-lg resize-y border-stone-200 text-stone-900 focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-500/20"
                   />
                 </div>
                 {contactError && <p className="text-xs text-red-600">{t('chatbot.requiredHint')}</p>}
@@ -259,7 +261,7 @@ export function ChatWidget() {
             </div>
           ) : (
             <>
-              <div ref={listRef} className="min-h-0 flex-1 space-y-3 overflow-y-auto p-4">
+              <div ref={listRef} className="flex-1 min-h-0 p-4 space-y-3 overflow-y-auto">
                 {messages.map((m) => (
                   <div
                     key={m.id}
@@ -280,14 +282,14 @@ export function ChatWidget() {
                 ))}
                 {typing && (
                   <div className="flex justify-start">
-                    <div className="rounded-2xl rounded-bl-md border border-stone-100 bg-stone-50 px-3 py-2 text-xs text-stone-500">
+                    <div className="px-3 py-2 text-xs border rounded-2xl rounded-bl-md border-stone-100 bg-stone-50 text-stone-500">
                       {t('chatbot.typing')}
                     </div>
                   </div>
                 )}
               </div>
 
-              <div className="border-t border-stone-100 px-3 pb-3 pt-2">
+              <div className="px-3 pt-2 pb-3 border-t border-stone-100">
                 <p className="mb-2 text-[10px] font-medium uppercase tracking-wide text-stone-400">
                   {t('chatbot.quickLabel')}
                 </p>
@@ -315,12 +317,12 @@ export function ChatWidget() {
                     value={input}
                     onChange={(e) => setInput(e.target.value)}
                     placeholder={t('chatbot.placeholder')}
-                    className="min-w-0 flex-1 rounded-xl border border-stone-200 px-3 py-2 text-sm text-stone-900 placeholder:text-stone-400 focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-500/20"
+                    className="flex-1 min-w-0 px-3 py-2 text-sm border rounded-xl border-stone-200 text-stone-900 placeholder:text-stone-400 focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-500/20"
                     aria-label={t('chatbot.placeholder')}
                   />
                   <button
                     type="submit"
-                    className="shrink-0 rounded-xl bg-stone-900 px-3 py-2 text-sm font-medium text-white transition hover:bg-stone-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2"
+                    className="px-3 py-2 text-sm font-medium text-white transition shrink-0 rounded-xl bg-stone-900 hover:bg-stone-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2"
                   >
                     {t('chatbot.send')}
                   </button>
@@ -337,16 +339,29 @@ export function ChatWidget() {
           setOpen((v) => !v)
           if (!open) setPanelMode('chat')
         }}
-        className="pointer-events-auto flex h-14 w-14 items-center justify-center rounded-full bg-stone-900 text-white shadow-lg shadow-stone-900/25 transition hover:bg-stone-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2"
+        className={`pointer-events-auto flex h-14 w-14 items-center justify-center rounded-full text-white shadow-lg transition-all duration-200 ease-out hover:scale-[1.03] active:scale-[0.96] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 ${
+          open
+            ? 'bg-stone-900 shadow-stone-900/25 hover:bg-stone-800'
+            : 'bg-blue-600 shadow-blue-600/30 hover:bg-blue-500'
+        }`}
         aria-expanded={open}
         aria-label={open ? t('chatbot.close') : t('chatbot.open')}
       >
         {open ? (
-          <span className="text-xl leading-none">×</span>
+          <X
+            className="w-6 h-6 transition-all duration-200 ease-out"
+            strokeWidth={2.2}
+            aria-hidden
+          />
         ) : (
-          <span className="text-lg font-semibold" aria-hidden>
-            BF
-          </span>
+          <Image
+            src="/images/company-logos-bitflow/logo-no_text-2.png"
+            alt="BITFLOW chatbot"
+            width={32}
+            height={32}
+            priority
+            className="object-contain w-8 h-8 transition-all duration-200 ease-out"
+          />
         )}
       </button>
     </div>
