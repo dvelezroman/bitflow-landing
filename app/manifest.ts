@@ -2,9 +2,9 @@ import { MetadataRoute } from 'next'
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'BITFLOW — Software y soluciones digitales',
+    name: 'BITFLOW — Software sin humo',
     short_name: 'BITFLOW',
-    description: 'Desarrollo de software, plataformas y consultoría con criterio de ingeniería.',
+    description: 'Software, plataformas y consultoría al grano — No bullshit software.',
     start_url: '/',
     display: 'standalone',
     background_color: '#ffffff',

@@ -31,51 +31,50 @@ export function LandingServices() {
   const { t } = useI18n()
 
   return (
-    <section id="servicios" className="scroll-mt-20 md:scroll-mt-24 border-b border-stone-200/80 py-16 sm:py-20 md:py-28">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <h2 className="text-balance text-2xl font-semibold tracking-tight text-stone-900 sm:text-3xl md:text-4xl">{t('services.title')}</h2>
-        <p className="mt-4 max-w-2xl text-base text-stone-600 sm:text-lg">{t('services.subtitle')}</p>
+    <section id="servicios" className="section-pad">
+      <div className="section-inner">
+        <h2 className="section-title">{t('services.title')}</h2>
+        <p className="section-lead">{t('services.subtitle')}</p>
 
-        <div className="mt-10 rounded-2xl border border-stone-700/30 bg-gradient-to-br from-stone-900 via-stone-900 to-stone-950 px-5 py-7 text-stone-100 shadow-soft-lg sm:rounded-3xl sm:px-8 sm:py-9">
-          <h3 className="text-lg font-semibold tracking-tight text-white md:text-xl">{t('services.engineering.title')}</h3>
-          <p className="mt-3 max-w-3xl text-sm leading-relaxed text-stone-300 md:text-base">{t('services.engineering.intro')}</p>
-          <ul className="mt-6 space-y-3 border-t border-stone-700 pt-6 text-sm text-stone-200 md:text-[0.9375rem]">
+        <div className="mt-10 border border-slate-800 bg-slate-900 px-5 py-7 text-slate-100 sm:mt-12 sm:px-8 sm:py-9">
+          <h3 className="font-display text-lg font-semibold tracking-tight text-white md:text-xl">
+            {t('services.engineering.title')}
+          </h3>
+          <p className="mt-3 max-w-3xl text-sm leading-relaxed text-slate-300 md:text-base">
+            {t('services.engineering.intro')}
+          </p>
+          <ul className="mt-6 space-y-3 border-t border-slate-700/80 pt-6 text-sm text-slate-200 md:text-[0.9375rem]">
             {[0, 1, 2].map((i) => (
               <li key={i} className="flex gap-3">
-                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary-400" aria-hidden />
+                <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-teal-400" aria-hidden />
                 <span>{t(`services.engineering.points.${i}`)}</span>
               </li>
             ))}
           </ul>
         </div>
 
-        <div className="mt-10 grid gap-4 sm:mt-12 sm:gap-5 md:grid-cols-3">
+        <div className="mt-10 grid gap-8 sm:mt-14 md:grid-cols-3 md:gap-10">
           {cards.map((card) => (
-            <article
-              key={card.key}
-              className="flex flex-col overflow-hidden rounded-2xl border border-stone-200/80 bg-white/95 shadow-soft backdrop-blur-sm transition hover:border-primary-200/50 hover:shadow-soft-lg sm:rounded-3xl"
-            >
-              <div className="relative aspect-[16/10] bg-stone-200 sm:aspect-[21/9]">
+            <article key={card.key} className="group flex flex-col">
+              <div className="overflow-hidden bg-slate-200">
                 <img
                   src={card.media}
                   alt={t(`services.${card.key}.imageAlt`)}
                   width={800}
                   height={340}
-                  className="h-full w-full object-cover"
+                  className="aspect-[16/10] w-full object-cover transition duration-500 group-hover:scale-[1.03] sm:aspect-[21/10]"
                   loading="lazy"
                 />
               </div>
-              <div className="flex flex-1 flex-col p-5 sm:p-6">
-                <div className="flex items-start gap-3 sm:gap-4">
-                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-primary-50 to-sky-50 text-stone-800 ring-1 ring-primary-100/80">
-                    <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
-                      {card.icon}
-                    </svg>
-                  </span>
-                  <div className="min-w-0">
-                    <h3 className="text-lg font-semibold text-stone-900">{t(`services.${card.key}.title`)}</h3>
-                    <p className="mt-2 text-stone-600 leading-relaxed">{t(`services.${card.key}.description`)}</p>
-                  </div>
+              <div className="mt-5 flex items-start gap-3">
+                <span className="mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-teal-50 text-slate-800 ring-1 ring-teal-100">
+                  <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
+                    {card.icon}
+                  </svg>
+                </span>
+                <div className="min-w-0">
+                  <h3 className="text-lg font-semibold text-slate-900">{t(`services.${card.key}.title`)}</h3>
+                  <p className="mt-2 leading-relaxed text-slate-600">{t(`services.${card.key}.description`)}</p>
                 </div>
               </div>
             </article>

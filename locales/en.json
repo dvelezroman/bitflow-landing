@@ -8,78 +8,79 @@
     "about": "About",
     "faq": "FAQ",
     "contact": "Contact",
-    "cta": "Request a consult",
+    "cta": "Get in touch",
     "successStories": "Success stories",
     "projects": "Projects",
-    "partners": "Brands"
+    "partners": "Brands",
+    "work": "Work"
   },
   "hero": {
     "eyebrow": "BITFLOW",
-    "title": "Serious software for companies",
-    "titleAccent": "that can't afford fluff",
-    "description": "Development, platforms, and consulting with real engineering discipline: maintainable code, honest scope, and solutions meant to run for years — not demos that shine and nobody maintains.",
-    "ctaPrimary": "Discuss your project",
-    "ctaSecondary": "View services"
+    "title": "Software that lasts",
+    "titleAccent": "for teams that don't buy fluff",
+    "description": "Dev, platforms, and consulting — straight talk: maintainable code, honest scope, and stuff built for production — not pretty demos nobody can keep alive.",
+    "ctaPrimary": "Let's talk",
+    "ctaSecondary": "See services"
   },
   "story": {
     "eyebrow": "Our story",
-    "title": "We got tired of the same script: big promises, fragile deliveries.",
-    "lead": "BITFLOW exists for teams that need a digital partner who signs with the same standards they sleep on: original, explainable, useful work. If your business depends on software, you deserve better than disguised templates and endless patches.",
+    "title": "We got tired of the same script: big promises, deliveries that fall apart.",
+    "lead": "BITFLOW is for teams that need a digital partner they can sleep on: original, explainable, useful work. If your business runs on software, you deserve better than dressed-up templates and endless patches.",
     "chapters": [
       {
-        "title": "Your operation isn't a playground for cheap experiments",
-        "body": "Every technical choice should hold up in front of your CFO, your auditor, or your end customer. That's why we bias toward clarity: readable architecture, visible risks, and releases your team can run the Monday after — not only in a Friday demo."
+        "title": "Your ops aren't a cheap experiment lab",
+        "body": "Every technical call has to hold up in front of your director, your auditor, or your end customer. So we go for clarity: readable architecture, risks out in the open, and releases you can run on Monday — not only in Friday's demo."
       },
       {
         "title": "No bullshit software",
-        "body": "We don't sell empty magic; we don't ship plagiarism or repackage someone else's work as ours; we don't sneak in billable features you won't use. We build real software: tested where it counts, documented when it helps, and honest about its limits."
+        "body": "We don't sell empty magic; we don't ship plagiarism or repackage someone else's work as ours; we don't sneak in features just to pad the invoice. We build real software: tested where it counts, documented when it helps, and honest about its limits."
       },
       {
         "title": "Built to evolve, not to rip out next year",
-        "body": "We'd rather say \"no\" to a requirement we know will break your system than say \"yes\" just to close the sale. We think about whoever maintains the code two years out — sometimes you, sometimes us, and sometimes someone new who deserves context, not a graveyard of hacks."
+        "body": "We'd rather say \"no\" to a requirement that will break your system than say \"yes\" just to close the deal. We think about whoever maintains the code two years out — sometimes you, sometimes us, sometimes someone new who deserves context, not a graveyard of hacks."
       },
       {
         "title": "From idea to long term, in the same language",
-        "body": "We thread APIs, cloud, data, and product into one narrative: fewer \"business vs IT\" translation meetings, more shared decisions and traceability for why each choice was made."
+        "body": "We pull APIs, cloud, data, and product into one thread: fewer \"business vs IT\" translation meetings, more shared decisions, and a clear trail of why each choice was made."
       }
     ],
     "manifestoKicker": "Our promise",
     "manifestoTitle": "Useful, maintainable software — without moral fine print.",
-    "manifestoBody": "At BITFLOW we build digital solutions for any company that values time, money, and reputation: engineering that respects your users, your teams, and the future of the product. That's what sets us apart from market noise.",
-    "closing": "If you want a team that tells you the technical truth and helps you build something that lasts, you're already in the right place."
+    "manifestoBody": "At BITFLOW we build digital product for companies that care about time, money, and reputation: engineering that respects your users, your team, and the future of the system. That's what sets us apart from market noise.",
+    "closing": "If you want a team that tells you the technical truth and helps you build something that lasts — you're already in the right place."
   },
   "services": {
     "title": "What we do",
-    "subtitle": "One focus: high-quality digital product — from first conversation to evolutionary support.",
+    "subtitle": "One focus: real digital product — from the first chat to evolutionary support.",
     "engineering": {
-      "title": "Serious software engineering — no fluff, no throwaway code",
-      "intro": "We don't ship fragile throwaways or promise what we can't sustain. Clear standards: understandable design, testing where it matters, controlled technical debt, and clean IP — what we build is yours, not disguised copy-paste.",
+      "title": "Software engineering — no shortcuts, no fluff",
+      "intro": "We don't ship fragile throwaways or promise what we can't sustain. Clear standards: understandable design, testing where it matters, controlled tech debt, and clean IP — what we build is yours, not disguised copy-paste.",
       "points": [
-        "We solve real needs: less operational friction, faster processes, and more predictable delivery or service.",
-        "Maintainable, documented code so your team or ours can evolve the product with confidence.",
-        "Transparency on scope, risk, and cost — we won't sell you features you won't use just to inflate the invoice."
+        "We solve real pain: less operational friction, faster processes, more predictable ops.",
+        "Maintainable, documented code so your team or ours can evolve the product without fear.",
+        "Straight talk on scope, risk, and cost — we won't sell you features you won't use just to inflate the invoice."
       ]
     },
     "software": {
       "title": "Software development",
-      "description": "Tailored web apps and backends, integrations, and continuous delivery — built to last, not to become obsolete in a few months.",
+      "description": "Custom web apps and backends, integrations, and ongoing evolution — built to last, not to go stale in a few months.",
       "imageAlt": "Code and collaborative software development"
     },
     "consulting": {
       "title": "Solution consulting",
-      "description": "Straight talk on tech and business: architecture, priorities, and a roadmap you can actually ship and maintain.",
+      "description": "We tell it like it is: architecture, priorities, and a roadmap you can actually ship and maintain.",
       "imageAlt": "Consulting session and planning"
     },
     "platforms": {
       "title": "Management platforms",
-      "description": "Automation and dashboards that structure your ops: less manual work, better traceability, and sharper decisions with the same headcount.",
+      "description": "Automation and dashboards that tidy up your ops: less manual work, better traceability, sharper decisions with the same team.",
       "imageAlt": "Business dashboard and analytics"
     }
   },
   "partners": {
     "title": "Technology brands and alliances",
     "tagsAria": "Brands and technologies",
-    "lead": "We are AWS and Google Cloud partners: we design, deploy, and operate cloud workloads with solid cybersecurity practices and cost discipline. We also build with blockchain and Web3 — from enterprise traceability to wallet integrations and smart contracts.",
+    "lead": "We're AWS and Google Cloud partners: we design, deploy, and run cloud workloads with solid security practices and cost control. We also build with blockchain and Web3 — from enterprise traceability to wallets and smart contracts.",
     "categories": [
       {
         "title": "Cloud partners",
@@ -128,8 +129,8 @@
     ]
   },
   "showcase": {
-    "title": "How a BITFLOW engagement flows",
-    "subtitle": "Two complementary fronts — build well and sustain over time — with the same cadence: understand, propose, and deliver with clarity.",
+    "title": "How a BITFLOW project flows",
+    "subtitle": "Two fronts that move together — build it right and keep it alive — same cadence: understand, propose, and ship without the runaround.",
     "diagramAria": "Diagram: product build and sustainability merge into a three-stage process",
     "flowIntro": "Where projects start",
     "laneSoftware": "From zero to production",
@@ -137,25 +138,25 @@
     "laneSustain": "Built to last",
     "laneSustainHint": "Quality, tests, documentation, and evolutionary support — without toxic debt hidden under the rug.",
     "mergeHint": "One method, one honest conversation",
-    "footnote": "Timelines depend on scope and integrations; specifics land in the proposal — without sneaky fine print."
+    "footnote": "Timelines depend on scope and integrations; we lock details in the proposal — no sneaky fine print."
   },
   "successStories": {
     "title": "Success stories",
-    "subtitle": "Recent deliveries across education, retail, agro, health, and logistics — built for Latin American teams and users.",
+    "subtitle": "Recent work across education, retail, agro, health, and logistics — built for LatAm teams and users.",
     "platformsHeading": "Custom platforms and software",
     "techAria": "Technologies used",
     "platforms": [
       {
         "sector": "Higher education",
         "title": "End-to-end academic digital ecosystem",
-        "solution": "Multi-program college: mobile app for students and web portal for faculty and admin. Live grades, QR attendance, elective enrollment, push notices, and tuition module linked to a regional payment gateway.",
+        "solution": "Multi-program college: mobile app for students and portal for faculty and admin. Live grades, QR attendance in class, elective enrollment, push notices, and tuition module wired to a regional payment gateway.",
         "tech": "React Native · Next.js · NestJS · PostgreSQL · Redis · FCM · payments REST API",
-        "result": "Less operational load on enrollment and comms; faster student inquiries and a single channel for official notices.",
+        "result": "Less load on enrollment and comms; faster student inquiries and one channel for official notices.",
         "imageAlt": "Students and academic setting"
       },
       {
         "sector": "Multi-store retail",
-        "title": "Centralized inventory and sales",
+        "title": "Inventory and sales in one place",
         "solution": "Chain across several cities: live stock per branch, inter-store transfers, e-invoicing integration, and regional management reporting.",
         "tech": "Next.js · Node.js · TypeScript · PostgreSQL · BullMQ · e-invoicing API",
         "result": "Unified inventory visibility; fewer count discrepancies and quicker month-end closes across stores.",
@@ -164,9 +165,9 @@
       {
         "sector": "Agro exports",
         "title": "Lot traceability on blockchain",
-        "solution": "Exporter: custody chain from field and packing plant to container. QR labels and NFC reads, events on a permissioned ledger, and auditor/buyer portal.",
+        "solution": "Exporter: custody chain from field and packing plant to container. QR labels and NFC reads, events on a permissioned ledger, and auditor/buyer portal abroad.",
         "tech": "Hyperledger Fabric · Node.js · Express · React · IPFS (documents) · PostgreSQL off-chain",
-        "result": "Origin and movements verified in minutes; smoother audits and clearer answers to buyer questions.",
+        "result": "Origin and movements verified in minutes; smoother audits and clearer answers to buyers.",
         "imageAlt": "Farming and supply chain"
       },
       {
@@ -188,23 +189,23 @@
     ]
   },
   "testimonials": {
-    "title": "Client voices",
-    "subtitle": "What clients highlight about working with us.",
+    "title": "What clients say",
+    "subtitle": "Straight feedback from teams who've worked with us.",
     "items": [
       {
-        "quote": "We needed to get out of spreadsheet chaos. The team shipped a usable first version in weeks and stayed through rollout.",
+        "quote": "We needed out of spreadsheet chaos. In weeks we had a usable first version, and they stayed with us through deploy.",
         "name": "Mariana Ortega",
         "role": "Head of operations",
         "company": "Andean Distribution"
       },
       {
-        "quote": "Consulting helped us prioritize without blowing the budget. Clear documentation and short, focused meetings.",
+        "quote": "Consulting helped us prioritize without blowing the budget. Clear docs and short meetings — to the point.",
         "name": "Andrés Morales",
         "role": "CTO",
         "company": "BridgePay Latam"
       },
       {
-        "quote": "They helped us integrate a difficult legacy without stopping operations. Clear documentation and milestone deliveries we could actually review.",
+        "quote": "They wired a tough legacy without stopping ops. Milestone deliveries we could actually review.",
         "name": "Roberto Silva",
         "role": "Head of systems",
         "company": "Urban Logistics South"
@@ -213,56 +214,56 @@
   },
   "process": {
     "title": "How we work",
-    "subtitle": "A clear process so you know what to expect at each stage.",
+    "subtitle": "Clear process, no mystery — you know what happens at each stage.",
     "step1": {
       "title": "Discovery",
-      "description": "We listen to goals, context, and constraints. We define initial scope and risks."
+      "description": "We listen to goals, context, and constraints. We sketch initial scope and put risks on the table."
     },
     "step2": {
       "title": "Proposal",
-      "description": "We share options, timelines, and a transparent estimate before moving forward."
+      "description": "We show options, timelines, and a transparent estimate before we move — we'll quote you straight, no runaround."
     },
     "step3": {
       "title": "Delivery",
-      "description": "Incremental delivery, frequent communication, and evolutionary support after go-live."
+      "description": "We ship in increments, stay in touch, and stick around for evolutionary support after go-live."
     }
   },
   "about": {
     "title": "About BITFLOW",
     "description": "A team focused on serious digital product: code you can read, run, and evolve.",
-    "paragraph1": "BITFLOW supports companies and teams that need an engineering partner aligned with the business — from architecture and cloud to the front-line details your users touch every day.",
-    "paragraph2": "We work with SMBs, scale-ups, and IT groups modernizing without betting on fragile solutions or opaque vendor dependency.",
+    "paragraph1": "BITFLOW partners with companies and teams that need engineering aligned to the business — from architecture and cloud down to the front-end details your users touch every day.",
+    "paragraph2": "We work with SMBs, scale-ups, and IT teams modernizing without betting on fragile solutions or getting locked into an opaque vendor.",
     "highlight": "Eng. Darío Vélez Román, Ms.",
     "role": "CEO & founder",
     "imageAlt": "Team collaborating on a technology project"
   },
   "cta": {
-    "title": "Have a technical challenge or a project in mind?",
-    "description": "Tell us where you are and we will reply with concrete next steps.",
-    "button": "Go to contact form"
+    "title": "Got a project or a technical pain?",
+    "description": "Tell us where you are and we'll reply with concrete next steps — no runaround.",
+    "button": "Go to contact"
   },
   "faq": {
-    "title": "Frequently asked questions",
+    "title": "FAQ",
     "q1": {
-      "question": "Do you only work with large enterprises?",
-      "answer": "Not necessarily. We fit SMBs and mid-sized teams — what matters is real impact and a quality bar we can commit to."
+      "question": "Do you only work with big companies?",
+      "answer": "Nope. We also work with SMBs and mid-sized teams. What matters is real impact and a quality bar we can actually commit to."
     },
     "q2": {
-      "question": "How is a software project quoted?",
-      "answer": "After an initial conversation we define scope, deliverables, and engagement model (project-based or phased). There is no charge for that first assessment."
+      "question": "How do you quote a software project?",
+      "answer": "First we talk, scope it out, and quote you — straight, no runaround. That chat is free. Then we lock deliverables and engagement model (project-based or phased)."
     },
     "q3": {
       "question": "Do you offer maintenance or support afterward?",
-      "answer": "Yes. We agree evolutionary support, continuous improvement, or monitoring depending on the product and how critical it is to your business."
+      "answer": "Yes. We agree evolutionary support, improvements, or monitoring depending on the product and how critical it is for your business."
     },
     "q4": {
       "question": "Is the code and IP ours?",
-      "answer": "Yes, unless we explicitly agree otherwise: what we build for your project is yours — we don't resell it to competitors or pass third-party work as our own."
+      "answer": "Yes, unless we agree otherwise in writing: what we build for your project is yours. We don't recycle it for competitors or sell someone else's work as ours."
     }
   },
   "contact": {
     "title": "Contact",
-    "subtitle": "Leave your details and a short summary. We will reply by email or, if you prefer, coordinate via WhatsApp.",
+    "subtitle": "Leave your details and a short summary. We'll reply by email or, if you prefer, we coordinate on WhatsApp.",
     "name": "Name",
     "namePlaceholder": "Your name or company",
     "email": "Email",
@@ -270,57 +271,57 @@
     "phone": "Phone",
     "phonePlaceholder": "Optional",
     "service": "Type of inquiry",
-    "servicePlaceholder": "Choose an option",
+    "servicePlaceholder": "Pick an option",
     "serviceSoftware": "Software development",
     "serviceConsulting": "Consulting",
     "servicePlatforms": "Management platforms",
     "serviceIntegrations": "Integrations, APIs & legacy",
     "serviceOther": "Other / multiple",
     "message": "Message",
-    "messagePlaceholder": "Describe your need, timeline, and context (current stack, user volume, integrations).",
+    "messagePlaceholder": "Tell us what you need, timeline, and context (current stack, user volume, integrations).",
     "send": "Send message",
     "whatsapp": "WhatsApp",
     "emailLabel": "Email",
     "phoneLabel": "Phone",
     "channelsTitle": "Direct channels",
-    "success": "Thank you. We received your message and will get back to you soon."
+    "success": "Got it. We received your message and will get back soon."
   },
   "projects": {
     "title": "Projects built with BITFLOW",
-    "subtitle": "Products and platforms we have taken from requirements to production: context, stack, client need, and outcome.",
+    "subtitle": "Products and platforms we took from requirements to production: context, stack, client need, and outcome.",
     "labels": {
       "summary": "What it is",
-      "need": "Client need",
+      "need": "What the client needed",
       "tech": "Technology",
       "outcome": "What we achieved"
     },
-    "pipeline": "More projects in the pipeline — if your challenge looks like this, let’s talk.",
+    "pipeline": "More projects in the pipeline — if what you need looks like this, let's talk.",
     "items": [
       {
         "title": "Shrimp harvest management & traceability platform",
         "summary": "System to record batches, process stages, and movements from harvest through dispatch, with auditable traceability for export and compliance.",
-        "need": "Replace spreadsheets and scattered files with one digital flow; demonstrate origin and chain of custody for buyers and audits.",
-        "tech": "Web app and API on Node.js/NestJS, PostgreSQL, document storage, reports and dashboards; cloud deployment with backups and roles per plant or site.",
-        "outcome": "Near–real-time visibility of inventory by batch, fewer traceability errors, and faster answers to customer and certification questions."
+        "need": "Get off scattered spreadsheets; one digital flow and prove origin and chain of custody for buyers and audits.",
+        "tech": "Web app and API on Node.js/NestJS, PostgreSQL, document storage, reports and dashboards; cloud deploy with backups and roles per plant or site.",
+        "outcome": "Near–real-time visibility of inventory by batch, fewer traceability errors, and faster answers to customers and certifications."
       },
       {
         "title": "Educational management platform for in-person and online classes",
         "summary": "Unified academic environment: materials, attendance, grades, and communication across faculty, students, and administration.",
         "need": "Run in-person and remote without duplicating tools; cut admin load and give families and students clarity.",
         "tech": "React/Next.js frontend, modular backend, relational database, notifications (email/push as designed), integrated or linked video, roles and permissions by campus.",
-        "outcome": "A single channel for official notices, cleaner performance tracking, and less friction in enrollment and day-to-day communication."
+        "outcome": "One channel for official notices, cleaner performance tracking, and less friction in enrollment and day-to-day."
       },
       {
         "title": "Sports event timing platform",
-        "summary": "Application to capture times per participant or team, live rankings, and publishing results during competitions.",
-        "need": "Move off paper or shared sheets; reduce disputes and delays when posting official results.",
-        "tech": "Responsive web app and high-throughput API, duplicate protection, panel for judges or officials, optional integration with readers or manual entry.",
+        "summary": "App to capture times per participant or team, live rankings, and publishing results during the competition.",
+        "need": "Leave paper or shared-sheet timing behind; fewer disputes and delays when posting official results.",
+        "tech": "Responsive web app and high-throughput API, duplicate protection, panel for judges or officials, optional reader integration or manual entry.",
         "outcome": "More reliable, faster results, less repetitive work for staff, and a better experience for athletes and spectators."
       },
       {
         "title": "Patient & medical appointment management platform",
         "summary": "Medical scheduling, concise history, reminders, and front-desk flow for clinics or outpatient networks.",
-        "need": "Cut no-shows, prevent double-booking, and organize patient information beyond paper alone.",
+        "need": "Cut no-shows, prevent double-booking, and organize patient info beyond paper.",
         "tech": "Vue or React depending on project, backend with appointment rules, WhatsApp or other reminder channels, access patterns aligned with sensitive data.",
         "outcome": "A fuller schedule without clashes, fewer absences, and reception with context before the visit."
       },
@@ -329,26 +330,26 @@
         "summary": "Registration, payment or confirmation, badges, and communications for conferences, fairs, or corporate programs.",
         "need": "Centralize attendees, capacity, and comms; avoid email threads and spreadsheets that go stale within hours.",
         "tech": "Public portal + admin console, payment gateway when needed, lists and exports, automated notifications.",
-        "outcome": "More predictable event operations, fewer rework cycles, and a smoother experience for attendees and organizers."
+        "outcome": "More predictable event ops, fewer rework cycles, and a smoother experience for attendees and organizers."
       },
       {
         "title": "AI-powered app — Manabí gastronomy recommendations",
         "summary": "Mobile or web experience suggesting dishes, routes, or venues by preference, context, and regional culinary heritage.",
-        "need": "Deliver personalized discovery without hand-curating everything; connect tourism and culture with structured data and an authentic local voice.",
+        "need": "Personalized discovery without hand-curating everything; connect tourism/culture with structured data and a real local voice.",
         "tech": "React Native or PWA client, recommendation services and business rules, AI models or APIs as designed, curated content in a database.",
-        "outcome": "Users find options that fit their profile faster; the client differentiates with a modern, local-first experience."
+        "outcome": "Users find options that fit their profile faster; the client stands out with a modern, local-first experience."
       },
       {
         "title": "Professional landing page for a language school",
-        "summary": "High-conversion site with clear value, levels, modalities, and calls to action toward contact or enrollment.",
+        "summary": "High-conversion site with clear value, levels, modalities, and CTAs toward contact or enrollment.",
         "need": "A credible web presence that reflects teaching quality; fast mobile loads and consistent messaging, optionally multilingual.",
         "tech": "Next.js, SEO- and performance-oriented content, forms wired to CRM or email, responsive accessible layout.",
-        "outcome": "More qualified inquiries, low load times, and a first impression aligned with the school’s brand."
+        "outcome": "More qualified inquiries, fast loads, and a first impression aligned with the school's brand."
       },
       {
         "title": "Enrollment & portfolio management platform for an educational institution",
-        "summary": "Control of enrollments, agreements, account status, and academic-financial tracking in one institutional environment.",
-        "need": "Unify student linkage and billing/plans without relying on endless Excels and email chains.",
+        "summary": "Control of enrollments, agreements, account status, and academic-financial tracking in one environment.",
+        "need": "Unify student linkage and billing/plans without living on endless Excels and email chains.",
         "tech": "Web app with roles (finance, registrar, leadership), reporting and export, change audit trails, backups, and granular permissions.",
         "outcome": "Clearer portfolio visibility by program and cohort, fewer disputes from misaligned data, and faster month-end closes."
       },
@@ -357,14 +358,14 @@
         "summary": "Tool for campaigns and notifications to authorized lists, with templates, queues, and delivery traceability.",
         "need": "Scale communication without breaking platform policies; track what was sent and avoid mass manual copy-paste errors.",
         "tech": "Backend with queues (e.g. BullMQ), WhatsApp Business API integration, campaign console, logs and retries, infra ready for traffic spikes.",
-        "outcome": "Governed bulk sends, better visibility of message status, and operations less dependent on spreadsheets."
+        "outcome": "Governed bulk sends, better visibility of message status, and ops less dependent on spreadsheets."
       }
     ]
   },
   "chatbot": {
     "title": "Online advisor",
     "subtitle": "BITFLOW",
-    "open": "Open assistant",
+    "open": "Open chat",
     "close": "Close",
     "placeholder": "Type your question…",
     "send": "Send",
@@ -374,38 +375,43 @@
     "quickPhilosophy": "Why BITFLOW?",
     "quickContact": "I want to be contacted",
     "quickPricing": "Pricing & timelines",
+    "quickFaq": "FAQ",
     "contactTitle": "Your contact details",
-    "contactHint": "Fill in the form and choose WhatsApp or email — we open a ready-to-send message.",
+    "contactHint": "Fill the form and pick WhatsApp or email — we open a ready-to-send message.",
     "fieldName": "Name",
     "fieldEmail": "Email",
     "fieldPhone": "Phone",
     "fieldMessage": "Message or question",
-    "contactFormCta": "Complete details to reach us",
+    "contactFormCta": "Leave details to reach us",
     "backToChat": "Back to chat",
     "sendWhatsapp": "Send via WhatsApp",
     "sendEmail": "Send via email",
     "requiredHint": "Name and at least one channel (email or phone) help us reply properly.",
-    "greeting": "Hi — I'm BITFLOW's virtual assistant. I can guide you on custom software, platforms, consulting, how we work (**No bullshit software**), brands we use, and next steps. What do you need?",
+    "greeting": "Hey — I'm BITFLOW's assistant. I can help with software, platforms, consulting, how we work (**No bullshit software**), brands we use, and next steps. What do you need?",
     "answers": {
-      "philosophy": "BITFLOW stands for **No bullshit software**: honest delivery, maintainable code, no plagiarism or repackaged third-party work, and full transparency on scope and risk. Read the **Why BITFLOW** section on the page for our story and promise.",
-      "services": "We focus on **software & digital platforms**: custom development, consulting, integrations, cloud, and operations automation. See **What we do** for detail.",
-      "software": "We build custom web apps and backends, integrations, and ongoing evolution. We focus on maintainable code and clear scope — see the **Serious software engineering** block under Services.",
-      "consulting": "Consulting covers architecture, priorities, and a roadmap you can actually ship and maintain — without inflated promises.",
-      "platforms": "We design management and automation platforms to streamline operations: inventory, workflows, reporting, and less repetitive manual work.",
-      "integrations": "We connect existing systems (ERP, gateways, legacy) with modern APIs, queues, and clear contracts — without breaking what already pays the bills.",
-      "cloud": "We're **AWS and Google Cloud partners**: we design and run cloud workloads with solid security and cost practices. More under **Technology partners**.",
-      "blockchain": "We build with **blockchain & Web3**: Hyperledger Fabric, Ethereum/L2, IPFS, smart contracts, and wallet integration when the use case fits (e.g. traceability).",
-      "partners": "**Technology partners** lists cloud, blockchain, software stacks, and quality/ops practices we use on real projects.",
-      "successStories": "**Success stories** highlights real work in education, retail, agri with ledger traceability, health, and logistics — each in a Latin American context. If you were looking for “case studies,” this is the same kind of detail: scope, tech, and outcomes.",
-      "projects": "The **Projects built with BITFLOW** section describes real products: overview, client need, technology, and outcome — including shrimp traceability, education, sports timing, health, events, AI gastronomy, language-school landing, institutional portfolio, and bulk WhatsApp.",
-      "pricing": "Every quote depends on scope and integrations. The first scoping conversation has no cost. Use the contact form or the button below for concrete options.",
-      "location": "We work **remotely** with online meetings, aligned to your time zone. If you need occasional onsite work, we discuss it in the proposal.",
-      "timing": "Timelines depend on deliverable size and integrations. **How we work** explains diagnosis, proposal, and phased delivery.",
-      "process": "Typical flow: **diagnosis** (goals and risks), **proposal** (clear scope and estimate), and **implementation** in milestones with handover support.",
-      "about": "BITFLOW is led by Eng. Darío Vélez Román, Ms. We bring product judgment, architecture, and execution for teams that can't afford fragile delivery.",
-      "audience": "We serve **companies and product/IT teams** — from growing SMBs to initiatives inside larger orgs that want a serious technical partner.",
-      "contactPrompt": "To reach the team, use the **contact form** on the page or tap **I want to be contacted** below — I'll prepare WhatsApp or email with your details.",
-      "fallback": "I don't have an exact auto-reply for that. Try a keyword (software, integrations, quote, AWS, blockchain, quality…) or use the assistant contact form and a human will reply."
+      "philosophy": "BITFLOW is about **No bullshit software**: honest delivery, maintainable code, no plagiarism or repackaged third-party work, and full transparency on scope and risk. Check [Why BITFLOW](#historia) for the story and promise.",
+      "services": "We focus on **software & digital platforms**: custom development, consulting, integrations, cloud, and ops automation. See [What we do](#servicios) for detail.",
+      "software": "We build custom web apps and backends, integrations, and ongoing evolution. Maintainable code and clear scope — more under [Services](#servicios).",
+      "consulting": "Consulting covers architecture, priorities, and a roadmap you can actually ship and maintain — no inflated promises. More under [Services](#servicios).",
+      "platforms": "We design management and automation platforms to tidy ops: inventory, workflows, reporting, less manual work. See [Services](#servicios).",
+      "integrations": "We connect existing systems (ERP, gateways, legacy) with modern APIs, queues, and clear contracts — without breaking what already pays the bills. Detail in [Services](#servicios).",
+      "cloud": "We're **AWS and Google Cloud partners**: we design and run cloud workloads with solid security and cost practices. More under [Technology partners](#marcas-alianzas).",
+      "blockchain": "We build with **blockchain & Web3**: Hyperledger Fabric, Ethereum/L2, IPFS, smart contracts, and wallet integration when the case calls for it (e.g. traceability). Also [Technology partners](#marcas-alianzas).",
+      "partners": "[Technology partners](#marcas-alianzas) lists cloud, blockchain, software stacks, and quality/ops practices we use on real projects.",
+      "successStories": "[Success stories](#casos-exitosos) highlights real work in education, retail, agri with ledger traceability, health, and logistics — each in a LatAm context.",
+      "projects": "[BITFLOW projects](#proyectos-bitflow) covers real products: overview, client need, tech, and outcome — shrimp traceability, education, sports, health, events, AI gastronomy, and more.",
+      "pricing": "Every quote depends on scope and integrations. The first scoping chat is free. Use the form here or go to [Contact](#contacto).",
+      "location": "We work **remotely** with online meetings, aligned to your time zone. Need occasional onsite? We talk it through in the proposal.",
+      "timing": "Timelines depend on deliverable size and integrations. [How we work](#proceso) covers discovery, proposal, and phased delivery.",
+      "process": "Typical flow: **discovery** (goals and risks), **proposal** (clear scope and estimate), and **delivery** in milestones with handover support. See [How we work](#proceso).",
+      "about": "BITFLOW is led by Eng. Darío Vélez Román, Ms. We bring product judgment, architecture, and execution for teams that can't afford fragile delivery. More in [About](#nosotros).",
+      "audience": "We serve **companies and product/IT teams** — from growing SMBs to initiatives inside larger orgs that want a serious technical partner. Also see the [FAQ](#faq).",
+      "support": "Yes — we offer **support and maintenance** after delivery: evolutionary work, improvements, or monitoring by criticality. Details in the [FAQ](#faq).",
+      "ip": "Unless we explicitly agree otherwise, **project code and IP belong to the client** — we don't recycle your work for competitors or sell third-party work as ours. See the [FAQ](#faq).",
+      "testimonials": "See [Testimonials](#testimonios) for what clients and partners say about working with BITFLOW.",
+      "faq": "The [FAQ](#faq) covers audiences, quoting, post-delivery support, and IP. You can also ask me here with keywords.",
+      "contactPrompt": "Go ahead — open the form below and leave your details. I'll prep WhatsApp or email. You can also jump to [Contact](#contacto) on the page.",
+      "fallback": "I don't have an exact auto-reply for that. Try a keyword (software, integrations, quote, AWS, blockchain, support…) or leave your details in the assistant form and a human will reply."
     }
   },
   "footer": {

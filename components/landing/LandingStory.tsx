@@ -8,39 +8,35 @@ export function LandingStory() {
   const { t } = useI18n()
 
   return (
-    <section
-      id="historia"
-      className="scroll-mt-20 md:scroll-mt-24 border-b border-stone-200/80 bg-gradient-to-b from-white/95 to-stone-50/90 py-16 backdrop-blur-[2px] sm:py-20 md:py-28"
-    >
-      <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary-700">{t('story.eyebrow')}</p>
-        <h2 className="mt-4 max-w-4xl text-balance text-2xl font-semibold tracking-tight text-stone-900 sm:text-3xl md:text-4xl">
-          {t('story.title')}
-        </h2>
-        <p className="mt-5 max-w-3xl text-base leading-relaxed text-stone-600 sm:mt-6 sm:text-lg md:text-xl">
-          {t('story.lead')}
-        </p>
+    <section id="historia" className="section-pad bg-white/70 backdrop-blur-[2px]">
+      <div className="section-inner">
+        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-teal-700">{t('story.eyebrow')}</p>
+        <h2 className="section-title mt-4 max-w-4xl">{t('story.title')}</h2>
+        <p className="section-lead max-w-3xl md:text-xl">{t('story.lead')}</p>
 
-        <div className="mt-10 grid gap-4 sm:mt-12 sm:gap-5 md:grid-cols-2 md:gap-6">
+        <ol className="mt-12 divide-y divide-slate-200 border-y border-slate-200 sm:mt-14">
           {CHAPTER_INDICES.map((i) => (
-            <article
-              key={i}
-              className="rounded-2xl border border-stone-200/80 bg-white/90 p-5 shadow-soft backdrop-blur-sm sm:rounded-3xl sm:p-7 md:p-8"
-            >
-              <span className="text-xs font-bold text-stone-400">{(i + 1).toString().padStart(2, '0')}</span>
-              <h3 className="mt-2 text-lg font-semibold text-stone-900 md:text-xl">{t(`story.chapters.${i}.title`)}</h3>
-              <p className="mt-4 text-sm leading-relaxed text-stone-600 md:text-base">{t(`story.chapters.${i}.body`)}</p>
-            </article>
+            <li key={i} className="grid gap-3 py-7 sm:grid-cols-[4rem_1fr] sm:gap-8 sm:py-8">
+              <span className="font-display text-sm font-semibold text-slate-400">{(i + 1).toString().padStart(2, '0')}</span>
+              <div>
+                <h3 className="text-lg font-semibold text-slate-900 md:text-xl">{t(`story.chapters.${i}.title`)}</h3>
+                <p className="mt-3 max-w-3xl text-sm leading-relaxed text-slate-600 md:text-base">
+                  {t(`story.chapters.${i}.body`)}
+                </p>
+              </div>
+            </li>
           ))}
-        </div>
+        </ol>
 
-        <div className="mt-10 rounded-2xl border border-stone-800/80 bg-gradient-to-br from-stone-900 via-stone-900 to-stone-950 px-5 py-7 text-stone-100 shadow-soft-lg ring-1 ring-white/10 sm:mt-12 sm:rounded-3xl sm:px-8 sm:py-9 md:px-10 md:py-10">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary-300">{t('story.manifestoKicker')}</p>
-          <p className="mt-3 text-2xl font-semibold tracking-tight text-white md:text-3xl">{t('story.manifestoTitle')}</p>
-          <p className="mt-5 max-w-3xl text-sm leading-relaxed text-stone-300 md:text-base">{t('story.manifestoBody')}</p>
-        </div>
+        <aside className="mt-12 border border-slate-800 bg-slate-900 px-5 py-8 text-slate-100 sm:mt-14 sm:px-8 sm:py-10 md:px-10">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-teal-300">{t('story.manifestoKicker')}</p>
+          <p className="mt-3 font-display text-2xl font-semibold tracking-tight text-white md:text-3xl">
+            {t('story.manifestoTitle')}
+          </p>
+          <p className="mt-5 max-w-3xl text-sm leading-relaxed text-slate-300 md:text-base">{t('story.manifestoBody')}</p>
+        </aside>
 
-        <p className="mx-auto mt-8 max-w-2xl text-center text-base font-medium leading-relaxed text-stone-800 sm:mt-10 md:text-lg">
+        <p className="mx-auto mt-10 max-w-2xl text-center text-base font-medium leading-relaxed text-slate-800 md:text-lg">
           {t('story.closing')}
         </p>
       </div>

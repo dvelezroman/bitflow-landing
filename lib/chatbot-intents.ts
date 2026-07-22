@@ -2,6 +2,15 @@
  * Intents for the on-site assistant. First match wins — list is ordered most → least specific.
  * Keywords work in ES/EN (normalized: lowercase, no accents).
  */
+
+export const CONTACT_ANSWER_KEY = 'chatbot.answers.contactPrompt'
+export const FALLBACK_ANSWER_KEY = 'chatbot.answers.fallback'
+
+export type ChatIntentMatch = {
+  answerKey: string
+  openContact: boolean
+}
+
 export const CHAT_INTENTS: { keywords: string[]; answerKey: string }[] = [
   {
     keywords: [
@@ -21,8 +30,14 @@ export const CHAT_INTENTS: { keywords: string[]; answerKey: string }[] = [
     ],
     answerKey: 'chatbot.answers.philosophy',
   },
-  { keywords: ['blockchain', 'web3', 'hyperledger', 'ethereum', 'ipfs', 'solidity', 'nft', 'wallet'], answerKey: 'chatbot.answers.blockchain' },
-  { keywords: ['aws', 'google cloud', 'gcp', 'partner nube', 'cloud partner', 'infraestructura nube'], answerKey: 'chatbot.answers.cloud' },
+  {
+    keywords: ['blockchain', 'web3', 'hyperledger', 'ethereum', 'ipfs', 'solidity', 'nft', 'wallet'],
+    answerKey: 'chatbot.answers.blockchain',
+  },
+  {
+    keywords: ['aws', 'google cloud', 'gcp', 'partner nube', 'cloud partner', 'infraestructura nube'],
+    answerKey: 'chatbot.answers.cloud',
+  },
   {
     keywords: [
       'casos exitosos',
@@ -44,19 +59,135 @@ export const CHAT_INTENTS: { keywords: string[]; answerKey: string }[] = [
     ],
     answerKey: 'chatbot.answers.projects',
   },
-  { keywords: ['precio', 'precios', 'cotiz', 'cotización', 'costo', 'cuanto cuesta', 'how much', 'pricing', 'quote'], answerKey: 'chatbot.answers.pricing' },
-  { keywords: ['donde', 'dónde', 'ubicacion', 'zona', 'ciudad', 'pais', 'location', 'where', 'remoto', 'remote'], answerKey: 'chatbot.answers.location' },
-  { keywords: ['plazo', 'tiempo', 'cuanto demora', 'how long', 'timeline'], answerKey: 'chatbot.answers.timing' },
-  { keywords: ['como trabajan', 'cómo trabajan', 'proceso', 'etapas', 'how we work', 'methodology'], answerKey: 'chatbot.answers.process' },
-  { keywords: ['consultoria', 'consultoría', 'consulting', 'roadmap', 'arquitectura'], answerKey: 'chatbot.answers.consulting' },
-  { keywords: ['desarrollo software', 'software a medida', 'aplicacion', 'aplicación', 'backend', 'codigo', 'código', 'custom software'], answerKey: 'chatbot.answers.software' },
-  { keywords: ['plataforma gestion', 'automatiz', 'erp', 'inventario', 'management platform'], answerKey: 'chatbot.answers.platforms' },
-  { keywords: ['integracion', 'integración', 'apis', 'api', 'legacy', 'sistemas legacy'], answerKey: 'chatbot.answers.integrations' },
-  { keywords: ['empresa', 'pyme', 'sme', 'startup', 'negocio'], answerKey: 'chatbot.answers.audience' },
-  { keywords: ['quienes', 'quiénes', 'fundador', 'ceo', 'about bitflow', 'about you'], answerKey: 'chatbot.answers.about' },
-  { keywords: ['whatsapp', 'whats app', 'correo', 'email', 'contacto', 'hablar', 'llamar', 'dejar datos', 'talk to', 'reach'], answerKey: 'chatbot.answers.contactPrompt' },
-  { keywords: ['marca', 'marcas', 'alianza', 'partners', 'stack'], answerKey: 'chatbot.answers.partners' },
-  { keywords: ['servicio', 'servicios', 'que hacen', 'qué hacen', 'what do you do', 'offer'], answerKey: 'chatbot.answers.services' },
+  {
+    keywords: [
+      'propiedad intelectual',
+      'intellectual property',
+      'el codigo es mio',
+      'el código es mío',
+      'codigo es nuestro',
+      'código es nuestro',
+      'ip ownership',
+      'who owns the code',
+    ],
+    answerKey: 'chatbot.answers.ip',
+  },
+  {
+    keywords: [
+      'mantenimiento',
+      'soporte',
+      'maintenance',
+      'support after',
+      'post entrega',
+      'post-entrega',
+      'after launch',
+      'sla',
+    ],
+    answerKey: 'chatbot.answers.support',
+  },
+  {
+    keywords: ['testimonio', 'testimonios', 'opiniones', 'reviews', 'testimonials', 'clientes dicen'],
+    answerKey: 'chatbot.answers.testimonials',
+  },
+  {
+    keywords: ['faq', 'preguntas frecuentes', 'frequently asked', 'dudas frecuentes'],
+    answerKey: 'chatbot.answers.faq',
+  },
+  {
+    keywords: [
+      'precio',
+      'precios',
+      'cotiz',
+      'cotización',
+      'costo',
+      'cuanto cuesta',
+      'how much',
+      'pricing',
+      'quote',
+    ],
+    answerKey: 'chatbot.answers.pricing',
+  },
+  {
+    keywords: [
+      'donde',
+      'dónde',
+      'ubicacion',
+      'zona',
+      'ciudad',
+      'pais',
+      'location',
+      'where',
+      'remoto',
+      'remote',
+    ],
+    answerKey: 'chatbot.answers.location',
+  },
+  {
+    keywords: ['plazo', 'tiempo', 'cuanto demora', 'how long', 'timeline'],
+    answerKey: 'chatbot.answers.timing',
+  },
+  {
+    keywords: ['como trabajan', 'cómo trabajan', 'proceso', 'etapas', 'how we work', 'methodology'],
+    answerKey: 'chatbot.answers.process',
+  },
+  {
+    keywords: ['consultoria', 'consultoría', 'consulting', 'roadmap', 'arquitectura'],
+    answerKey: 'chatbot.answers.consulting',
+  },
+  {
+    keywords: [
+      'desarrollo software',
+      'software a medida',
+      'aplicacion',
+      'aplicación',
+      'backend',
+      'codigo',
+      'código',
+      'custom software',
+    ],
+    answerKey: 'chatbot.answers.software',
+  },
+  {
+    keywords: ['plataforma gestion', 'automatiz', 'erp', 'inventario', 'management platform'],
+    answerKey: 'chatbot.answers.platforms',
+  },
+  {
+    keywords: ['integracion', 'integración', 'apis', 'api', 'legacy', 'sistemas legacy'],
+    answerKey: 'chatbot.answers.integrations',
+  },
+  {
+    keywords: ['empresa', 'pyme', 'sme', 'startup', 'negocio'],
+    answerKey: 'chatbot.answers.audience',
+  },
+  {
+    keywords: ['quienes', 'quiénes', 'fundador', 'ceo', 'about bitflow', 'about you'],
+    answerKey: 'chatbot.answers.about',
+  },
+  {
+    keywords: [
+      'whatsapp',
+      'whats app',
+      'correo',
+      'email',
+      'contacto',
+      'hablar',
+      'llamar',
+      'dejar datos',
+      'talk to',
+      'reach',
+      'contactar',
+      'get in touch',
+    ],
+    answerKey: CONTACT_ANSWER_KEY,
+  },
+  {
+    keywords: ['marca', 'marcas', 'alianza', 'partners', 'stack'],
+    answerKey: 'chatbot.answers.partners',
+  },
+  {
+    keywords: ['servicio', 'servicios', 'que hacen', 'qué hacen', 'what do you do', 'offer'],
+    answerKey: 'chatbot.answers.services',
+  },
 ]
 
 export function normalizeChatInput(s: string): string {
@@ -69,14 +200,17 @@ export function normalizeChatInput(s: string): string {
     .trim()
 }
 
-export function matchChatIntent(normalizedUserText: string): string {
+export function matchChatIntent(normalizedUserText: string): ChatIntentMatch {
   for (const intent of CHAT_INTENTS) {
     for (const kw of intent.keywords) {
       const n = normalizeChatInput(kw)
       if (n && normalizedUserText.includes(n)) {
-        return intent.answerKey
+        return {
+          answerKey: intent.answerKey,
+          openContact: intent.answerKey === CONTACT_ANSWER_KEY,
+        }
       }
     }
   }
-  return 'chatbot.answers.fallback'
+  return { answerKey: FALLBACK_ANSWER_KEY, openContact: false }
 }

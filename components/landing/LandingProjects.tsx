@@ -16,11 +16,9 @@ function Field({
   className?: string
 }) {
   return (
-    <div
-      className={`min-w-0 pt-4 sm:pt-5 ${isFirst ? '' : 'border-t border-stone-100'} ${className}`}
-    >
-      <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-primary-700 sm:text-xs">{label}</p>
-      <p className="mt-2 text-base leading-[1.65] text-stone-700 sm:text-[0.9375rem] sm:leading-relaxed">
+    <div className={`min-w-0 pt-4 sm:pt-5 ${isFirst ? '' : 'border-t border-slate-100'} ${className}`}>
+      <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-teal-700 sm:text-xs">{label}</p>
+      <p className="mt-2 text-base leading-[1.65] text-slate-700 sm:text-[0.9375rem] sm:leading-relaxed">
         <span className="block break-words [overflow-wrap:anywhere] [hyphens:auto]">{children}</span>
       </p>
     </div>
@@ -31,25 +29,15 @@ export function LandingProjects() {
   const { t } = useI18n()
 
   return (
-    <section
-      id="proyectos-bitflow"
-      className="scroll-mt-20 md:scroll-mt-24 overflow-x-clip border-b border-stone-200/80 bg-gradient-to-b from-white/90 to-stone-50/80 py-14 backdrop-blur-[2px] sm:py-20 md:py-28"
-    >
+    <section id="proyectos-bitflow" className="section-pad overflow-x-clip">
       <div className="mx-auto w-full min-w-0 max-w-6xl px-[max(1rem,env(safe-area-inset-left))] pr-[max(1rem,env(safe-area-inset-right))] sm:px-6">
-        <h2 className="text-balance text-[1.375rem] font-semibold leading-snug tracking-tight text-stone-900 sm:text-3xl md:text-4xl">
-          {t('projects.title')}
-        </h2>
-        <p className="mt-3 max-w-3xl text-[0.9375rem] leading-relaxed text-stone-600 sm:mt-4 sm:text-lg">
-          {t('projects.subtitle')}
-        </p>
+        <h2 className="section-title text-[1.375rem] sm:text-3xl md:text-4xl">{t('projects.title')}</h2>
+        <p className="section-lead max-w-3xl text-[0.9375rem] sm:text-lg">{t('projects.subtitle')}</p>
 
-        <div className="mt-8 flex min-w-0 flex-col gap-5 sm:mt-12 sm:gap-7 md:gap-8">
+        <div className="mt-8 flex min-w-0 flex-col gap-0 divide-y divide-slate-200 border-y border-slate-200 sm:mt-12">
           {PROJECT_INDICES.map((i) => (
-            <article
-              key={i}
-              className="min-w-0 overflow-hidden rounded-2xl border border-stone-200/80 bg-white/95 p-4 shadow-soft backdrop-blur-sm sm:rounded-3xl sm:p-6 md:p-8"
-            >
-              <h3 className="text-balance text-[1.0625rem] font-semibold leading-snug text-stone-900 sm:text-xl sm:leading-tight">
+            <article key={i} className="min-w-0 py-8 sm:py-10">
+              <h3 className="text-balance text-[1.0625rem] font-semibold leading-snug text-slate-900 sm:text-xl sm:leading-tight">
                 {t(`projects.items.${i}.title`)}
               </h3>
 
@@ -73,7 +61,7 @@ export function LandingProjects() {
           ))}
         </div>
 
-        <p className="mt-8 text-balance rounded-2xl border border-dashed border-primary-200/80 bg-primary-50/40 px-4 py-4 text-center text-[0.9375rem] font-medium leading-relaxed text-stone-800 sm:mt-12 sm:px-8 sm:py-5 sm:text-base">
+        <p className="mt-8 border border-dashed border-teal-200 bg-teal-50/50 px-4 py-4 text-center text-[0.9375rem] font-medium leading-relaxed text-slate-800 sm:mt-12 sm:px-8 sm:py-5 sm:text-base">
           {t('projects.pipeline')}
         </p>
       </div>

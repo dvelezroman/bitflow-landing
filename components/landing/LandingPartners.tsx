@@ -21,7 +21,7 @@ function PartnerItemRow({ item }: { item: PartnerItem }) {
 
   return (
     <li>
-      <span className="inline-flex max-w-full items-center gap-2 rounded-lg border border-stone-200 bg-white px-2.5 py-1.5 text-xs font-medium text-stone-800 shadow-sm">
+      <span className="inline-flex max-w-full items-center gap-2 border border-slate-200 bg-white px-2.5 py-1.5 text-xs font-medium text-slate-800">
         {assetOk ? (
           <img
             src={icon}
@@ -65,32 +65,24 @@ export function LandingPartners() {
   const indices = Array.from({ length: CATEGORY_COUNT }, (_, i) => i)
 
   return (
-    <section
-      id="marcas-alianzas"
-      className="scroll-mt-20 md:scroll-mt-24 border-b border-stone-200/80 bg-white/55 py-16 backdrop-blur-md sm:py-20 md:py-28 supports-[backdrop-filter]:bg-white/45"
-    >
-      <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <h2 className="text-balance text-2xl font-semibold tracking-tight text-stone-900 sm:text-3xl md:text-4xl">
-          {t('partners.title')}
-        </h2>
-        <p className="mt-4 max-w-3xl text-base leading-relaxed text-stone-600 sm:mt-5 sm:text-lg">{t('partners.lead')}</p>
+    <section id="marcas-alianzas" className="section-pad">
+      <div className="section-inner">
+        <h2 className="section-title">{t('partners.title')}</h2>
+        <p className="section-lead max-w-3xl">{t('partners.lead')}</p>
 
-        <div className="mt-10 grid gap-4 sm:mt-12 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3">
+        <div className="mt-10 grid gap-8 sm:mt-12 sm:grid-cols-2 lg:grid-cols-3 lg:gap-10">
           {indices.map((i) => {
             const cat = categories[i]
             const title = cat?.title ?? ''
             const items = cat?.items
 
             return (
-              <div
-                key={i}
-                className="rounded-2xl border border-stone-200/80 bg-white/90 p-4 shadow-soft backdrop-blur-sm transition hover:border-primary-200/40 hover:shadow-soft-lg sm:rounded-3xl sm:p-5"
-              >
-                <h3 className="text-base font-semibold text-stone-900">{title}</h3>
+              <div key={i} className="border-t border-slate-900 pt-5">
+                <h3 className="text-base font-semibold text-slate-900">{title}</h3>
                 {items?.length ? (
                   <PartnerItemList items={items} label={tagsAria} />
                 ) : (
-                  <p className="mt-3 text-sm text-stone-500">—</p>
+                  <p className="mt-3 text-sm text-slate-500">—</p>
                 )}
               </div>
             )

@@ -8,31 +8,26 @@ export function LandingTestimonials() {
   const indices = Array.from({ length: TESTIMONIAL_COUNT }, (_, i) => i)
 
   return (
-    <section id="testimonios" className="scroll-mt-20 md:scroll-mt-24 border-b border-stone-200/80 bg-white/85 py-16 backdrop-blur-sm sm:py-20 md:py-28 supports-[backdrop-filter]:bg-white/75">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <h2 className="text-balance text-2xl font-semibold tracking-tight text-stone-900 sm:text-3xl md:text-4xl">
-          {t('testimonials.title')}
-        </h2>
-        <p className="mt-4 max-w-2xl text-base leading-relaxed text-stone-600 sm:text-lg">{t('testimonials.subtitle')}</p>
+    <section id="testimonios" className="section-pad bg-white/70">
+      <div className="section-inner">
+        <h2 className="section-title">{t('testimonials.title')}</h2>
+        <p className="section-lead">{t('testimonials.subtitle')}</p>
 
-        <div className="mt-10 grid gap-4 sm:mt-12 sm:gap-5 md:grid-cols-3 md:gap-6">
+        <div className="mt-10 grid gap-8 sm:mt-12 md:grid-cols-3 md:gap-10">
           {indices.map((i) => (
-            <figure
-              key={i}
-              className="flex flex-col rounded-2xl border border-stone-200/80 bg-white/90 p-5 shadow-soft backdrop-blur-sm sm:rounded-3xl sm:p-6"
-            >
-              <figcaption>
-                <span className="block font-semibold text-stone-900">{t(`testimonials.items.${i}.name`)}</span>
-                <span className="mt-0.5 block text-sm text-stone-600">{t(`testimonials.items.${i}.role`)}</span>
-                <span className="mt-0.5 block text-xs text-stone-500">{t(`testimonials.items.${i}.company`)}</span>
-              </figcaption>
-              <blockquote className="mt-5 flex-1 text-stone-700 leading-relaxed">
-                <span className="text-3xl font-serif leading-none text-stone-300" aria-hidden>
+            <figure key={i} className="flex flex-col border-t border-slate-900 pt-6">
+              <blockquote className="flex-1 text-base leading-relaxed text-slate-700">
+                <span className="font-display text-3xl leading-none text-teal-600/40" aria-hidden>
                   &ldquo;
                 </span>
                 {t(`testimonials.items.${i}.quote`)}
                 <span className="sr-only">&rdquo;</span>
               </blockquote>
+              <figcaption className="mt-6">
+                <span className="block font-semibold text-slate-900">{t(`testimonials.items.${i}.name`)}</span>
+                <span className="mt-0.5 block text-sm text-slate-600">{t(`testimonials.items.${i}.role`)}</span>
+                <span className="mt-0.5 block text-xs text-slate-500">{t(`testimonials.items.${i}.company`)}</span>
+              </figcaption>
             </figure>
           ))}
         </div>

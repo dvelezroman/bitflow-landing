@@ -19,7 +19,6 @@ export function LandingIntro() {
     if (finishedRef.current) return
     finishedRef.current = true
     setShow(false)
-
     if (typeof document !== 'undefined') {
       document.body.style.overflow = ''
     }
@@ -30,7 +29,6 @@ export function LandingIntro() {
 
     const mq = window.matchMedia('(prefers-reduced-motion: reduce)')
     reducedRef.current = mq.matches
-
     const transitionMs = mq.matches ? 180 : 650
     setExitMs(transitionMs)
 
@@ -40,7 +38,6 @@ export function LandingIntro() {
 
     const startExit = () => {
       setPhase('out')
-
       exitFallbackRef.current = window.setTimeout(() => {
         finish()
       }, transitionMs + 150)
@@ -50,11 +47,7 @@ export function LandingIntro() {
 
     return () => {
       window.clearTimeout(id)
-
-      if (exitFallbackRef.current) {
-        window.clearTimeout(exitFallbackRef.current)
-      }
-
+      if (exitFallbackRef.current) window.clearTimeout(exitFallbackRef.current)
       document.body.style.overflow = ''
     }
   }, [finish])
@@ -64,12 +57,10 @@ export function LandingIntro() {
       if (e.target !== e.currentTarget) return
       if (e.propertyName !== 'opacity') return
       if (phase !== 'out') return
-
       if (exitFallbackRef.current) {
         window.clearTimeout(exitFallbackRef.current)
         exitFallbackRef.current = null
       }
-
       finish()
     },
     [phase, finish],
@@ -85,8 +76,8 @@ export function LandingIntro() {
       role="presentation"
       className={`fixed inset-0 z-[200] flex flex-col items-center justify-center px-6 transition-[opacity,transform,filter] ease-out ${
         phase === 'out'
-          ? 'pointer-events-none scale-[1.02] opacity-0 blur-sm'
-          : 'scale-100 opacity-100 blur-0'
+          ? 'pointer-events-none opacity-0 blur-sm scale-[1.02]'
+          : 'opacity-100 blur-0 scale-100'
       }`}
       style={{
         transitionDuration: `${exitMs}ms`,
@@ -96,22 +87,24 @@ export function LandingIntro() {
       onTransitionEnd={onOverlayTransitionEnd}
     >
       <div
-        className="absolute inset-0 bg-gradient-to-br from-stone-950 via-slate-900 to-stone-950"
+        className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950"
+        aria-hidden
+      />
+      <div
+        className="absolute inset-0 opacity-[0.35] [background-image:linear-gradient(to_right,rgb(148_163_184/0.12)_1px,transparent_1px),linear-gradient(to_bottom,rgb(148_163_184/0.12)_1px,transparent_1px)] [background-size:32px_32px]"
+        aria-hidden
+      />
+      <div
+        className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_20%,rgb(20_184_166/0.22),transparent_55%)]"
+        aria-hidden
+      />
+      <div
+        className="absolute inset-0 bg-[radial-gradient(ellipse_50%_40%_at_80%_80%,rgb(56_189_248/0.1),transparent_50%)]"
         aria-hidden
       />
 
       <div
-        className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_20%,rgb(14_165_233/0.25),transparent_55%)]"
-        aria-hidden
-      />
-
-      <div
-        className="absolute inset-0 bg-[radial-gradient(ellipse_50%_40%_at_80%_80%,rgb(99_102_241/0.12),transparent_50%)]"
-        aria-hidden
-      />
-
-      <div
-        className={`absolute left-1/2 top-1/2 h-72 w-72 -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary-500/25 blur-[80px] ${
+        className={`absolute left-1/2 top-1/2 h-72 w-72 -translate-x-1/2 -translate-y-1/2 rounded-full bg-teal-500/20 blur-[80px] ${
           spinning ? 'motion-safe:animate-pulse' : ''
         }`}
         aria-hidden
@@ -122,7 +115,7 @@ export function LandingIntro() {
           spinning ? 'motion-safe:animate-[intro-logo-in_0.95s_cubic-bezier(0.22,1,0.36,1)_both]' : ''
         }`}
       >
-        <div className="relative flex items-center justify-center w-40 h-40 sm:h-44 sm:w-44">
+        <div className="relative flex h-40 w-40 items-center justify-center sm:h-44 sm:w-44">
           {spinning ? (
             <div
               className="absolute inset-[-2px] overflow-hidden rounded-3xl motion-safe:animate-[intro-orbit_10s_linear_infinite]"
@@ -132,18 +125,17 @@ export function LandingIntro() {
                 className="absolute left-1/2 top-1/2 h-[220%] w-[220%] -translate-x-1/2 -translate-y-1/2"
                 style={{
                   background:
-                    'conic-gradient(from 0deg at 50% 50%, #0ea5e9, #7dd3fc, #818cf8, #38bdf8, #0ea5e9)',
+                    'conic-gradient(from 0deg at 50% 50%, #0d9488, #5eead4, #38bdf8, #14b8a6, #0d9488)',
                 }}
               />
             </div>
           ) : (
             <div
-              className="absolute inset-0 rounded-3xl ring-2 ring-primary-500/35 ring-offset-2 ring-offset-stone-950"
+              className="absolute inset-0 rounded-3xl ring-2 ring-teal-500/35 ring-offset-2 ring-offset-slate-950"
               aria-hidden
             />
           )}
-
-          <div className="relative z-10 flex h-[calc(100%-3px)] w-[calc(100%-3px)] items-center justify-center rounded-[1.35rem] bg-stone-950 shadow-[0_0_60px_-12px_rgb(14_165_233/0.45)] ring-1 ring-white/10">
+          <div className="relative z-10 flex h-[calc(100%-3px)] w-[calc(100%-3px)] items-center justify-center rounded-[1.35rem] bg-slate-950 shadow-[0_0_60px_-12px_rgb(20_184_166/0.4)] ring-1 ring-white/10">
             <Image
               src="/images/company-logos-bitflow/logo-square-2.png"
               alt="BITFLOW logo"
@@ -156,11 +148,11 @@ export function LandingIntro() {
         </div>
 
         <div
-          className="relative w-40 h-px mt-8 overflow-hidden rounded-full bg-white/10 sm:w-48"
+          className="relative mt-8 h-px w-40 overflow-hidden rounded-full bg-white/10 sm:w-48"
           aria-hidden
         >
           <div
-            className={`h-full w-[45%] max-w-[12rem] rounded-full bg-gradient-to-r from-transparent via-primary-400 to-transparent ${
+            className={`h-full w-[45%] max-w-[12rem] rounded-full bg-gradient-to-r from-transparent via-teal-400 to-transparent ${
               spinning ? 'motion-safe:animate-[intro-scan_1.8s_ease-in-out_infinite]' : 'mx-auto opacity-70'
             }`}
           />
