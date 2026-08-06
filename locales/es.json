@@ -280,11 +280,13 @@
     "message": "Mensaje",
     "messagePlaceholder": "Cuéntanos qué necesitas, plazos y contexto (stack actual, volumen de usuarios, integraciones).",
     "send": "Enviar mensaje",
+    "sending": "Enviando…",
     "whatsapp": "WhatsApp",
     "emailLabel": "Correo",
     "phoneLabel": "Teléfono",
     "channelsTitle": "Canales directos",
-    "success": "Listo. Recibimos tu mensaje y te escribimos pronto."
+    "success": "Listo. Recibimos tu mensaje y te escribimos pronto.",
+    "error": "No pudimos enviar el mensaje. Intenta de nuevo o escríbenos por WhatsApp."
   },
   "projects": {
     "title": "Proyectos armados con BITFLOW",

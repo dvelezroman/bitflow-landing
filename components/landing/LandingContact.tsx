@@ -3,6 +3,9 @@
 import { useState } from 'react'
 import { useI18n } from '@/lib/i18n'
 import { SITE } from '@/lib/site'
+import { submitContactForm } from '@/lib/contact-submit'
+
+type SubmitStatus = 'idle' | 'loading' | 'success' | 'error'
 
 export function LandingContact() {
   const { t } = useI18n()
@@ -11,15 +14,30 @@ export function LandingContact() {
   const [phone, setPhone] = useState('')
   const [service, setService] = useState('')
   const [message, setMessage] = useState('')
+  const [status, setStatus] = useState<SubmitStatus>('idle')
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    alert(t('contact.success'))
-    setName('')
-    setEmail('')
-    setPhone('')
-    setService('')
-    setMessage('')
+    if (status === 'loading') return
+
+    setStatus('loading')
+    try {
+      await submitContactForm({
+        name: name.trim(),
+        email: email.trim(),
+        phone: phone.trim() || undefined,
+        service,
+        message: message.trim(),
+      })
+      setStatus('success')
+      setName('')
+      setEmail('')
+      setPhone('')
+      setService('')
+      setMessage('')
+    } catch {
+      setStatus('error')
+    }
   }
 
   return (
@@ -46,6 +64,7 @@ export function LandingContact() {
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   required
+                  disabled={status === 'loading'}
                   className="field-input"
                   placeholder={t('contact.namePlaceholder')}
                 />
@@ -63,6 +82,7 @@ export function LandingContact() {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required
+                    disabled={status === 'loading'}
                     className="field-input"
                     placeholder={t('contact.emailPlaceholder')}
                   />
@@ -78,6 +98,7 @@ export function LandingContact() {
                     autoComplete="tel"
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
+                    disabled={status === 'loading'}
                     className="field-input"
                     placeholder={t('contact.phonePlaceholder')}
                   />
@@ -93,6 +114,7 @@ export function LandingContact() {
                   value={service}
                   onChange={(e) => setService(e.target.value)}
                   required
+                  disabled={status === 'loading'}
                   className="field-input"
                 >
                   <option value="">{t('contact.servicePlaceholder')}</option>
@@ -114,12 +136,29 @@ export function LandingContact() {
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
                   required
+                  disabled={status === 'loading'}
                   className="field-input min-h-[10rem] resize-y py-3"
                   placeholder={t('contact.messagePlaceholder')}
                 />
               </div>
-              <button type="submit" className="btn-primary w-full sm:w-auto sm:min-w-[10rem]">
-                {t('contact.send')}
+
+              {status === 'success' && (
+                <p role="status" className="text-sm font-medium text-teal-700">
+                  {t('contact.success')}
+                </p>
+              )}
+              {status === 'error' && (
+                <p role="alert" className="text-sm font-medium text-red-600">
+                  {t('contact.error')}
+                </p>
+              )}
+
+              <button
+                type="submit"
+                disabled={status === 'loading'}
+                className="btn-primary w-full sm:w-auto sm:min-w-[10rem] disabled:cursor-not-allowed disabled:opacity-70"
+              >
+                {status === 'loading' ? t('contact.sending') : t('contact.send')}
               </button>
             </form>
           </div>
