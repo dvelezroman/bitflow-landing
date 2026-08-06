@@ -17,9 +17,9 @@
   "hero": {
     "eyebrow": "BITFLOW",
     "title": "Software que aguanta",
-    "titleAccent": "para equipos que no compran humo",
-    "description": "Desarrollo, plataformas y consultoría al grano: código que se puede mantener, alcance honesto y cosas pensadas para producción — no demos lindas que después nadie sostiene.",
-    "ctaPrimary": "Dale, hablemos",
+    "titleAccent": "cuando tu operación no puede parar",
+    "description": "Desarrollo, plataformas y consultoría con alcance claro: sistemas que tu equipo puede operar y mantener, listos para producción — no demos que se caen en el cierre de mes o cuando más los necesitas.",
+    "ctaPrimary": "Hablemos",
     "ctaSecondary": "Ver servicios"
   },
   "story": {
@@ -32,7 +32,7 @@
         "body": "Cada decisión técnica tiene que aguantar frente a tu director, tu auditor o tu cliente final. Por eso vamos con claridad: arquitectura legible, riesgos a la vista y entregas que se operan el lunes, no solo en la demo del viernes."
       },
       {
-        "title": "No bullshit software",
+        "title": "Software de verdad, sin vueltas",
         "body": "No vendemos magia vacía; no entregamos plagios ni reempaquetamos trabajo ajeno como propio; no te colamos features solo para inflar la factura. Construimos software real: probado donde importa, documentado cuando suma y honesto sobre sus límites."
       },
       {
@@ -53,7 +53,7 @@
     "title": "Qué hacemos",
     "subtitle": "Un solo foco: producto digital de verdad — desde la primera charla hasta el soporte evolutivo.",
     "engineering": {
-      "title": "Ingeniería de software, sin atajos ni humo",
+      "title": "Ingeniería de software, sin atajos ni promesas vacías",
       "intro": "No improvisamos entregables frágiles ni prometemos lo que no podemos sostener. Estándares claros: diseño entendible, pruebas donde aportan, deuda técnica controlada e IP limpia — lo que construimos es tuyo, no un copy-paste disfrazado.",
       "points": [
         "Resolvemos dolores reales: menos fricción operativa, procesos más rápidos y operación más predecible.",
@@ -389,9 +389,9 @@
     "sendWhatsapp": "Mandar por WhatsApp",
     "sendEmail": "Mandar por correo",
     "requiredHint": "Nombre y al menos un medio (correo o teléfono) nos ayudan a responderte mejor.",
-    "greeting": "Hola. Soy el asistente de BITFLOW. Te oriento sobre software, plataformas, consultoría, cómo trabajamos («No bullshit software»), marcas con las que trabajamos y el siguiente paso. ¿En qué te ayudo?",
+    "greeting": "Hola. Soy el asistente de BITFLOW. Te oriento sobre software, plataformas, consultoría, cómo trabajamos, marcas con las que trabajamos y el siguiente paso. ¿En qué te ayudo?",
     "answers": {
-      "philosophy": "BITFLOW va de **No bullshit software**: entregas honestas, código mantenible, sin plagios ni reempaquetado ajeno, y transparencia total en alcance y riesgos. Mira [Por qué BITFLOW](#historia): ahí está la historia y la promesa.",
+      "philosophy": "BITFLOW va de **software serio y transparente**: entregas honestas, código mantenible, sin plagios ni reempaquetado ajeno, y claridad total en alcance y riesgos. Mira [Por qué BITFLOW](#historia): ahí está la historia y la promesa.",
       "services": "Nos enfocamos en **software y plataformas digitales**: desarrollo a medida, consultoría, integraciones, nube y automatización de operaciones. En [Qué hacemos](#servicios) está el detalle.",
       "software": "Armamos apps web y backends a medida, integraciones y evolución continua. Priorizamos código mantenible y alcance claro — más en [Servicios](#servicios).",
       "consulting": "La consultoría cubre arquitectura, prioridades y roadmap alineado a lo que puedes ejecutar y mantener, sin promesas infladas. Más en [Servicios](#servicios).",
@@ -417,7 +417,7 @@
     }
   },
   "footer": {
-    "tagline": "Software y plataformas digitales con criterio de ingeniería — sin humo.",
+    "tagline": "Software y plataformas digitales con criterio de ingeniería — claros y sostenibles.",
     "rights": "Todos los derechos reservados.",
     "services": "Servicios",
     "company": "Empresa",

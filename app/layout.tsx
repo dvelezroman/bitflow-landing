@@ -16,23 +16,23 @@ const syne = Syne({
 })
 
 export const metadata: Metadata = {
-  title: 'BITFLOW — Software y plataformas digitales sin humo',
+  title: 'BITFLOW — Software y plataformas digitales que aguantan',
   description:
-    'Desarrollo a medida, plataformas y consultoría al grano. BITFLOW: No bullshit software — código que se mantiene, alcance honesto y hecho para producción.',
+    'Desarrollo a medida, plataformas y consultoría con alcance claro. BITFLOW: código mantenible, entregas honestas y sistemas pensados para producción.',
   keywords:
     'desarrollo software, consultoría TI, plataformas gestión, integraciones API, nube AWS Google Cloud, blockchain, BITFLOW, LatAm',
   authors: [{ name: 'BITFLOW' }],
   openGraph: {
-    title: 'BITFLOW — Software y plataformas digitales sin humo',
+    title: 'BITFLOW — Software y plataformas digitales que aguantan',
     description:
-      'Producto digital serio para empresas: software, nube e integraciones — sin vueltas ni humo.',
+      'Producto digital serio para empresas: software, nube e integraciones — claros, sostenibles y listos para operar.',
     type: 'website',
     locale: 'es_ES',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'BITFLOW',
-    description: 'No bullshit software — desarrollo y plataformas digitales para equipos en LatAm.',
+    description: 'Software y plataformas digitales serias para equipos en LatAm.',
   },
   robots: {
     index: true,

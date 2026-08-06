@@ -16,9 +16,9 @@
   },
   "hero": {
     "eyebrow": "BITFLOW",
-    "title": "Software that lasts",
-    "titleAccent": "for teams that don't buy fluff",
-    "description": "Dev, platforms, and consulting — straight talk: maintainable code, honest scope, and stuff built for production — not pretty demos nobody can keep alive.",
+    "title": "Software that holds up",
+    "titleAccent": "when your operation can't stop",
+    "description": "Custom development, platforms, and consulting with clear scope: systems your team can run and maintain, built for production — not demos that fall apart at month-end or when you need them most.",
     "ctaPrimary": "Let's talk",
     "ctaSecondary": "See services"
   },
@@ -32,7 +32,7 @@
         "body": "Every technical call has to hold up in front of your director, your auditor, or your end customer. So we go for clarity: readable architecture, risks out in the open, and releases you can run on Monday — not only in Friday's demo."
       },
       {
-        "title": "No bullshit software",
+        "title": "Real software, straight talk",
         "body": "We don't sell empty magic; we don't ship plagiarism or repackage someone else's work as ours; we don't sneak in features just to pad the invoice. We build real software: tested where it counts, documented when it helps, and honest about its limits."
       },
       {
@@ -53,7 +53,7 @@
     "title": "What we do",
     "subtitle": "One focus: real digital product — from the first chat to evolutionary support.",
     "engineering": {
-      "title": "Software engineering — no shortcuts, no fluff",
+      "title": "Software engineering — no shortcuts, no empty promises",
       "intro": "We don't ship fragile throwaways or promise what we can't sustain. Clear standards: understandable design, testing where it matters, controlled tech debt, and clean IP — what we build is yours, not disguised copy-paste.",
       "points": [
         "We solve real pain: less operational friction, faster processes, more predictable ops.",
@@ -389,9 +389,9 @@
     "sendWhatsapp": "Send via WhatsApp",
     "sendEmail": "Send via email",
     "requiredHint": "Name and at least one channel (email or phone) help us reply properly.",
-    "greeting": "Hey — I'm BITFLOW's assistant. I can help with software, platforms, consulting, how we work (**No bullshit software**), brands we use, and next steps. What do you need?",
+    "greeting": "Hey — I'm BITFLOW's assistant. I can help with software, platforms, consulting, how we work, brands we use, and next steps. What do you need?",
     "answers": {
-      "philosophy": "BITFLOW is about **No bullshit software**: honest delivery, maintainable code, no plagiarism or repackaged third-party work, and full transparency on scope and risk. Check [Why BITFLOW](#historia) for the story and promise.",
+      "philosophy": "BITFLOW is about **serious, transparent software**: honest delivery, maintainable code, no plagiarism or repackaged third-party work, and full clarity on scope and risk. Check [Why BITFLOW](#historia) for the story and promise.",
       "services": "We focus on **software & digital platforms**: custom development, consulting, integrations, cloud, and ops automation. See [What we do](#servicios) for detail.",
       "software": "We build custom web apps and backends, integrations, and ongoing evolution. Maintainable code and clear scope — more under [Services](#servicios).",
       "consulting": "Consulting covers architecture, priorities, and a roadmap you can actually ship and maintain — no inflated promises. More under [Services](#servicios).",
@@ -417,7 +417,7 @@
     }
   },
   "footer": {
-    "tagline": "Digital software and platforms with engineering judgment — no fluff.",
+    "tagline": "Digital software and platforms with engineering judgment — clear and sustainable.",
     "rights": "All rights reserved.",
     "services": "Services",
     "company": "Company",
