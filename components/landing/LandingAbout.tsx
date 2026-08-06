@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { useI18n } from '@/lib/i18n'
 import { MEDIA } from '@/content/media'
 
@@ -21,13 +22,13 @@ export function LandingAbout() {
             </aside>
           </div>
           <div className="order-1 overflow-hidden bg-slate-200 lg:order-2">
-            <img
+            <Image
               src={MEDIA.about.team}
               alt={t('about.imageAlt')}
               width={1200}
               height={900}
               className="aspect-[4/3] w-full object-cover lg:aspect-auto lg:min-h-[420px]"
-              loading="lazy"
+              sizes="(min-width: 1024px) 50vw, 100vw"
             />
           </div>
         </div>

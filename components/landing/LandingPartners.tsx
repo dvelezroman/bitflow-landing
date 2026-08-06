@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { useMemo } from 'react'
 import { useI18n } from '@/lib/i18n'
 import es from '@/locales/es.json'
@@ -23,14 +24,12 @@ function PartnerItemRow({ item }: { item: PartnerItem }) {
     <li>
       <span className="inline-flex max-w-full items-center gap-2 border border-slate-200 bg-white px-2.5 py-1.5 text-xs font-medium text-slate-800">
         {assetOk ? (
-          <img
-            src={icon}
+          <Image
+            src={icon!}
             alt=""
             width={80}
             height={24}
             className="h-5 w-auto max-w-[5.5rem] shrink-0 object-contain object-left"
-            loading="lazy"
-            decoding="async"
           />
         ) : hasSimpleIcon ? (
           <PartnerSimpleIcon slug={icon!} className="h-5 w-5 shrink-0" />

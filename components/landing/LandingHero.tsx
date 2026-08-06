@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { useI18n } from '@/lib/i18n'
 import { MEDIA } from '@/content/media'
 
@@ -9,14 +10,13 @@ export function LandingHero() {
   return (
     <section className="relative flex min-h-[100svh] flex-col justify-end overflow-hidden text-white">
       <div className="absolute inset-0" aria-hidden>
-        <img
+        <Image
           src={MEDIA.hero.main}
           alt=""
-          width={1920}
-          height={1080}
-          className="motion-safe:animate-ken-slow h-full w-full object-cover"
-          loading="eager"
-          fetchPriority="high"
+          fill
+          priority
+          sizes="100vw"
+          className="motion-safe:animate-ken-slow object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/75 to-slate-900/35" />
         <div className="absolute inset-0 bg-gradient-to-r from-slate-950/50 via-transparent to-transparent" />

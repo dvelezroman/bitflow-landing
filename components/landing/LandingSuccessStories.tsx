@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { useI18n } from '@/lib/i18n'
 import { MEDIA, SUCCESS_PLATFORM_COUNT } from '@/content/media'
 
@@ -39,13 +40,13 @@ export function LandingSuccessStories() {
             return (
               <article key={`p-${i}`} className="group flex flex-col">
                 <div className="overflow-hidden bg-slate-200">
-                  <img
+                  <Image
                     src={image}
                     alt={t(`successStories.platforms.${i}.imageAlt`)}
                     width={1200}
                     height={750}
                     className="aspect-[16/10] h-full w-full object-cover transition duration-500 group-hover:scale-[1.02]"
-                    loading="lazy"
+                    sizes="(min-width: 768px) 50vw, 100vw"
                   />
                 </div>
                 <div className="mt-5 flex flex-1 flex-col">

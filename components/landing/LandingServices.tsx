@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { useI18n } from '@/lib/i18n'
 import { MEDIA } from '@/content/media'
 
@@ -57,13 +58,13 @@ export function LandingServices() {
           {cards.map((card) => (
             <article key={card.key} className="group flex flex-col">
               <div className="overflow-hidden bg-slate-200">
-                <img
+                <Image
                   src={card.media}
                   alt={t(`services.${card.key}.imageAlt`)}
                   width={800}
                   height={340}
                   className="aspect-[16/10] w-full object-cover transition duration-500 group-hover:scale-[1.03] sm:aspect-[21/10]"
-                  loading="lazy"
+                  sizes="(min-width: 768px) 33vw, 100vw"
                 />
               </div>
               <div className="mt-5 flex items-start gap-3">
