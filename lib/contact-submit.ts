@@ -1,11 +1,3 @@
-export type ContactPayload = {
-  name: string
-  email: string
-  phone?: string
-  service: string
-  message: string
-}
-
 type Web3FormsResponse = {
   success: boolean
   message?: string
@@ -14,34 +6,32 @@ type Web3FormsResponse = {
 const WEB3FORMS_ENDPOINT = 'https://api.web3forms.com/submit'
 
 /**
- * Sends contact form data via Web3Forms.
- * Destination email is the one registered with the access key (dvelezroman@gmail.com).
- * Requires NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY (free at https://web3forms.com).
+ * Sends a contact form via Web3Forms (FormData, official API style).
+ * Destination email = email used when creating the access key.
+ * Requires NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY.
  */
-export async function submitContactForm(payload: ContactPayload): Promise<void> {
+export async function submitContactForm(form: HTMLFormElement): Promise<void> {
   const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY
 
   if (!accessKey) {
     throw new Error('MISSING_ACCESS_KEY')
   }
 
+  const formData = new FormData(form)
+  const name = String(formData.get('name') ?? '').trim()
+
+  formData.append('access_key', accessKey)
+  formData.append('subject', `Contacto BITFLOW — ${name || 'Nuevo mensaje'}`)
+  formData.append('from_name', 'BITFLOW Landing')
+
+  const replyTo = String(formData.get('email') ?? '').trim()
+  if (replyTo) {
+    formData.append('replyto', replyTo)
+  }
+
   const response = await fetch(WEB3FORMS_ENDPOINT, {
     method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      Accept: 'application/json',
-    },
-    body: JSON.stringify({
-      access_key: accessKey,
-      subject: `Contacto BITFLOW — ${payload.name}`,
-      from_name: 'BITFLOW Landing',
-      replyto: payload.email,
-      name: payload.name,
-      email: payload.email,
-      phone: payload.phone || '—',
-      service: payload.service,
-      message: payload.message,
-    }),
+    body: formData,
   })
 
   let data: Web3FormsResponse | null = null

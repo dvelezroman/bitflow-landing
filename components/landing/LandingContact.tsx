@@ -16,19 +16,13 @@ export function LandingContact() {
   const [message, setMessage] = useState('')
   const [status, setStatus] = useState<SubmitStatus>('idle')
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     if (status === 'loading') return
 
     setStatus('loading')
     try {
-      await submitContactForm({
-        name: name.trim(),
-        email: email.trim(),
-        phone: phone.trim() || undefined,
-        service,
-        message: message.trim(),
-      })
+      await submitContactForm(e.currentTarget)
       setStatus('success')
       setName('')
       setEmail('')
